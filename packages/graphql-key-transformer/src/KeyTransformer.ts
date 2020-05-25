@@ -1,4 +1,4 @@
-import { Transformer, gql, TransformerContext, getDirectiveArguments, InvalidDirectiveError } from 'graphql-transformer-core';
+import { Transformer, gql, TransformerContext, getDirectiveArguments, InvalidDirectiveError } from '@atweel/graphql-transformer-core';
 import {
   obj,
   str,
@@ -16,7 +16,7 @@ import {
   bool,
   forEach,
   list,
-} from 'graphql-mapping-template';
+} from '@atweel/graphql-mapping-template';
 import {
   ResolverResourceIDs,
   ResourceConstants,
@@ -39,8 +39,8 @@ import {
   graphqlName,
   toUpper,
   getDirectiveArgument,
-} from 'graphql-transformer-common';
-import { makeModelConnectionType } from 'graphql-dynamodb-transformer';
+} from '@atweel/graphql-transformer-common';
+import { makeModelConnectionType } from '@atweel/graphql-dynamodb-transformer';
 import {
   ObjectTypeDefinitionNode,
   FieldDefinitionNode,

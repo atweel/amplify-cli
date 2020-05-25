@@ -22,7 +22,7 @@ import {
   qref,
   Expression,
   block,
-} from 'graphql-mapping-template';
+} from '@atweel/graphql-mapping-template';
 import {
   ResourceConstants,
   ModelResourceIDs,
@@ -33,8 +33,8 @@ import {
   attributeTypeFromScalar,
   toCamelCase,
   applyCompositeKeyConditionExpression,
-} from 'graphql-transformer-common';
-import { InvalidDirectiveError } from 'graphql-transformer-core';
+} from '@atweel/graphql-transformer-common';
+import { InvalidDirectiveError } from '@atweel/graphql-transformer-core';
 
 export class ResourceFactory {
   public makeParams() {

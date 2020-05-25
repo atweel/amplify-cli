@@ -22,9 +22,9 @@ import {
   Expression,
   bool,
   methodCall,
-} from 'graphql-mapping-template';
-import { toUpper, plurality, graphqlName, ResourceConstants, ModelResourceIDs } from 'graphql-transformer-common';
-import { MappingParameters } from 'graphql-transformer-core/src/TransformerContext';
+} from '@atweel/graphql-mapping-template';
+import { toUpper, plurality, graphqlName, ResourceConstants, ModelResourceIDs } from '@atweel/graphql-transformer-common';
+import { MappingParameters } from '@atweel/graphql-transformer-core/src/TransformerContext';
 
 export class ResourceFactory {
   public makeParams() {

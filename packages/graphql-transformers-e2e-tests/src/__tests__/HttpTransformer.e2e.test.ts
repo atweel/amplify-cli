@@ -1,7 +1,7 @@
-import { ResourceConstants } from 'graphql-transformer-common';
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
 import { HttpTransformer } from '../../../graphql-http-transformer';
 import { CloudFormationClient } from '../CloudFormationClient';
 import { Output } from 'aws-sdk/clients/cloudformation';
@@ -434,7 +434,9 @@ test('Test that GET errors when missing a required Query input object', async ()
     expect(response.data).toBeNull();
     expect(response.errors).toBeDefined();
     expect(response.errors).toHaveLength(1);
-    expect(response.errors[0].message).toEqual('Validation error of type MissingFieldArgument: Missing field argument query @ \'createComment/complexGet\'');
+    expect(response.errors[0].message).toEqual(
+      "Validation error of type MissingFieldArgument: Missing field argument query @ 'createComment/complexGet'",
+    );
   } catch (e) {
     console.error(e);
     // fail
@@ -467,7 +469,9 @@ test('Test that POST errors when missing a non-null arg in query/body', async ()
     expect(response.data.createComment.complexPost).toBeNull();
     expect(response.errors).toBeDefined();
     expect(response.errors).toHaveLength(1);
-    expect(response.errors[0].message).toEqual('An argument you marked as Non-Null is not present in the query nor the body of your request.');
+    expect(response.errors[0].message).toEqual(
+      'An argument you marked as Non-Null is not present in the query nor the body of your request.',
+    );
   } catch (e) {
     console.error(e);
     // fail

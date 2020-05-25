@@ -1,5 +1,5 @@
 {
-  "name": "@aws-amplify/cli",
+  "name": "@atweel/amplify-cli",
   "version": "4.20.0",
   "description": "Amplify CLI",
   "repository": {
@@ -37,33 +37,33 @@
     "@types/fs-extra": "^8.0.1",
     "@types/global-prefix": "^3.0.0",
     "@types/update-notifier": "^4.1.0",
-    "amplify-category-analytics": "2.16.5",
-    "amplify-category-api": "2.19.2",
-    "amplify-category-auth": "2.15.6",
-    "amplify-category-function": "2.20.2",
-    "amplify-category-hosting": "2.3.1",
-    "amplify-category-interactions": "2.3.7",
-    "amplify-category-notifications": "2.15.6",
-    "amplify-category-predictions": "2.3.8",
-    "amplify-category-storage": "2.4.5",
-    "amplify-category-xr": "2.3.6",
-    "amplify-codegen": "2.15.8",
-    "amplify-console-hosting": "1.3.2",
-    "amplify-dotnet-function-runtime-provider": "1.1.1",
-    "amplify-dotnet-function-template-provider": "1.2.0",
-    "amplify-frontend-android": "2.13.2",
-    "amplify-frontend-ios": "2.13.2",
-    "amplify-frontend-javascript": "2.15.3",
-    "amplify-go-function-runtime-provider": "1.1.1",
-    "amplify-go-function-template-provider": "1.1.1",
-    "amplify-java-function-runtime-provider": "1.1.2",
-    "amplify-java-function-template-provider": "1.1.1",
-    "amplify-nodejs-function-runtime-provider": "1.0.4",
-    "amplify-nodejs-function-template-provider": "1.0.2",
-    "amplify-provider-awscloudformation": "4.20.0",
-    "amplify-python-function-runtime-provider": "1.1.1",
-    "amplify-python-function-template-provider": "1.1.1",
-    "amplify-util-mock": "3.20.0",
+    "@atweel/amplify-category-analytics": "2.16.5",
+    "@atweel/amplify-category-api": "2.19.2",
+    "@atweel/amplify-category-auth": "2.15.6",
+    "@atweel/amplify-category-function": "2.20.2",
+    "@atweel/amplify-category-hosting": "2.3.1",
+    "@atweel/amplify-category-interactions": "2.3.7",
+    "@atweel/amplify-category-notifications": "2.15.6",
+    "@atweel/amplify-category-predictions": "2.3.8",
+    "@atweel/amplify-category-storage": "2.4.5",
+    "@atweel/amplify-category-xr": "2.3.6",
+    "@atweel/amplify-codegen": "2.15.8",
+    "@atweel/amplify-console-hosting": "1.3.2",
+    "@atweel/amplify-dotnet-function-runtime-provider": "1.1.1",
+    "@atweel/amplify-dotnet-function-template-provider": "1.2.0",
+    "@atweel/amplify-frontend-android": "2.13.2",
+    "@atweel/amplify-frontend-ios": "2.13.2",
+    "@atweel/amplify-frontend-javascript": "2.15.3",
+    "@atweel/amplify-go-function-runtime-provider": "1.1.1",
+    "@atweel/amplify-go-function-template-provider": "1.1.1",
+    "@atweel/amplify-java-function-runtime-provider": "1.1.2",
+    "@atweel/amplify-java-function-template-provider": "1.1.1",
+    "@atweel/amplify-nodejs-function-runtime-provider": "1.0.4",
+    "@atweel/amplify-nodejs-function-template-provider": "1.0.2",
+    "@atweel/amplify-provider-awscloudformation": "4.20.0",
+    "@atweel/amplify-python-function-runtime-provider": "1.1.1",
+    "@atweel/amplify-python-function-template-provider": "1.1.1",
+    "@atweel/amplify-util-mock": "3.20.0",
     "chalk": "^3.0.0",
     "chalk-pipe": "^3.0.0",
     "cli-table3": "^0.5.1",
@@ -114,94 +114,94 @@
       "core": {
         "name": "core",
         "type": "core",
-        "packageName": "@aws-amplify/cli"
+        "packageName": "@atweel/amplify-cli"
       },
       "awscloudformation": {
         "name": "awscloudformation",
         "type": "provider",
-        "packageName": "amplify-provider-awscloudformation"
+        "packageName": "@atweel/amplify-provider-awscloudformation"
       },
       "analytics": {
         "name": "analytics",
         "type": "category",
-        "packageName": "amplify-category-analytics"
+        "packageName": "@atweel/amplify-category-analytics"
       },
       "api": {
         "name": "api",
         "type": "category",
-        "packageName": "amplify-category-api"
+        "packageName": "@atweel/amplify-category-api"
       },
       "auth": {
         "name": "auth",
         "type": "category",
-        "packageName": "amplify-category-auth"
+        "packageName": "@atweel/amplify-category-auth"
       },
       "function": {
         "name": "function",
         "type": "category",
-        "packageName": "amplify-category-function"
+        "packageName": "@atweel/amplify-category-function"
       },
       "hosting": [
         {
           "name": "hosting",
           "type": "category",
-          "packageName": "amplify-category-hosting"
+          "packageName": "@atweel/amplify-category-hosting"
         },
         {
           "name": "hosting",
           "type": "category",
-          "packageName": "amplify-console-hosting"
+          "packageName": "@atweel/amplify-console-hosting"
         }
       ],
       "interactions": {
         "name": "interactions",
         "type": "category",
-        "packageName": "amplify-category-interactions"
+        "packageName": "@atweel/amplify-category-interactions"
       },
       "notifications": {
         "name": "notifications",
         "type": "category",
-        "packageName": "amplify-category-notifications"
+        "packageName": "@atweel/amplify-category-notifications"
       },
       "predictions": {
         "name": "predictions",
         "type": "category",
-        "packageName": "amplify-category-predictions"
+        "packageName": "@atweel/amplify-category-predictions"
       },
       "storage": {
         "name": "storage",
         "type": "category",
-        "packageName": "amplify-category-storage"
+        "packageName": "@atweel/amplify-category-storage"
       },
       "xr": {
         "name": "xr",
         "type": "category",
-        "packageName": "amplify-category-xr"
+        "packageName": "@atweel/amplify-category-xr"
       },
       "codegen": {
         "name": "codegen",
         "type": "util",
-        "packageName": "amplify-codegen"
+        "packageName": "@atweel/amplify-codegen"
       },
       "android": {
         "name": "android",
         "type": "frontend",
-        "packageName": "amplify-frontend-android"
+        "packageName": "@atweel/amplify-frontend-android"
       },
       "ios": {
         "name": "ios",
         "type": "frontend",
-        "packageName": "amplify-frontend-ios"
+        "packageName": "@atweel/amplify-frontend-ios"
       },
       "javascript": {
         "name": "javascript",
         "type": "frontend",
-        "packageName": "amplify-frontend-javascript"
+        "packageName": "@atweel/amplify-frontend-javascript"
       },
       "mock": {
         "name": "mock",
         "type": "util",
-        "packageName": "amplify-util-mock"
+        "packageName": "@atweel/amplify-util-mock"
       }
     }
   }

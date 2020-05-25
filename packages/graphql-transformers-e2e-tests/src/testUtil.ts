@@ -7,7 +7,7 @@ import {
   InputValueDefinitionNode,
   DefinitionNode,
 } from 'graphql';
-import { isNonNullType } from 'graphql-transformer-common';
+import { isNonNullType } from '@atweel/graphql-transformer-common';
 
 export function expectFields(type: ObjectTypeDefinitionNode, fields: string[]) {
   for (const fieldName of fields) {

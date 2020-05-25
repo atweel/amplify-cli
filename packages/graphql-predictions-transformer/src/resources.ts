@@ -1,4 +1,4 @@
-import { ResourceConstants, PredictionsResourceIDs } from 'graphql-transformer-common';
+import { ResourceConstants, PredictionsResourceIDs } from '@atweel/graphql-transformer-common';
 import {
   obj,
   str,
@@ -16,7 +16,7 @@ import {
   qref,
   toJson,
   comment,
-} from 'graphql-mapping-template';
+} from '@atweel/graphql-mapping-template';
 import { iamActions } from './predictions_utils';
 import { IAM, Fn, AppSync, Lambda } from 'cloudform-types';
 import { HttpConfig, LambdaConfig } from 'cloudform-types/types/appSync/dataSource';

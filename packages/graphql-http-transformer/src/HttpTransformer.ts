@@ -1,4 +1,4 @@
-import { Transformer, TransformerContext, TransformerContractError, gql } from 'graphql-transformer-core';
+import { Transformer, TransformerContext, TransformerContractError, gql } from '@atweel/graphql-transformer-core';
 import {
   DirectiveNode,
   ObjectTypeDefinitionNode,
@@ -9,8 +9,8 @@ import {
   print,
 } from 'graphql';
 import { ResourceFactory } from './resources';
-import { getDirectiveArgument, isScalar } from 'graphql-transformer-common';
-import { ResolverResourceIDs, HttpResourceIDs } from 'graphql-transformer-common';
+import { getDirectiveArgument, isScalar } from '@atweel/graphql-transformer-common';
+import { ResolverResourceIDs, HttpResourceIDs } from '@atweel/graphql-transformer-common';
 import { makeUrlParamInputObject, makeHttpArgument, makeHttpQueryInputObject, makeHttpBodyInputObject } from './definitions';
 
 const HTTP_STACK_NAME = 'HttpStack';
@@ -55,7 +55,7 @@ export class HttpTransformer extends Transformer {
           key: String
           value: String
         }
-      `
+      `,
     );
     this.resources = new ResourceFactory();
   }
@@ -82,7 +82,7 @@ export class HttpTransformer extends Transformer {
       const protocolMatcher = /^http(s)?:\/\//;
       if (!protocolMatcher.test(url)) {
         throw new TransformerContractError(
-          `@http directive at location ${value.loc.start} ` + `requires a url parameter that begins with http:// or https://.`
+          `@http directive at location ${value.loc.start} ` + `requires a url parameter that begins with http:// or https://.`,
         );
       }
       // extract just the base url with protocol
@@ -103,7 +103,7 @@ export class HttpTransformer extends Transformer {
     parent: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,
     field: FieldDefinitionNode,
     directive: DirectiveNode,
-    ctx: TransformerContext
+    ctx: TransformerContext,
   ): void => {
     ctx.mapResourceToStack(HTTP_STACK_NAME, ResolverResourceIDs.ResolverResourceID(parent.name.value, field.name.value));
     const url: string = getDirectiveArgument(directive, 'url');
@@ -182,7 +182,7 @@ export class HttpTransformer extends Transformer {
             parent.name.value,
             field.name.value,
             queryBodyArgsArray.filter(a => a.type.kind === Kind.NON_NULL_TYPE).map(a => a.name.value),
-            headers
+            headers,
           );
           ctx.setResource(postResourceID, postResolver);
         }
@@ -196,7 +196,7 @@ export class HttpTransformer extends Transformer {
             parent.name.value,
             field.name.value,
             queryBodyArgsArray.filter(a => a.type.kind === Kind.NON_NULL_TYPE).map(a => a.name.value),
-            headers
+            headers,
           );
           ctx.setResource(putResourceID, putResolver);
         }
@@ -217,7 +217,7 @@ export class HttpTransformer extends Transformer {
             parent.name.value,
             field.name.value,
             queryBodyArgsArray.filter(a => a.type.kind === Kind.NON_NULL_TYPE).map(a => a.name.value),
-            headers
+            headers,
           );
           ctx.setResource(patchResourceID, patchResolver);
         }

@@ -5,7 +5,13 @@ import {
   ObjectTypeDefinitionNode,
   FieldDefinitionNode,
 } from 'graphql';
-import { makeInputValueDefinition, makeNonNullType, makeNamedType, ModelResourceIDs, unwrapNonNull } from 'graphql-transformer-common';
+import {
+  makeInputValueDefinition,
+  makeNonNullType,
+  makeNamedType,
+  ModelResourceIDs,
+  unwrapNonNull,
+} from '@atweel/graphql-transformer-common';
 
 export function makeHttpArgument(name: string, inputType: InputObjectTypeDefinitionNode, makeNonNull: boolean): InputValueDefinitionNode {
   // the URL params type that we create will need to be non-null, so build in some flexibility here
@@ -16,7 +22,7 @@ export function makeHttpArgument(name: string, inputType: InputObjectTypeDefinit
 export function makeUrlParamInputObject(
   parent: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,
   field: FieldDefinitionNode,
-  urlParams: string[]
+  urlParams: string[],
 ): InputObjectTypeDefinitionNode {
   const name = ModelResourceIDs.UrlParamsInputObjectName(parent.name.value, field.name.value);
   const urlParamFields = urlParams.map((param: string) => {
@@ -42,7 +48,7 @@ export function makeHttpQueryInputObject(
   parent: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,
   field: FieldDefinitionNode,
   queryArgArray: InputValueDefinitionNode[],
-  deNull: boolean
+  deNull: boolean,
 ): InputObjectTypeDefinitionNode {
   const name = ModelResourceIDs.HttpQueryInputObjectName(parent.name.value, field.name.value);
   // unwrap all the non-nulls in the argument array if the flag is set
@@ -74,7 +80,7 @@ export function makeHttpBodyInputObject(
   parent: ObjectTypeDefinitionNode | InterfaceTypeDefinitionNode,
   field: FieldDefinitionNode,
   bodyArgArray: InputValueDefinitionNode[],
-  deNull: boolean
+  deNull: boolean,
 ): InputObjectTypeDefinitionNode {
   const name = ModelResourceIDs.HttpBodyInputObjectName(parent.name.value, field.name.value);
   // unwrap all the non-nulls in the argument array if the flag is set

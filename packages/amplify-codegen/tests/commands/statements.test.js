@@ -1,5 +1,5 @@
 const path = require('path');
-const { generate } = require('amplify-graphql-docs-generator');
+const { generate } = require('@atweel/amplify-graphql-docs-generator');
 const fs = require('fs-extra');
 
 const loadConfig = require('../../src/codegen-config');
@@ -17,7 +17,7 @@ const MOCK_CONTEXT = {
   },
 };
 
-jest.mock('amplify-graphql-docs-generator');
+jest.mock('@atweel/amplify-graphql-docs-generator');
 jest.mock('../../src/codegen-config');
 jest.mock('../../src/utils');
 jest.mock('fs-extra');
@@ -92,7 +92,7 @@ describe('command - statements', () => {
       path.join(MOCK_PROJECT_ROOT, MOCK_SCHEMA),
       MOCK_APIS[0],
       MOCK_REGION,
-      forceDownload
+      forceDownload,
     );
   });
 
@@ -105,7 +105,7 @@ describe('command - statements', () => {
       path.join(MOCK_PROJECT_ROOT, MOCK_SCHEMA),
       MOCK_APIS[0],
       MOCK_REGION,
-      forceDownload
+      forceDownload,
     );
   });
 

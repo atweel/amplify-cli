@@ -3,7 +3,7 @@ import * as execa from 'execa';
 import fs from 'fs-extra';
 import glob from 'glob';
 import { shimPath, shimJarPath } from './constants';
-import { BuildRequest, BuildResult } from 'amplify-function-plugin-interface';
+import { BuildRequest, BuildResult } from '@atweel/amplify-function-plugin-interface';
 
 export const buildResource = async (request: BuildRequest): Promise<BuildResult> => {
   const resourceDir = path.join(request.srcRoot);

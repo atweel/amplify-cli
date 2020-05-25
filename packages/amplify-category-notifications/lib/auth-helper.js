@@ -60,7 +60,7 @@ async function attachPolicyToRole(context, policy, roleName) {
 }
 
 async function checkAuth(context) {
-  const { checkRequirements, externalAuthEnable } = require('amplify-category-auth');
+  const { checkRequirements, externalAuthEnable } = require('@atweel/amplify-category-auth');
 
   const apiRequirements = { authSelections: 'identityPoolOnly', allowUnauthenticatedIdentities: true };
   const satisfiedRequirements = await checkRequirements(apiRequirements, context);

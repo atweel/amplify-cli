@@ -1,10 +1,10 @@
 import { InputObjectTypeDefinitionNode } from 'graphql';
-import { makeInputValueDefinition, makeNonNullType, makeNamedType } from 'graphql-transformer-common';
+import { makeInputValueDefinition, makeNonNullType, makeNamedType } from '@atweel/graphql-transformer-common';
 
 export function updateCreateInputWithConnectionField(
   input: InputObjectTypeDefinitionNode,
   connectionFieldName: string,
-  nonNull: boolean = false
+  nonNull: boolean = false,
 ): InputObjectTypeDefinitionNode {
   const keyFieldExists = Boolean(input.fields.find(f => f.name.value === connectionFieldName));
   // If the key field already exists then do not change the input.
@@ -24,7 +24,7 @@ export function updateCreateInputWithConnectionField(
 
 export function updateUpdateInputWithConnectionField(
   input: InputObjectTypeDefinitionNode,
-  connectionFieldName: string
+  connectionFieldName: string,
 ): InputObjectTypeDefinitionNode {
   const keyFieldExists = Boolean(input.fields.find(f => f.name.value === connectionFieldName));
   // If the key field already exists then do not change the input.

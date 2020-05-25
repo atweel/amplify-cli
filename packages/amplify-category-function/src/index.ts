@@ -1,7 +1,7 @@
 import path from 'path';
 import { category } from './constants';
 import { categoryName } from './provider-utils/awscloudformation/utils/constants';
-import { FunctionBreadcrumbs, FunctionRuntimeLifecycleManager } from 'amplify-function-plugin-interface';
+import { FunctionBreadcrumbs, FunctionRuntimeLifecycleManager } from '@atweel/amplify-function-plugin-interface';
 import sequential from 'promise-sequential';
 import { updateConfigOnEnvInit } from './provider-utils/awscloudformation';
 

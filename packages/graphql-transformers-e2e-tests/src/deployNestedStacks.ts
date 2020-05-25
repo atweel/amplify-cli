@@ -2,7 +2,7 @@ import { S3Client } from './S3Client';
 import { CloudFormationClient } from './CloudFormationClient';
 import * as fs from 'fs';
 import * as path from 'path';
-import { DeploymentResources } from 'graphql-transformer-core/lib/DeploymentResources';
+import { DeploymentResources } from '@atweel/graphql-transformer-core/lib/DeploymentResources';
 
 function deleteDirectory(directory: string) {
   const files = fs.readdirSync(directory);
@@ -131,7 +131,7 @@ export async function deploy(
   buildPath: string,
   bucketName: string,
   rootKey: string,
-  buildTimeStamp: string
+  buildTimeStamp: string,
 ) {
   try {
     if (!fs.existsSync(buildPath)) {

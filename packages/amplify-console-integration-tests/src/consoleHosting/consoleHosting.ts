@@ -1,4 +1,4 @@
-import { nspawn as spawn } from 'amplify-e2e-core';
+import { nspawn as spawn } from '@atweel/amplify-e2e-core';
 import { getCLIPath } from '../util';
 import { HOSTING_NOT_ENABLED, HOSTING_ENABLED_IN_CONSOLE, ORIGINAL_ENV } from './constants';
 

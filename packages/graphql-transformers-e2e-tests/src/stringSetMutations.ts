@@ -1,4 +1,4 @@
-import { DeploymentResources } from 'graphql-transformer-core';
+import { DeploymentResources } from '@atweel/graphql-transformer-core';
 
 /**
  * Used with SearchableModelTransformer Tests

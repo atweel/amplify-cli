@@ -1,12 +1,8 @@
-import {
-  amplifyPublishWithoutUpdate,
-  createReactTestProject,
-  resetBuildCommand,
-} from 'amplify-e2e-core';
+import { amplifyPublishWithoutUpdate, createReactTestProject, resetBuildCommand } from '@atweel/amplify-e2e-core';
 
-import { initJSProjectWithProfile, deleteProject } from 'amplify-e2e-core';
-import { addHosting, removeHosting, amplifyPushWithoutCodegen } from 'amplify-e2e-core';
-import { deleteProjectDir, getProjectMeta } from 'amplify-e2e-core';
+import { initJSProjectWithProfile, deleteProject } from '@atweel/amplify-e2e-core';
+import { addHosting, removeHosting, amplifyPushWithoutCodegen } from '@atweel/amplify-e2e-core';
+import { deleteProjectDir, getProjectMeta } from '@atweel/amplify-e2e-core';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 
@@ -60,5 +56,4 @@ describe('amplify add hosting', () => {
     expect(error.message).toEqual('Process exited with non zero exit code 1');
     resetBuildCommand(projRoot, currentBuildCommand);
   });
-
-})
+});

@@ -1,6 +1,6 @@
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { ResourceConstants } from 'graphql-transformer-common';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { ModelAuthTransformer } from '../ModelAuthTransformer';
 
 test('Test ModelAuthTransformer validation happy case w/ static groups', () => {
@@ -28,7 +28,7 @@ test('Test ModelAuthTransformer validation happy case w/ static groups', () => {
   const out = transformer.transform(validSchema);
   expect(out).toBeDefined();
   expect(out.rootStack.Resources[ResourceConstants.RESOURCES.GraphQLAPILogicalID].Properties.AuthenticationType).toEqual(
-    'AMAZON_COGNITO_USER_POOLS'
+    'AMAZON_COGNITO_USER_POOLS',
   );
 });
 
@@ -58,7 +58,7 @@ test('Test ModelAuthTransformer validation happy case w/ dynamic groups', () => 
   const out = transformer.transform(validSchema);
   expect(out).toBeDefined();
   expect(out.rootStack.Resources[ResourceConstants.RESOURCES.GraphQLAPILogicalID].Properties.AuthenticationType).toEqual(
-    'AMAZON_COGNITO_USER_POOLS'
+    'AMAZON_COGNITO_USER_POOLS',
   );
 });
 
@@ -88,7 +88,7 @@ test('Test ModelAuthTransformer validation happy case w/ dynamic group', () => {
   const out = transformer.transform(validSchema);
   expect(out).toBeDefined();
   expect(out.rootStack.Resources[ResourceConstants.RESOURCES.GraphQLAPILogicalID].Properties.AuthenticationType).toEqual(
-    'AMAZON_COGNITO_USER_POOLS'
+    'AMAZON_COGNITO_USER_POOLS',
   );
 });
 

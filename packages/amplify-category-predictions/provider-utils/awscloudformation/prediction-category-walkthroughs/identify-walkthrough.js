@@ -35,11 +35,11 @@ async function addWalkthrough(context) {
   while (!checkIfAuthExists(context)) {
     if (
       await context.amplify.confirmPrompt.run(
-        'You need to add auth (Amazon Cognito) to your project in order to add storage for user files. Do you want to add auth now?'
+        'You need to add auth (Amazon Cognito) to your project in order to add storage for user files. Do you want to add auth now?',
       )
     ) {
       try {
-        const { add } = require('amplify-category-auth');
+        const { add } = require('@atweel/amplify-category-auth');
         await add(context);
       } catch (e) {
         context.print.error('The Auth plugin is not installed in the CLI. You need to install it to use this feature');
@@ -332,7 +332,7 @@ function checkIfAuthExists(context) {
 }
 
 async function enableGuestAuth(context, resourceName, allowUnauthenticatedIdentities) {
-  const { checkRequirements, externalAuthEnable } = require('amplify-category-auth');
+  const { checkRequirements, externalAuthEnable } = require('@atweel/amplify-category-auth');
   // enable allowUnauthenticatedIdentities
   const identifyRequirements = { authSelections: 'identityPoolAndUserPool', allowUnauthenticatedIdentities };
   // getting requirement satisfaction map
@@ -373,7 +373,7 @@ async function addS3ForIdentity(context, storageAccess, bucketName, predictionsR
   const projectBackendDirPath = context.amplify.pathManager.getBackendDirPath();
 
   const defaultValues = getAllS3Defaults(context.amplify.getProjectDetails());
-  const { checkRequirements, externalAuthEnable } = require('amplify-category-auth');
+  const { checkRequirements, externalAuthEnable } = require('@atweel/amplify-category-auth');
 
   const options = {
     providerPlugin: 'awscloudformation',
@@ -597,7 +597,7 @@ async function createNewFunction(context, predictionsResourceName, s3ResourceNam
       projectBackendDirPath,
       category,
       predictionsResourceName,
-      `${predictionsResourceName}-template.json`
+      `${predictionsResourceName}-template.json`,
     );
     let identifyCFNFile = context.amplify.readJsonFile(identifyCFNFilePath);
     identifyCFNFile = generateLambdaAccessForRekognition(identifyCFNFile, functionName, s3ResourceName);
@@ -641,7 +641,7 @@ function addStorageIAMResourcestoIdentifyCFNFile(context, predictionsResourceNam
     projectBackendDirPath,
     category,
     predictionsResourceName,
-    `${predictionsResourceName}-template.json`
+    `${predictionsResourceName}-template.json`,
   );
   let identifyCFNFile = context.amplify.readJsonFile(identifyCFNFilePath);
   identifyCFNFile = generateStorageAccessForRekognition(identifyCFNFile, s3ResourceName, prefixForAdminTrigger);

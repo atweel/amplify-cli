@@ -1,4 +1,4 @@
-import { FunctionRuntimeContributorFactory } from 'amplify-function-plugin-interface';
+import { FunctionRuntimeContributorFactory } from '@atweel/amplify-function-plugin-interface';
 import { checkDependencies, packageResource, buildResource } from './runtime';
 import { localInvoke } from './localinvoke';
 

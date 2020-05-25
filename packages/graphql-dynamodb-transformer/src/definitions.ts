@@ -31,8 +31,8 @@ import {
   makeValueNode,
   withNamedNodeNamed,
   isListType,
-} from 'graphql-transformer-common';
-import { TransformerContext } from 'graphql-transformer-core';
+} from '@atweel/graphql-transformer-common';
+import { TransformerContext } from '@atweel/graphql-transformer-core';
 import { getCreatedAtFieldName, getUpdatedAtFieldName } from './ModelDirectiveArgs';
 
 const STRING_CONDITIONS = ['ne', 'eq', 'le', 'lt', 'ge', 'gt', 'contains', 'notContains', 'between', 'beginsWith'];

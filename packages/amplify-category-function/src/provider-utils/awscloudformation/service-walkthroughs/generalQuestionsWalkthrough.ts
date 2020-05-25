@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import uuid from 'uuid';
-import { FunctionParameters } from 'amplify-function-plugin-interface';
+import { FunctionParameters } from '@atweel/amplify-function-plugin-interface';
 
 /**
  * Asks general questions about the function and populates corresponding FunctionParameters

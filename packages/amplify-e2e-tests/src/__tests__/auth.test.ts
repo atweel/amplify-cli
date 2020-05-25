@@ -6,7 +6,7 @@ import {
   deleteProject,
   amplifyPushAuth,
   amplifyPush,
-} from 'amplify-e2e-core';
+} from '@atweel/amplify-e2e-core';
 import {
   addAuthWithDefault,
   removeAuthWithDefault,
@@ -21,7 +21,7 @@ import {
   addAuthViaAPIWithTrigger,
   addAuthWithMaxOptions,
   addAuthUserPoolOnly,
-} from 'amplify-e2e-core';
+} from '@atweel/amplify-e2e-core';
 import {
   createNewProjectDir,
   deleteProjectDir,
@@ -31,7 +31,7 @@ import {
   getUserPool,
   getUserPoolClients,
   getLambdaFunction,
-} from 'amplify-e2e-core';
+} from '@atweel/amplify-e2e-core';
 
 const defaultsSettings = {
   name: 'authTest',

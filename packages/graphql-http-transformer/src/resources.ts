@@ -14,8 +14,8 @@ import {
   raw,
   ref,
   set,
-} from 'graphql-mapping-template';
-import { HttpResourceIDs, ResourceConstants } from 'graphql-transformer-common';
+} from '@atweel/graphql-mapping-template';
+import { HttpResourceIDs, ResourceConstants } from '@atweel/graphql-transformer-common';
 import { HttpHeader } from './HttpTransformer';
 import Template from 'cloudform-types/types/template';
 export class ResourceFactory {
@@ -70,7 +70,7 @@ export class ResourceFactory {
       comment('START: Manually checking that all non-null arguments are provided either in the query or the body'),
       iff(
         or(nonNullArgs.map((arg: string) => parens(and([raw(`!$ctx.args.body.${arg}`), raw(`!$ctx.args.query.${arg}`)])))),
-        ref('util.error("An argument you marked as Non-Null is not present ' + 'in the query nor the body of your request."))')
+        ref('util.error("An argument you marked as Non-Null is not present ' + 'in the query nor the body of your request."))'),
       ),
       comment('END: Manually checking that all non-null arguments are provided either in the query or the body'),
     ]);
@@ -103,8 +103,8 @@ export class ResourceFactory {
                 headers: ref('util.toJson($headers)'),
               }),
             }),
-          ])
-        )
+          ]),
+        ),
       ),
       ResponseMappingTemplate: print(
         ifElse(
@@ -112,10 +112,10 @@ export class ResourceFactory {
           ifElse(
             ref('ctx.result.headers.get("Content-Type").toLowerCase().contains("xml")'),
             ref('utils.xml.toJsonString($ctx.result.body)'),
-            ref('ctx.result.body')
+            ref('ctx.result.body'),
           ),
-          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))')
-        )
+          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))'),
+        ),
       ),
     }); // .dependsOn(ResourceConstants.RESOURCES.GraphQLSchemaLogicalID)
   }
@@ -151,8 +151,8 @@ export class ResourceFactory {
                 headers: ref('util.toJson($headers)'),
               }),
             }),
-          ])
-        )
+          ]),
+        ),
       ),
       ResponseMappingTemplate: print(
         ifElse(
@@ -161,10 +161,10 @@ export class ResourceFactory {
           ifElse(
             ref('ctx.result.headers.get("Content-Type").toLowerCase().contains("xml")'),
             ref('utils.xml.toJsonString($ctx.result.body)'),
-            ref('ctx.result.body')
+            ref('ctx.result.body'),
           ),
-          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))')
-        )
+          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))'),
+        ),
       ),
     }); // .dependsOn(ResourceConstants.RESOURCES.GraphQLSchemaLogicalID)
   }
@@ -200,8 +200,8 @@ export class ResourceFactory {
                 headers: ref('util.toJson($headers)'),
               }),
             }),
-          ])
-        )
+          ]),
+        ),
       ),
       ResponseMappingTemplate: print(
         ifElse(
@@ -209,10 +209,10 @@ export class ResourceFactory {
           ifElse(
             ref('ctx.result.headers.get("Content-Type").toLowerCase().contains("xml")'),
             ref('utils.xml.toJsonString($ctx.result.body)'),
-            ref('ctx.result.body')
+            ref('ctx.result.body'),
           ),
-          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))')
-        )
+          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))'),
+        ),
       ),
     }); // .dependsOn(ResourceConstants.RESOURCES.GraphQLSchemaLogicalID)
   }
@@ -241,8 +241,8 @@ export class ResourceFactory {
                 headers: ref('util.toJson($headers)'),
               }),
             }),
-          ])
-        )
+          ]),
+        ),
       ),
       ResponseMappingTemplate: print(
         ifElse(
@@ -250,10 +250,10 @@ export class ResourceFactory {
           ifElse(
             ref('ctx.result.headers.get("Content-Type").toLowerCase().contains("xml")'),
             ref('utils.xml.toJsonString($ctx.result.body)'),
-            ref('ctx.result.body')
+            ref('ctx.result.body'),
           ),
-          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))')
-        )
+          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))'),
+        ),
       ),
     }); // .dependsOn(ResourceConstants.RESOURCES.GraphQLSchemaLogicalID)
   }
@@ -289,8 +289,8 @@ export class ResourceFactory {
                 headers: ref('util.toJson($headers)'),
               }),
             }),
-          ])
-        )
+          ]),
+        ),
       ),
       ResponseMappingTemplate: print(
         ifElse(
@@ -298,10 +298,10 @@ export class ResourceFactory {
           ifElse(
             ref('ctx.result.headers.get("Content-Type").toLowerCase().contains("xml")'),
             ref('utils.xml.toJsonString($ctx.result.body)'),
-            ref('ctx.result.body')
+            ref('ctx.result.body'),
           ),
-          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))')
-        )
+          ref('util.qr($util.appendError($ctx.result.body, $ctx.result.statusCode))'),
+        ),
       ),
     }); // .dependsOn(ResourceConstants.RESOURCES.GraphQLSchemaLogicalID)
   }

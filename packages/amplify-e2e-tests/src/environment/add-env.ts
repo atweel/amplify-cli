@@ -1,4 +1,4 @@
-import { nspawn as spawn, getCLIPath } from 'amplify-e2e-core';
+import { nspawn as spawn, getCLIPath } from '@atweel/amplify-e2e-core';
 
 export function addEnvironment(cwd: string, settings: any) {
   return new Promise((resolve, reject) => {

@@ -1,5 +1,5 @@
 import fs from 'fs-extra';
-import { BuildRequest, BuildResult } from 'amplify-function-plugin-interface/src';
+import { BuildRequest, BuildResult } from '@atweel/amplify-function-plugin-interface/src';
 import { execAsStringPromise } from './pyUtils';
 import glob from 'glob';
 

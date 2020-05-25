@@ -7,8 +7,8 @@ import {
   InputValueDefinitionNode,
 } from 'graphql';
 import { getActionInputType, makeActionInputObject, getActionInputName, addInputArgument, createInputValueAction } from './definitions';
-import { Transformer, gql, TransformerContext, InvalidDirectiveError } from 'graphql-transformer-core';
-import { ResolverResourceIDs, PredictionsResourceIDs } from 'graphql-transformer-common';
+import { Transformer, gql, TransformerContext, InvalidDirectiveError } from '@atweel/graphql-transformer-core';
+import { ResolverResourceIDs, PredictionsResourceIDs } from '@atweel/graphql-transformer-common';
 import { ResourceFactory, ActionPolicyMap } from './resources';
 import { allowedActions } from './predictions_utils';
 import { Fn } from 'cloudform-types';
@@ -36,7 +36,7 @@ export class PredictionsTransformer extends Transformer {
           convertTextToSpeech
           translateText
         }
-      `
+      `,
     );
     this.resources = new ResourceFactory();
     this.predictionsConfig = predictionsConfig;
@@ -52,14 +52,14 @@ export class PredictionsTransformer extends Transformer {
     // validate that that order the transformers are correct
     this.validateActions(actions);
     // validate storage is in the config
-    if ( !(this.predictionsConfig) || !(this.predictionsConfig.bucketName) ) {
+    if (!this.predictionsConfig || !this.predictionsConfig.bucketName) {
       throw new InvalidDirectiveError('Please configure storage in your project in order to use @predictions directive');
     }
 
     // make changes to the schema to create the input/output types
     // generate action datasources and add functions
     this.createResources(ctx, definition, actions, this.predictionsConfig.bucketName);
-  }
+  };
 
   private validateActions(actions: string[]) {
     // validate actions
@@ -117,7 +117,7 @@ export class PredictionsTransformer extends Transformer {
       if (!ctx.getResource(PredictionsResourceIDs.getPredictionFunctionName(action))) {
         ctx.setResource(
           PredictionsResourceIDs.getPredictionFunctionName(action),
-          this.resources.createActionFunction(action, actionDSConfig.id)
+          this.resources.createActionFunction(action, actionDSConfig.id),
         );
         ctx.mapResourceToStack(PREDICTIONS_DIRECTIVE_STACK, PredictionsResourceIDs.getPredictionFunctionName(action));
       }

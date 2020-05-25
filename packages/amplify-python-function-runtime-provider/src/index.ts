@@ -1,4 +1,4 @@
-import { FunctionRuntimeContributorFactory } from 'amplify-function-plugin-interface';
+import { FunctionRuntimeContributorFactory } from '@atweel/amplify-function-plugin-interface';
 import { pythonBuild } from './util/buildUtils';
 import { pythonPackage } from './util/packageUtils';
 import { pythonInvoke } from './util/invokeUtil';

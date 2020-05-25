@@ -1,5 +1,5 @@
 {
-  "name": "amplify-graphiql-explorer",
+  "name": "@atweel/amplify-graphiql-explorer",
   "version": "1.3.2",
   "private": true,
   "dependencies": {

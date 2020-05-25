@@ -1,5 +1,5 @@
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { GraphQLTransform } from 'graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
 import { VersionedModelTransformer } from 'graphql-versioned-transformer';
 import { GraphQLClient } from './utils/graphql-client';
 import { deploy, launchDDBLocal, terminateDDB, logDebug } from './utils/index';
@@ -73,7 +73,7 @@ test('Test createPost mutation', async () => {
             version
         }
     }`,
-    {}
+    {},
   );
   expect(response.data.createPost.id).toBeDefined();
   expect(response.data.createPost.title).toEqual('Hello, World!');
@@ -93,7 +93,7 @@ test('Test updatePost mutation', async () => {
             version
         }
     }`,
-    {}
+    {},
   );
   expect(createResponse.data.createPost.id).toBeDefined();
   expect(createResponse.data.createPost.title).toEqual('Test Update');
@@ -110,7 +110,7 @@ test('Test updatePost mutation', async () => {
             version
         }
     }`,
-    {}
+    {},
   );
   expect(updateResponse.data.updatePost.title).toEqual('Bye, World!');
   expect(updateResponse.data.updatePost.version).toEqual(2);
@@ -127,7 +127,7 @@ test('Test failed updatePost mutation with wrong version', async () => {
             version
         }
     }`,
-    {}
+    {},
   );
   expect(createResponse.data.createPost.id).toBeDefined();
   expect(createResponse.data.createPost.title).toEqual('Test Update');
@@ -144,7 +144,7 @@ test('Test failed updatePost mutation with wrong version', async () => {
             version
         }
     }`,
-    {}
+    {},
   );
   expect(updateResponse.errors.length).toEqual(1);
   expect((updateResponse.errors[0] as any).errorType).toEqual('DynamoDB:ConditionalCheckFailedException');
@@ -161,7 +161,7 @@ test('Test deletePost mutation', async () => {
             updatedAt
         }
     }`,
-    {}
+    {},
   );
   expect(createResponse.data.createPost.id).toBeDefined();
   expect(createResponse.data.createPost.title).toEqual('Test Delete');
@@ -174,7 +174,7 @@ test('Test deletePost mutation', async () => {
             version
         }
     }`,
-    {}
+    {},
   );
   expect(deleteResponse.data.deletePost.title).toEqual('Test Delete');
   expect(deleteResponse.data.deletePost.version).toEqual(createResponse.data.createPost.version);
@@ -191,7 +191,7 @@ test('Test deletePost mutation with wrong version', async () => {
             updatedAt
         }
     }`,
-    {}
+    {},
   );
   expect(createResponse.data.createPost.id).toBeDefined();
   expect(createResponse.data.createPost.title).toEqual('Test Delete');
@@ -204,7 +204,7 @@ test('Test deletePost mutation with wrong version', async () => {
             version
         }
     }`,
-    {}
+    {},
   );
   expect(deleteResponse.errors.length).toEqual(1);
   expect((deleteResponse.errors[0] as any).errorType).toEqual('DynamoDB:ConditionalCheckFailedException');

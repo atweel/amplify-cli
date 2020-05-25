@@ -1,5 +1,5 @@
 {
-  "name": "amplify-dynamodb-simulator",
+  "name": "@atweel/amplify-dynamodb-simulator",
   "version": "1.14.0",
   "description": "DynamoDB emulator nodejs wrapper",
   "repository": {

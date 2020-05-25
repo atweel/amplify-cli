@@ -1,5 +1,5 @@
 {
-  "name": "graphql-mapping-template",
+  "name": "@atweel/graphql-mapping-template",
   "version": "4.13.4",
   "description": "An AST wrapper around AWS AppSync resolvers",
   "repository": {

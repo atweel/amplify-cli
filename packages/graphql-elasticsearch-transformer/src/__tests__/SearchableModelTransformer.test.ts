@@ -1,5 +1,5 @@
-import { GraphQLTransform, TRANSFORM_CURRENT_VERSION, ConflictHandlerType } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform, TRANSFORM_CURRENT_VERSION, ConflictHandlerType } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { SearchableModelTransformer } from '../SearchableModelTransformer';
 
 test('Test SearchableModelTransformer validation happy case', () => {

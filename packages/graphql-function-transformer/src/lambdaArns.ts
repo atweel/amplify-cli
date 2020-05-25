@@ -1,5 +1,5 @@
 import { Fn, Refs } from 'cloudform-types';
-import { ResourceConstants } from 'graphql-transformer-common';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
 
 export function lambdaArnResource(name: string, region?: string) {
   const substitutions = {};
@@ -9,7 +9,7 @@ export function lambdaArnResource(name: string, region?: string) {
   return Fn.If(
     ResourceConstants.CONDITIONS.HasEnvironmentParameter,
     Fn.Sub(lambdaArnKey(name, region), substitutions),
-    Fn.Sub(lambdaArnKey(removeEnvReference(name), region), {})
+    Fn.Sub(lambdaArnKey(removeEnvReference(name), region), {}),
   );
 }
 

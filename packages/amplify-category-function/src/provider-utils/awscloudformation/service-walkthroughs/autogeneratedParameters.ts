@@ -1,5 +1,5 @@
 import uuid from 'uuid';
-import { FunctionParameters } from 'amplify-function-plugin-interface';
+import { FunctionParameters } from '@atweel/amplify-function-plugin-interface';
 
 /**
  * Populates FunctionParameters that do not require any additional input

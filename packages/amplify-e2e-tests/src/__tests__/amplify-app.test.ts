@@ -7,8 +7,8 @@ import {
   amplifyPush,
   addIntegAccountInConfig,
 } from '../amplify-app-helpers/amplify-app-setup';
-import { createNewProjectDir, deleteProjectDir } from 'amplify-e2e-core';
-import { deleteProject } from 'amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir } from '@atweel/amplify-e2e-core';
+import { deleteProject } from '@atweel/amplify-e2e-core';
 import {
   validateProject,
   validateProjectConfig,

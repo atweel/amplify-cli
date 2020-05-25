@@ -1,4 +1,4 @@
-import { Transformer, TransformerContext, getDirectiveArguments, gql, InvalidDirectiveError } from 'graphql-transformer-core';
+import { Transformer, TransformerContext, getDirectiveArguments, gql, InvalidDirectiveError } from '@atweel/graphql-transformer-core';
 import { DirectiveNode, ObjectTypeDefinitionNode } from 'graphql';
 import { ResourceFactory } from './resources';
 import {
@@ -16,9 +16,15 @@ import {
   blankObject,
   makeListType,
   makeInputValueDefinition,
-} from 'graphql-transformer-common';
-import { Expression, str } from 'graphql-mapping-template';
-import { ResolverResourceIDs, SearchableResourceIDs, ModelResourceIDs, getBaseType, ResourceConstants } from 'graphql-transformer-common';
+} from '@atweel/graphql-transformer-common';
+import { Expression, str } from '@atweel/graphql-mapping-template';
+import {
+  ResolverResourceIDs,
+  SearchableResourceIDs,
+  ModelResourceIDs,
+  getBaseType,
+  ResourceConstants,
+} from '@atweel/graphql-transformer-common';
 import path = require('path');
 
 const STACK_NAME = 'SearchableStack';

@@ -1,7 +1,7 @@
-import { initJSProjectWithProfile, deleteProject, amplifyPushAuth } from 'amplify-e2e-core';
-import { createNewProjectDir, deleteProjectDir, getCollection } from 'amplify-e2e-core';
-import { addConvert, addInterpret, addIdentifyCollection } from 'amplify-e2e-core';
-import { addAuthWithDefault } from 'amplify-e2e-core';
+import { initJSProjectWithProfile, deleteProject, amplifyPushAuth } from '@atweel/amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir, getCollection } from '@atweel/amplify-e2e-core';
+import { addConvert, addInterpret, addIdentifyCollection } from '@atweel/amplify-e2e-core';
+import { addAuthWithDefault } from '@atweel/amplify-e2e-core';
 import { getAWSExports } from '../aws-exports/awsExports';
 
 describe('amplify add predictions', () => {

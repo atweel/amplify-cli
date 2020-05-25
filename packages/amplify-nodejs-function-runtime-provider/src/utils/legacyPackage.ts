@@ -1,7 +1,7 @@
 import archiver from 'archiver';
 import fs from 'fs-extra';
 import path from 'path';
-import { PackageRequest, PackageResult } from 'amplify-function-plugin-interface/src';
+import { PackageRequest, PackageResult } from '@atweel/amplify-function-plugin-interface/src';
 
 export async function packageResource(request: PackageRequest, context: any): Promise<PackageResult> {
   if (!request.lastPackageTimestamp || request.lastBuildTimestamp > request.lastPackageTimestamp) {

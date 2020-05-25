@@ -1,5 +1,10 @@
 import { S3, Amplify } from 'aws-sdk';
-import { initJSProjectWithProfile, initIosProjectWithProfile, initAndroidProjectWithProfile, deleteProject } from 'amplify-e2e-core';
+import {
+  initJSProjectWithProfile,
+  initIosProjectWithProfile,
+  initAndroidProjectWithProfile,
+  deleteProject,
+} from '@atweel/amplify-e2e-core';
 import {
   createNewProjectDir,
   deleteProjectDir,
@@ -9,15 +14,15 @@ import {
   getAmplifyConfigIOSPath,
   getAWSConfigAndroidPath,
   getAmplifyConfigAndroidPath,
-} from 'amplify-e2e-core';
+} from '@atweel/amplify-e2e-core';
 import { addEnvironment, checkoutEnvironment, removeEnvironment } from '../environment/add-env';
-import { addApiWithoutSchema } from 'amplify-e2e-core';
+import { addApiWithoutSchema } from '@atweel/amplify-e2e-core';
 import { addCodegen } from '../codegen/add';
-import { addS3 } from 'amplify-e2e-core';
-import { amplifyPushWithoutCodegen } from 'amplify-e2e-core';
-import { addAuthWithDefault } from 'amplify-e2e-core';
+import { addS3 } from '@atweel/amplify-e2e-core';
+import { amplifyPushWithoutCodegen } from '@atweel/amplify-e2e-core';
+import { addAuthWithDefault } from '@atweel/amplify-e2e-core';
 import * as fs from 'fs-extra';
-import { initProject, addPinpointAnalytics, pushToCloud, pinpointAppExist, amplifyDelete } from 'amplify-e2e-core';
+import { initProject, addPinpointAnalytics, pushToCloud, pinpointAppExist, amplifyDelete } from '@atweel/amplify-e2e-core';
 import { getAWSExportsPath } from '../aws-exports/awsExports';
 import _ from 'lodash';
 

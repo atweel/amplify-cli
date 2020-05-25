@@ -1,4 +1,4 @@
-import { Transformer, TransformerContext, InvalidDirectiveError, gql, getDirectiveArguments } from 'graphql-transformer-core';
+import { Transformer, TransformerContext, InvalidDirectiveError, gql, getDirectiveArguments } from '@atweel/graphql-transformer-core';
 import {
   DirectiveNode,
   ObjectTypeDefinitionNode,
@@ -18,7 +18,7 @@ import {
   SortKeyFieldInfoTypeName,
   CONDITIONS_MINIMUM_VERSION,
   makeAttributeTypeEnum,
-} from 'graphql-dynamodb-transformer';
+} from '@atweel/graphql-dynamodb-transformer';
 import {
   getBaseType,
   isListType,
@@ -32,8 +32,8 @@ import {
   attributeTypeFromScalar,
   makeScalarKeyConditionForType,
   makeNamedType,
-} from 'graphql-transformer-common';
-import { ResolverResourceIDs, ModelResourceIDs } from 'graphql-transformer-common';
+} from '@atweel/graphql-transformer-common';
+import { ResolverResourceIDs, ModelResourceIDs } from '@atweel/graphql-transformer-common';
 import { updateCreateInputWithConnectionField, updateUpdateInputWithConnectionField } from './definitions';
 import Table, { KeySchema, GlobalSecondaryIndex, LocalSecondaryIndex } from 'cloudform-types/types/dynamoDb/table';
 

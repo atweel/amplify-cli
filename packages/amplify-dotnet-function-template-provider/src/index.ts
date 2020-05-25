@@ -1,4 +1,4 @@
-import { FunctionTemplateContributorFactory } from 'amplify-function-plugin-interface';
+import { FunctionTemplateContributorFactory } from '@atweel/amplify-function-plugin-interface';
 
 import { provideHelloWorld } from './providers/helloWorldProvider';
 import { provideServerless } from './providers/serverlessProvider';

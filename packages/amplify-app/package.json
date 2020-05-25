@@ -1,5 +1,5 @@
 {
-  "name": "amplify-app",
+  "name": "@atweel/amplify-app",
   "version": "2.16.0",
   "description": "Amplify CLI",
   "repository": {
@@ -15,7 +15,7 @@
     "aws"
   ],
   "bin": {
-    "amplify-app": "bin/amplify-app"
+    "@atweel/amplify-app": "bin/amplify-app"
   },
   "publishConfig": {
     "access": "public"
@@ -25,12 +25,12 @@
   },
   "engines": {
     "node": ">=10.0.0",
-    "@aws-amplify/cli": ">=4.18.0"
+    "@atweel/amplify-cli": ">=4.18.0"
   },
   "dependencies": {
-    "amplify-frontend-android": "2.13.2",
-    "amplify-frontend-ios": "2.13.2",
-    "amplify-frontend-javascript": "2.13.2",
+    "@atweel/amplify-frontend-android": "^2.13.2",
+    "@atweel/amplify-frontend-ios": "^2.13.2",
+    "@atweel/amplify-frontend-javascript": "^2.13.2",
     "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
     "graphql": "^14.5.8",

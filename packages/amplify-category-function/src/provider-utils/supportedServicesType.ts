@@ -1,4 +1,4 @@
-import { FunctionParameters } from 'amplify-function-plugin-interface';
+import { FunctionParameters } from '@atweel/amplify-function-plugin-interface';
 
 export type SupportedServices = Record<Service, ServiceConfig>;
 

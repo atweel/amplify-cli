@@ -10,12 +10,12 @@ import {
   DeleteUserPoolRequest,
   DeleteUserRequest,
 } from 'aws-sdk/clients/cognitoidentityserviceprovider';
-import { ResourceConstants } from 'graphql-transformer-common';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
 import { IAM as cfnIAM, Cognito as cfnCognito } from 'cloudform-types';
 import { AuthenticationDetails } from 'amazon-cognito-identity-js';
 import { default as CognitoClient } from 'aws-sdk/clients/cognitoidentityserviceprovider';
 import TestStorage from './TestStorage';
-import DeploymentResources from 'graphql-transformer-core/lib/DeploymentResources';
+import DeploymentResources from '@atweel/graphql-transformer-core/lib/DeploymentResources';
 
 interface E2Econfiguration {
   STACK_NAME?: string;

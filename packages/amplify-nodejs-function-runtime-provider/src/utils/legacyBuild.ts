@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import glob from 'glob';
 import childProcess from 'child_process';
-import { BuildRequest, BuildResult } from 'amplify-function-plugin-interface';
+import { BuildRequest, BuildResult } from '@atweel/amplify-function-plugin-interface';
 
 // copied from the existing build-resources.js file in amplify-cli with changes for new interface
 export async function buildResource(request: BuildRequest): Promise<BuildResult> {

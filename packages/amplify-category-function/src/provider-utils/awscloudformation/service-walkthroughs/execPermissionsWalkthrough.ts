@@ -1,7 +1,7 @@
 import { constructCFModelTableNameComponent, constructCFModelTableArnComponent } from '../utils/cloudformationHelpers';
 import inquirer from 'inquirer';
 import path from 'path';
-import * as TransformPackage from 'graphql-transformer-core';
+import * as TransformPackage from '@atweel/graphql-transformer-core';
 import _ from 'lodash';
 import { topLevelCommentPrefix, topLevelCommentSuffix, envVarPrintoutPrefix } from '../../../constants';
 

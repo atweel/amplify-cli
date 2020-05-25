@@ -1,12 +1,12 @@
 import { InputValueDefinitionNode, InputObjectTypeDefinitionNode, Kind, FieldDefinitionNode } from 'graphql';
-import { makeNamedType, makeNonNullType, makeListType } from 'graphql-transformer-common';
+import { makeNamedType, makeNonNullType, makeListType } from '@atweel/graphql-transformer-common';
 
 function inputValueDefinition(inputValue: string, namedType: string, isNonNull: boolean = false): InputValueDefinitionNode {
   return {
     kind: Kind.INPUT_VALUE_DEFINITION,
-        name: { kind: 'Name' as 'Name', value: inputValue },
-        type: isNonNull ? makeNonNullType(makeNamedType(namedType)) : makeNamedType(namedType),
-        directives: [],
+    name: { kind: 'Name' as 'Name', value: inputValue },
+    type: isNonNull ? makeNonNullType(makeNamedType(namedType)) : makeNamedType(namedType),
+    directives: [],
   };
 }
 
@@ -23,29 +23,29 @@ export function makeActionInputObject(fieldName: string, fields: InputValueDefin
     kind: Kind.INPUT_OBJECT_TYPE_DEFINITION,
     name: { kind: 'Name' as 'Name', value: `${capitalizeFirstLetter(fieldName)}Input` },
     fields,
-    directives: []
+    directives: [],
   };
 }
 
 export function getActionInputType(action: string, fieldName: string, isFirst: boolean = false): InputObjectTypeDefinitionNode {
   const actionInputFields: { [action: string]: InputValueDefinitionNode[] } = {
-    identifyText: [ inputValueDefinition('key', 'String', true) ],
-    identifyLabels: [ inputValueDefinition('key', 'String', true) ],
+    identifyText: [inputValueDefinition('key', 'String', true)],
+    identifyLabels: [inputValueDefinition('key', 'String', true)],
     translateText: [
       inputValueDefinition('sourceLanguage', 'String', true),
       inputValueDefinition('targetLanguage', 'String', true),
-      ...( isFirst ? [ inputValueDefinition('text', 'String', true) ] : []),
+      ...(isFirst ? [inputValueDefinition('text', 'String', true)] : []),
     ],
     convertTextToSpeech: [
       inputValueDefinition('voiceID', 'String', true),
-      ...( isFirst ? [ inputValueDefinition('text', 'String', true) ] : []),
-    ]
+      ...(isFirst ? [inputValueDefinition('text', 'String', true)] : []),
+    ],
   };
   return {
     kind: Kind.INPUT_OBJECT_TYPE_DEFINITION,
     name: { kind: 'Name', value: getActionInputName(action, fieldName) },
     fields: actionInputFields[action],
-    directives: []
+    directives: [],
   };
 }
 
@@ -63,7 +63,6 @@ export function addInputArgument(field: FieldDefinitionNode, fieldName: string, 
     type: isList ? makeListType(makeNamedType('String')) : makeNamedType('String'),
   };
 }
-
 
 export function createInputValueAction(action: string, fieldName: string): InputValueDefinitionNode {
   return {

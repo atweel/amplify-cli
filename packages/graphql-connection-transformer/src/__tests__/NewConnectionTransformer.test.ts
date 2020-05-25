@@ -8,11 +8,11 @@ import {
   InputObjectTypeDefinitionNode,
   InputValueDefinitionNode,
 } from 'graphql';
-import { GraphQLTransform, ConflictHandlerType, TRANSFORM_CURRENT_VERSION } from 'graphql-transformer-core';
-import { ResolverResourceIDs } from 'graphql-transformer-common';
+import { GraphQLTransform, ConflictHandlerType, TRANSFORM_CURRENT_VERSION } from '@atweel/graphql-transformer-core';
+import { ResolverResourceIDs } from '@atweel/graphql-transformer-common';
 import { ModelConnectionTransformer } from '../ModelConnectionTransformer';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { KeyTransformer } from 'graphql-key-transformer';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { KeyTransformer } from '@atweel/graphql-key-transformer';
 
 test('ModelConnectionTransformer should fail if connection was called on an object that is not a Model type.', () => {
   const validSchema = `

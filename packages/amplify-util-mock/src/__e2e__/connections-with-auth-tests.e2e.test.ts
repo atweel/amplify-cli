@@ -1,7 +1,7 @@
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
-import { ModelConnectionTransformer } from 'graphql-connection-transformer';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { GraphQLTransform } from 'graphql-transformer-core';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
+import { ModelConnectionTransformer } from '@atweel/graphql-connection-transformer';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
 import { signUpAddToGroupAndGetJwtToken } from './utils/cognito-utils';
 import { GraphQLClient } from './utils/graphql-client';
 import { deploy, launchDDBLocal, logDebug, terminateDDB } from './utils/index';
@@ -171,7 +171,7 @@ test('Test creating a post and immediately view it via the User.posts connection
           id
       }
   }`,
-    {}
+    {},
   );
   logDebug(createUser1);
   expect(createUser1.data.createUser.id).toEqual('user1@test.com');
@@ -184,7 +184,7 @@ test('Test creating a post and immediately view it via the User.posts connection
           owner
       }
   }`,
-    {}
+    {},
   );
   logDebug(response);
   expect(response.data.createPost.id).toBeDefined();
@@ -206,7 +206,7 @@ test('Test creating a post and immediately view it via the User.posts connection
           }
       }
   }`,
-    {}
+    {},
   );
   logDebug(JSON.stringify(getResponse, null, 4));
   expect(getResponse.data.getUser.posts.items[0].id).toBeDefined();
@@ -224,7 +224,7 @@ test('Testing reading an owner protected field as a non owner', async () => {
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response1);
   expect(response1.data.createFieldProtected.id).toEqual('1');
@@ -239,7 +239,7 @@ test('Testing reading an owner protected field as a non owner', async () => {
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.getFieldProtected.ownerOnly).toBeNull();
@@ -253,7 +253,7 @@ test('Testing reading an owner protected field as a non owner', async () => {
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response3);
   expect(response3.data.getFieldProtected.id).toEqual('1');
@@ -270,7 +270,7 @@ test('Test that @connection resolvers respect @model read operations.', async ()
           name
       }
   }`,
-    {}
+    {},
   );
   logDebug(response1);
   expect(response1.data.createOpenTopLevel.id).toEqual('1');
@@ -285,7 +285,7 @@ test('Test that @connection resolvers respect @model read operations.', async ()
           name
       }
   }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.createConnectionProtected.id).toEqual('1');
@@ -305,7 +305,7 @@ test('Test that @connection resolvers respect @model read operations.', async ()
           }
       }
   }`,
-    {}
+    {},
   );
   logDebug(response3);
   expect(response3.data.getOpenTopLevel.id).toEqual('1');
@@ -324,7 +324,7 @@ test('Test that @connection resolvers respect @model read operations.', async ()
           }
       }
   }`,
-    {}
+    {},
   );
   logDebug(response4);
   expect(response4.data.getOpenTopLevel.id).toEqual('1');
@@ -341,7 +341,7 @@ test('Test that owners cannot set the field of a FieldProtected object unless au
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(JSON.stringify(response1));
   expect(response1.data.createFieldProtected.id).toEqual('2');
@@ -356,7 +356,7 @@ test('Test that owners cannot set the field of a FieldProtected object unless au
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.createFieldProtected).toBeNull();
@@ -372,7 +372,7 @@ test('Test that owners cannot set the field of a FieldProtected object unless au
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response3);
   expect(response3.data.createFieldProtected.id).toEqual('4');
@@ -392,7 +392,7 @@ test('Test that owners cannot update the field of a FieldProtected object unless
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(JSON.stringify(response1));
   expect(response1.data.createFieldProtected.id).not.toBeNull();
@@ -407,7 +407,7 @@ test('Test that owners cannot update the field of a FieldProtected object unless
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.updateFieldProtected).toBeNull();
@@ -423,7 +423,7 @@ test('Test that owners cannot update the field of a FieldProtected object unless
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response3);
   expect(response3.data.updateFieldProtected.id).toEqual(response1.data.createFieldProtected.id);
@@ -439,7 +439,7 @@ test('Test that owners cannot update the field of a FieldProtected object unless
           ownerOnly
       }
   }`,
-    {}
+    {},
   );
   logDebug(response4);
   expect(response4.data.updateFieldProtected.id).toEqual(response1.data.createFieldProtected.id);

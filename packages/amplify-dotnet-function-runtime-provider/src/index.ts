@@ -1,4 +1,4 @@
-import { FunctionRuntimeContributorFactory } from 'amplify-function-plugin-interface';
+import { FunctionRuntimeContributorFactory } from '@atweel/amplify-function-plugin-interface';
 import { dotnetcore31 } from './constants';
 import { detectDotNetCore } from './utils/detect';
 import { build } from './utils/build';

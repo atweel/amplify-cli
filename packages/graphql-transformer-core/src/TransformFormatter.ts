@@ -1,13 +1,13 @@
 import { TransformerContext } from './TransformerContext';
 import { Fn, StringParameter } from 'cloudform-types';
 import Resource from 'cloudform-types/types/resource';
-import { makeOperationType, makeSchema } from 'graphql-transformer-common';
+import { makeOperationType, makeSchema } from '@atweel/graphql-transformer-common';
 import { ObjectTypeDefinitionNode, print } from 'graphql';
 import { stripDirectives } from './stripDirectives';
 import { SchemaResourceUtil } from './util/SchemaResourceUtil';
 import splitStack from './util/splitStack';
 import { DeploymentResources, ResolversFunctionsAndSchema, ResolverMap } from './DeploymentResources';
-import { ResourceConstants } from 'graphql-transformer-common';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
 
 export class TransformFormatter {
   private schemaResourceUtil = new SchemaResourceUtil();
@@ -96,7 +96,7 @@ export class TransformFormatter {
         kind: 'Document',
         definitions: Object.keys(ctx.nodeMap).map((k: string) => ctx.getType(k)),
       },
-      ['aws_subscribe', 'aws_auth', 'aws_api_key', 'aws_iam', 'aws_oidc', 'aws_cognito_user_pools', 'deprecated']
+      ['aws_subscribe', 'aws_auth', 'aws_api_key', 'aws_iam', 'aws_oidc', 'aws_cognito_user_pools', 'deprecated'],
     );
     const SDL = print(astSansDirectives);
     return SDL;

@@ -1,5 +1,5 @@
 {
-  "name": "amplify-ui-tests",
+  "name": "@atweel/amplify-ui-tests",
   "version": "2.13.3",
   "description": "",
   "main": "index.js",

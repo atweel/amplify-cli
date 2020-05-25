@@ -1,6 +1,6 @@
 import * as path from 'path';
 
-import { createNewProjectDir, deleteProjectDir } from 'amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir } from '@atweel/amplify-e2e-core';
 
 import { newPlugin, verifyPlugin } from '../plugin';
 

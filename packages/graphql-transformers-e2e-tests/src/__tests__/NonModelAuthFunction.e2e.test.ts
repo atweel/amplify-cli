@@ -1,8 +1,8 @@
-import { ResourceConstants } from 'graphql-transformer-common';
-import { GraphQLTransform, gql } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { FunctionTransformer } from 'graphql-function-transformer';
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { GraphQLTransform, gql } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { FunctionTransformer } from '@atweel/graphql-function-transformer';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
 import { CloudFormationClient } from '../CloudFormationClient';
 import { Output } from 'aws-sdk/clients/cloudformation';
 import { default as moment } from 'moment';

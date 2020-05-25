@@ -10,7 +10,7 @@ import {
 } from './RelationalDBSchemaTransformerUtils';
 import { AuroraDataAPIClient } from './AuroraDataAPIClient';
 import { IRelationalDBReader } from './IRelationalDBReader';
-import { toUpper } from 'graphql-transformer-common';
+import { toUpper } from '@atweel/graphql-transformer-common';
 
 /**
  * A class to manage interactions with a Aurora Serverless MySQL Relational Databse
@@ -168,7 +168,7 @@ export class AuroraServerlessMySQLDatabaseReader implements IRelationalDBReader 
       primaryKey,
       primaryKeyType,
       stringFieldList,
-      intFieldList
+      intFieldList,
     );
   };
 }

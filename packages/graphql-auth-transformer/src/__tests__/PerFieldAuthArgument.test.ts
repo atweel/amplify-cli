@@ -1,6 +1,6 @@
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { ResourceConstants } from 'graphql-transformer-common';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { ModelAuthTransformer } from '../ModelAuthTransformer';
 
 test('Test that subscriptions are only generated if the respective mutation operation exists', () => {
@@ -35,7 +35,7 @@ test('Test that subscriptions are only generated if the respective mutation oper
   // expect to generate subscription resolvers for create and update only
   expect(out).toBeDefined();
   expect(out.rootStack.Resources[ResourceConstants.RESOURCES.GraphQLAPILogicalID].Properties.AuthenticationType).toEqual(
-    'AMAZON_COGNITO_USER_POOLS'
+    'AMAZON_COGNITO_USER_POOLS',
   );
   expect(out.resolvers['Salary.secret.res.vtl']).toContain('#if( $operation == "Mutation" )');
   expect(out.resolvers['Salary.secret.res.vtl']).toMatchSnapshot();
@@ -75,7 +75,7 @@ test('Test per-field @auth without model', () => {
 
   expect(out).toBeDefined();
   expect(out.resolvers['Query.listContext.req.vtl']).toContain(
-    '## Authorization rule: { allow: groups, groups: ["Allowed"], groupClaim: "cognito:groups" } **'
+    '## Authorization rule: { allow: groups, groups: ["Allowed"], groupClaim: "cognito:groups" } **',
   );
   expect(out.resolvers['Query.listContext.req.vtl']).toMatchSnapshot();
 });

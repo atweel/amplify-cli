@@ -1,5 +1,5 @@
 const CategoryName = 'interactions';
-const { checkRequirements, externalAuthEnable } = require('amplify-category-auth');
+const { checkRequirements, externalAuthEnable } = require('@atweel/amplify-category-auth');
 
 async function ensureAuth(context) {
   const interactionsRequirements = { authSelections: 'identityPoolOnly', allowUnauthenticatedIdentities: true };

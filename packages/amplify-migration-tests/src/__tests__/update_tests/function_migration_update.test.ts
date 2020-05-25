@@ -1,9 +1,9 @@
-import { initJSProjectWithProfile, deleteProject, amplifyPushAuth, amplifyPush } from 'amplify-e2e-core';
-import { addFunction, updateFunction } from 'amplify-e2e-core';
-import { createNewProjectDir, deleteProjectDir, getProjectMeta, overrideFunctionSrc } from 'amplify-e2e-core';
-import { addApiWithSchema } from 'amplify-e2e-core';
+import { initJSProjectWithProfile, deleteProject, amplifyPushAuth, amplifyPush } from '@atweel/amplify-e2e-core';
+import { addFunction, updateFunction } from '@atweel/amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir, getProjectMeta, overrideFunctionSrc } from '@atweel/amplify-e2e-core';
+import { addApiWithSchema } from '@atweel/amplify-e2e-core';
 
-import { invokeFunction } from 'amplify-e2e-core';
+import { invokeFunction } from '@atweel/amplify-e2e-core';
 
 describe('amplify function migration', () => {
   let projRoot: string;

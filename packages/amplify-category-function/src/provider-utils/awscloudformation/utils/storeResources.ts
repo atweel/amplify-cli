@@ -1,4 +1,4 @@
-import { FunctionParameters, FunctionTriggerParameters, FunctionBreadcrumbs } from 'amplify-function-plugin-interface';
+import { FunctionParameters, FunctionTriggerParameters, FunctionBreadcrumbs } from '@atweel/amplify-function-plugin-interface';
 import path from 'path';
 import fs from 'fs-extra';
 import { categoryName, provider, serviceName } from './constants';

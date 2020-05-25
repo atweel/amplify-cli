@@ -1,7 +1,7 @@
 {
-  "name": "amplify-category-interactions",
+  "name": "@atweel/amplify-category-interactions",
   "version": "2.3.7",
-  "description": "amplify-cli interactions plugin",
+  "description": "@atweel/amplify-cli interactions plugin",
   "repository": {
     "type": "git",
     "url": "https://github.com/aws-amplify/amplify-cli.git",
@@ -15,7 +15,7 @@
     "aws"
   ],
   "dependencies": {
-    "amplify-category-auth": "2.15.6",
+    "@atweel/amplify-category-auth": "2.15.6",
     "fs-extra": "^8.1.0",
     "fuzzy": "^0.1.3",
     "inquirer": "^7.0.3",

@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import glob from 'glob';
 import * as execa from 'execa';
-import { BuildRequest, BuildResult } from 'amplify-function-plugin-interface';
+import { BuildRequest, BuildResult } from '@atweel/amplify-function-plugin-interface';
 import { executableName } from '../constants';
 
 export const build = async (request: BuildRequest): Promise<BuildResult> => {

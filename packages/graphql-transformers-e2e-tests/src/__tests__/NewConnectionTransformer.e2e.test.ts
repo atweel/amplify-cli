@@ -1,9 +1,9 @@
-import { ResourceConstants } from 'graphql-transformer-common';
-import { GraphQLTransform, DeploymentResources } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { KeyTransformer } from 'graphql-key-transformer';
-import { ModelConnectionTransformer } from 'graphql-connection-transformer';
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { GraphQLTransform, DeploymentResources } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { KeyTransformer } from '@atweel/graphql-key-transformer';
+import { ModelConnectionTransformer } from '@atweel/graphql-connection-transformer';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
 import { CloudFormationClient } from '../CloudFormationClient';
 import { Output } from 'aws-sdk/clients/cloudformation';
 import { GraphQLClient } from '../GraphQLClient';
@@ -455,9 +455,10 @@ test(`Test the default limit.`, async () => {
         }`,
       {},
     );
-  };
+  }
 
-  const createResponse = await GRAPHQL_CLIENT.query(`
+  const createResponse = await GRAPHQL_CLIENT.query(
+    `
     mutation {
       createPost(input: {authorID: "11", postContents: "helloWorld"}) {
         authorID
@@ -470,9 +471,11 @@ test(`Test the default limit.`, async () => {
           }
         }
       }
-    }`,{});
+    }`,
+    {},
+  );
   expect(createResponse).toBeDefined();
-  expect(createResponse.data.createPost.authorID).toEqual("11");
+  expect(createResponse.data.createPost.authorID).toEqual('11');
   expect(createResponse.data.createPost.authors.items.length).toEqual(50);
 });
 
@@ -526,13 +529,16 @@ test('Test PostModel.authors query with composite sortkey passed as arg.', async
 });
 
 test('Test User.authorPosts.posts query followed by getItem (intermediary model)', async () => {
-  const createPostAuthor = await GRAPHQL_CLIENT.query(`mutation {
+  const createPostAuthor = await GRAPHQL_CLIENT.query(
+    `mutation {
         createPostAuthor(input: { authorID: "123", postID: "321" }) {
             id
             authorID
             postID
         }
-    }`, {});
+    }`,
+    {},
+  );
   expect(createPostAuthor.data.createPostAuthor.id).toBeDefined();
   expect(createPostAuthor.data.createPostAuthor.authorID).toEqual('123');
   expect(createPostAuthor.data.createPostAuthor.postID).toEqual('321');

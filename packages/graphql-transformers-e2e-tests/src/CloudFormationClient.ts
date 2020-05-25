@@ -1,6 +1,6 @@
 import { CloudFormation } from 'aws-sdk';
 import { DescribeStacksOutput, StackStatus } from 'aws-sdk/clients/cloudformation';
-import { ResourceConstants } from 'graphql-transformer-common';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
 
 async function promisify<I, O>(fun: (arg: I, cb: (e: Error, d: O) => void) => void, args: I, that: any): Promise<O> {
   return await new Promise<O>((resolve, reject) => {
@@ -55,7 +55,7 @@ export class CloudFormationClient {
         Parameters: params,
         TemplateBody: JSON.stringify(template),
       },
-      this.client
+      this.client,
     );
   }
 
@@ -77,7 +77,7 @@ export class CloudFormationClient {
             return reject(`No stack named: ${name}`);
           }
           resolve(data.Stacks[0]);
-        }
+        },
       );
     });
   }
@@ -107,7 +107,7 @@ export class CloudFormationClient {
       'UPDATE_ROLLBACK_IN_PROGRESS',
     ],
     maxPolls: number = 1000,
-    pollInterval: number = 20
+    pollInterval: number = 20,
   ): Promise<CloudFormation.Stack> {
     const stack = await this.describeStack(name);
     if (success.includes(stack.StackStatus)) {
@@ -130,7 +130,7 @@ export class CloudFormationClient {
           failure,
           poll,
           maxPolls - 1,
-          pollInterval
+          pollInterval,
         );
       }
     }

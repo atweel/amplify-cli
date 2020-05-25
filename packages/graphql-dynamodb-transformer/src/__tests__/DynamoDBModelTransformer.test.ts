@@ -11,7 +11,7 @@ import {
   TypeNode,
   NamedTypeNode,
 } from 'graphql';
-import { GraphQLTransform, TRANSFORM_BASE_VERSION, TRANSFORM_CURRENT_VERSION } from 'graphql-transformer-core';
+import { GraphQLTransform, TRANSFORM_BASE_VERSION, TRANSFORM_CURRENT_VERSION } from '@atweel/graphql-transformer-core';
 import { DynamoDBModelTransformer } from '../DynamoDBModelTransformer';
 
 test('Test DynamoDBModelTransformer validation happy case', () => {

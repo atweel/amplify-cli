@@ -8,9 +8,9 @@ import {
   InputObjectTypeDefinitionNode,
   InputValueDefinitionNode,
 } from 'graphql';
-import { GraphQLTransform, TRANSFORM_CURRENT_VERSION } from 'graphql-transformer-core';
-import { ResolverResourceIDs, ModelResourceIDs, ResourceConstants } from 'graphql-transformer-common';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform, TRANSFORM_CURRENT_VERSION } from '@atweel/graphql-transformer-core';
+import { ResolverResourceIDs, ModelResourceIDs, ResourceConstants } from '@atweel/graphql-transformer-common';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { ModelConnectionTransformer } from '../ModelConnectionTransformer';
 
 test('Test ModelConnectionTransformer simple one to many happy case', () => {

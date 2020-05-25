@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import portfinder from 'portfinder';
 
-import { InvocationRequest, BuildRequest } from 'amplify-function-plugin-interface';
+import { InvocationRequest, BuildRequest } from '@atweel/amplify-function-plugin-interface';
 import { buildResourceInternal, executeCommand } from './runtime';
 import { MAIN_SOURCE, MAX_PORT, BASE_PORT, BIN_LOCAL, MAIN_BINARY, MAIN_BINARY_WIN } from './constants';
 import execa, { ExecaChildProcess } from 'execa';

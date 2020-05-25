@@ -1,7 +1,7 @@
 {
-  "name": "amplify-cli",
+  "name": "@atweel/amplify-cli",
   "version": "0.1.0",
-  "description": "amplify-cli",
+  "description": "@atweel/amplify-cli",
   "scripts": {
     "test-changed": "lerna run test --since master",
     "test": "lerna run test",

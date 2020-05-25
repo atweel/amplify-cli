@@ -5,7 +5,7 @@ import {
   gql,
   getDirectiveArguments,
   getFieldArguments,
-} from 'graphql-transformer-core';
+} from '@atweel/graphql-transformer-core';
 import GraphQLAPI from 'cloudform-types/types/appSync/graphQlApi';
 import Resolver from 'cloudform-types/types/appSync/resolver';
 import { StringParameter } from 'cloudform-types';
@@ -38,8 +38,21 @@ import {
   makeNonNullType,
   makeField,
   ModelResourceIDs,
-} from 'graphql-transformer-common';
-import { Expression, print, raw, iff, forEach, set, ref, list, compoundExpression, newline, comment, not } from 'graphql-mapping-template';
+} from '@atweel/graphql-transformer-common';
+import {
+  Expression,
+  print,
+  raw,
+  iff,
+  forEach,
+  set,
+  ref,
+  list,
+  compoundExpression,
+  newline,
+  comment,
+  not,
+} from '@atweel/graphql-mapping-template';
 import { ModelDirectiveConfiguration, ModelDirectiveOperationType, ModelSubscriptionLevel } from './ModelDirectiveConfiguration';
 
 import { OWNER_AUTH_STRATEGY, GROUPS_AUTH_STRATEGY, DEFAULT_OWNER_FIELD } from './constants';

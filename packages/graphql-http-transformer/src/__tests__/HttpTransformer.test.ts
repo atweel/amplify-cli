@@ -1,6 +1,6 @@
 import { parse } from 'graphql';
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { ResolverResourceIDs } from 'graphql-transformer-common';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { ResolverResourceIDs } from '@atweel/graphql-transformer-common';
 import { HttpTransformer } from '../HttpTransformer';
 
 test('Test HttpTransformer with four basic requests', () => {
@@ -149,56 +149,56 @@ test('Test HttpTransformer with four basic requests with env on the URI', () => 
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'content')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][0]
+    ][0],
   ).toContain('${env}');
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'content')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][1].env.Ref
+    ][1].env.Ref,
   ).toBe('env');
 
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'content2')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][0]
+    ][0],
   ).toContain('${env}');
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'content2')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][1].env.Ref
+    ][1].env.Ref,
   ).toBe('env');
 
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'more')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][0]
+    ][0],
   ).toContain('${env}');
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'more')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][1].env.Ref
+    ][1].env.Ref,
   ).toBe('env');
 
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'evenMore')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][0]
+    ][0],
   ).toContain('${env}');
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'evenMore')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][1].env.Ref
+    ][1].env.Ref,
   ).toBe('env');
 
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'stillMore')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][0]
+    ][0],
   ).toContain('${env}');
   expect(
     out.stacks.HttpStack.Resources[ResolverResourceIDs.ResolverResourceID('Comment', 'stillMore')].Properties.RequestMappingTemplate[
       'Fn::Sub'
-    ][1].env.Ref
+    ][1].env.Ref,
   ).toBe('env');
 });
 

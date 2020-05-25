@@ -1,7 +1,7 @@
 import { ObjectTypeDefinitionNode, parse, DocumentNode, Kind } from 'graphql';
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { ModelConnectionTransformer } from 'graphql-connection-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { ModelConnectionTransformer } from '@atweel/graphql-connection-transformer';
 import { ModelAuthTransformer, AppSyncAuthConfiguration, AppSyncAuthMode } from '../ModelAuthTransformer';
 
 const noAuthModeDefaultConfig: AppSyncAuthConfiguration = {

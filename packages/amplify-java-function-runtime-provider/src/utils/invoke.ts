@@ -1,6 +1,6 @@
 import execa from 'execa';
 import path from 'path';
-import { InvocationRequest } from 'amplify-function-plugin-interface';
+import { InvocationRequest } from '@atweel/amplify-function-plugin-interface';
 import { shimJarPath } from './constants';
 import { buildResource } from './build';
 
@@ -14,11 +14,13 @@ export const invokeResource = async (request: InvocationRequest, context: any) =
 
   const [handlerClassName, handlerMethodName] = request.handler.split('::');
 
-  const childProcess = execa('java',
+  const childProcess = execa(
+    'java',
     ['-jar', shimJarPath, path.join(request.srcRoot, 'build', 'libs', 'latest_build.jar'), handlerClassName, handlerMethodName],
     {
       input: request.event,
-    });
+    },
+  );
   childProcess.stdout.pipe(process.stdout);
 
   const { stdout, exitCode } = await childProcess;

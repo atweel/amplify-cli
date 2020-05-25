@@ -747,7 +747,7 @@ async function askUserPoolQuestions(context) {
 
   if (!authResourceName) {
     try {
-      const { add } = require('amplify-category-auth');
+      const { add } = require('@atweel/amplify-category-auth');
 
       authResourceName = await add(context);
     } catch (e) {

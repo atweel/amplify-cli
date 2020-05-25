@@ -8,7 +8,7 @@ import {
   Contributor,
   FunctionRuntimeLifecycleManager,
   ContributionRequest,
-} from 'amplify-function-plugin-interface';
+} from '@atweel/amplify-function-plugin-interface';
 import _ from 'lodash';
 
 /*

@@ -11,7 +11,7 @@ import {
   getFieldDefinition,
   getInputTypeDefinition,
 } from '../RelationalDBSchemaTransformerUtils';
-import { toUpper } from 'graphql-transformer-common';
+import { toUpper } from '@atweel/graphql-transformer-common';
 
 const testDBName = 'testdb';
 const mockTableAName = 'a';
@@ -54,7 +54,7 @@ function getTableContext(tableName: string): TableContext {
     primaryKey,
     primaryKeyType,
     stringFieldList,
-    []
+    [],
   );
 }
 

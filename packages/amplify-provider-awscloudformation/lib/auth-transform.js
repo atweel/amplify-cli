@@ -1,4 +1,4 @@
-const { prePushAuthHook } = require('amplify-category-auth');
+const { prePushAuthHook } = require('@atweel/amplify-category-auth');
 
 async function prePushAuthTransform(context, resources) {
   resources = resources.filter(resource => resource.resourceName === 'userPoolGroups');

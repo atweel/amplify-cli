@@ -1,6 +1,6 @@
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { GraphQLTransform } from 'graphql-transformer-core';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
 import { signUpAddToGroupAndGetJwtToken } from './utils/cognito-utils';
 import { GraphQLClient } from './utils/graphql-client';
 import { deploy, launchDDBLocal, logDebug, terminateDDB } from './utils/index';
@@ -171,7 +171,7 @@ beforeAll(async () => {
       USERNAME1,
       USERNAME1,
       [ADMIN_GROUP_NAME, PARTICIPANT_GROUP_NAME, WATCHER_GROUP_NAME],
-      'access'
+      'access',
     );
     GRAPHQL_CLIENT_1_ACCESS = new GraphQLClient(GRAPHQL_ENDPOINT, {
       Authorization: accessToken,
@@ -222,7 +222,7 @@ test('Test createPost mutation', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response);
   expect(response.data.createPost.id).toBeDefined();
@@ -242,7 +242,7 @@ test('Test createPost mutation', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.createPost.id).toBeDefined();
@@ -263,7 +263,7 @@ test('Test getPost query when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response);
   expect(response.data.createPost.id).toBeDefined();
@@ -281,7 +281,7 @@ test('Test getPost query when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(getResponse);
   expect(getResponse.data.getPost.id).toBeDefined();
@@ -300,7 +300,7 @@ test('Test getPost query when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(getResponseAccess.data.getPost.id).toBeDefined();
   expect(getResponseAccess.data.getPost.title).toEqual('Hello, World!');
@@ -320,7 +320,7 @@ test('Test getPost query when not authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(response.data.createPost.id).toBeDefined();
   expect(response.data.createPost.title).toEqual('Hello, World!');
@@ -337,7 +337,7 @@ test('Test getPost query when not authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(getResponse.data.getPost).toEqual(null);
   expect(getResponse.errors.length).toEqual(1);
@@ -355,7 +355,7 @@ test('Test updatePost mutation when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(response.data.createPost.id).toBeDefined();
   expect(response.data.createPost.title).toEqual('Hello, World!');
@@ -372,7 +372,7 @@ test('Test updatePost mutation when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(updateResponse.data.updatePost.id).toEqual(response.data.createPost.id);
   expect(updateResponse.data.updatePost.title).toEqual('Bye, World!');
@@ -388,7 +388,7 @@ test('Test updatePost mutation when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(updateResponseAccess.data.updatePost.id).toEqual(response.data.createPost.id);
   expect(updateResponseAccess.data.updatePost.title).toEqual('Bye, World!');
@@ -406,7 +406,7 @@ test('Test updatePost mutation when not authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(response.data.createPost.id).toBeDefined();
   expect(response.data.createPost.title).toEqual('Hello, World!');
@@ -423,7 +423,7 @@ test('Test updatePost mutation when not authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(updateResponse.data.updatePost).toEqual(null);
   expect(updateResponse.errors.length).toEqual(1);
@@ -442,7 +442,7 @@ test('Test deletePost mutation when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(response.data.createPost.id).toBeDefined();
   expect(response.data.createPost.title).toEqual('Hello, World!');
@@ -455,7 +455,7 @@ test('Test deletePost mutation when authorized', async () => {
             id
         }
     }`,
-    {}
+    {},
   );
   expect(deleteResponse.data.deletePost.id).toEqual(response.data.createPost.id);
 
@@ -469,7 +469,7 @@ test('Test deletePost mutation when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(responseAccess.data.createPost.id).toBeDefined();
   expect(responseAccess.data.createPost.title).toEqual('Hello, World!');
@@ -482,7 +482,7 @@ test('Test deletePost mutation when authorized', async () => {
             id
         }
     }`,
-    {}
+    {},
   );
   expect(deleteResponseAccess.data.deletePost.id).toEqual(responseAccess.data.createPost.id);
 });
@@ -498,7 +498,7 @@ test('Test deletePost mutation when not authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(response.data.createPost.id).toBeDefined();
   expect(response.data.createPost.title).toEqual('Hello, World!');
@@ -511,7 +511,7 @@ test('Test deletePost mutation when not authorized', async () => {
             id
         }
     }`,
-    {}
+    {},
   );
   expect(deleteResponse.data.deletePost).toEqual(null);
   expect(deleteResponse.errors.length).toEqual(1);
@@ -529,7 +529,7 @@ test('Test listPosts query when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   expect(firstPost.data.createPost.id).toBeDefined();
   expect(firstPost.data.createPost.title).toEqual('testing list');
@@ -546,7 +546,7 @@ test('Test listPosts query when authorized', async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   // There are two posts but only 1 created by me.
   const listResponse = await GRAPHQL_CLIENT_1.query(
@@ -557,7 +557,7 @@ test('Test listPosts query when authorized', async () => {
             }
         }
     }`,
-    {}
+    {},
   );
   logDebug(JSON.stringify(listResponse, null, 4));
   expect(listResponse.data.listPosts.items.length).toEqual(1);
@@ -570,7 +570,7 @@ test('Test listPosts query when authorized', async () => {
             }
         }
     }`,
-    {}
+    {},
   );
   logDebug(JSON.stringify(listResponseAccess, null, 4));
   expect(listResponseAccess.data.listPosts.items.length).toEqual(1);
@@ -2377,7 +2377,7 @@ test(`Test createTestIdentity as admin.`, async () => {
             }
         }
     }`,
-    {}
+    {},
   );
   const relevantPost = listResponse.data.listTestIdentitys.items.find(p => p.id === getReq.data.getTestIdentity.id);
   logDebug(JSON.stringify(listResponse, null, 4));
@@ -2415,7 +2415,7 @@ test("Test get and list with 'read' operation set", async () => {
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response);
   expect(response.data.createOwnerReadProtected.id).toBeDefined();
@@ -2428,7 +2428,7 @@ test("Test get and list with 'read' operation set", async () => {
             id content owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.getOwnerReadProtected).toBeNull();
@@ -2440,7 +2440,7 @@ test("Test get and list with 'read' operation set", async () => {
             id content owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response3);
   expect(response3.data.getOwnerReadProtected.id).toBeDefined();
@@ -2455,7 +2455,7 @@ test("Test get and list with 'read' operation set", async () => {
             }
         }
     }`,
-    {}
+    {},
   );
   logDebug(response4);
   expect(response4.data.listOwnerReadProtecteds.items.length).toBeGreaterThanOrEqual(1);
@@ -2468,7 +2468,7 @@ test("Test get and list with 'read' operation set", async () => {
             }
         }
     }`,
-    {}
+    {},
   );
   logDebug(response5);
   expect(response5.data.listOwnerReadProtecteds.items).toHaveLength(0);
@@ -2483,7 +2483,7 @@ test("Test createOwnerCreateUpdateDeleteProtected with 'create' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response);
   expect(response.data.createOwnerCreateUpdateDeleteProtected.id).toBeDefined();
@@ -2498,7 +2498,7 @@ test("Test createOwnerCreateUpdateDeleteProtected with 'create' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.createOwnerCreateUpdateDeleteProtected).toBeNull();
@@ -2514,7 +2514,7 @@ test("Test updateOwnerCreateUpdateDeleteProtected with 'update' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response);
   expect(response.data.createOwnerCreateUpdateDeleteProtected.id).toBeDefined();
@@ -2534,7 +2534,7 @@ test("Test updateOwnerCreateUpdateDeleteProtected with 'update' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.updateOwnerCreateUpdateDeleteProtected).toBeNull();
@@ -2553,7 +2553,7 @@ test("Test updateOwnerCreateUpdateDeleteProtected with 'update' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response3);
   expect(response3.data.updateOwnerCreateUpdateDeleteProtected.id).toBeDefined();
@@ -2570,7 +2570,7 @@ test("Test deleteOwnerCreateUpdateDeleteProtected with 'update' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response);
   expect(response.data.createOwnerCreateUpdateDeleteProtected.id).toBeDefined();
@@ -2589,7 +2589,7 @@ test("Test deleteOwnerCreateUpdateDeleteProtected with 'update' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response2);
   expect(response2.data.deleteOwnerCreateUpdateDeleteProtected).toBeNull();
@@ -2607,7 +2607,7 @@ test("Test deleteOwnerCreateUpdateDeleteProtected with 'update' operation set", 
             owner
         }
     }`,
-    {}
+    {},
   );
   logDebug(response3);
   expect(response3.data.deleteOwnerCreateUpdateDeleteProtected.id).toBeDefined();

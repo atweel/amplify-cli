@@ -1,5 +1,5 @@
 import * as util from '../util';
-import { nspawn as spawn } from 'amplify-e2e-core';
+import { nspawn as spawn } from '@atweel/amplify-e2e-core';
 
 export function headlessPull(projectRootDirPath, amplifyParam, providersParam): Promise<void> {
   return new Promise((resolve, reject) => {

@@ -1,4 +1,4 @@
-import { FunctionParameters, FunctionTriggerParameters } from 'amplify-function-plugin-interface';
+import { FunctionParameters, FunctionTriggerParameters } from '@atweel/amplify-function-plugin-interface';
 import { supportedServices } from '../supported-services';
 import { serviceName, provider, categoryName } from './utils/constants';
 import { createParametersFile, copyFunctionResources } from './utils/storeResources';

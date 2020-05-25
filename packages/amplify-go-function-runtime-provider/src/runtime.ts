@@ -1,4 +1,10 @@
-import { CheckDependenciesResult, PackageRequest, PackageResult, BuildRequest, BuildResult } from 'amplify-function-plugin-interface/src';
+import {
+  CheckDependenciesResult,
+  PackageRequest,
+  PackageResult,
+  BuildRequest,
+  BuildResult,
+} from '@atweel/amplify-function-plugin-interface/src';
 import * as which from 'which';
 import * as execa from 'execa';
 import archiver from 'archiver';

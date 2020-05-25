@@ -1,4 +1,4 @@
-import { Compile, parse } from 'amplify-velocity-template';
+import { Compile, parse } from '@atweel/amplify-velocity-template';
 import { AmplifyAppSyncSimulator } from '..';
 import { AmplifyAppSyncSimulatorAuthenticationType, AppSyncVTLTemplate } from '../type-definition';
 import { create as createUtil, TemplateSentError } from './util';

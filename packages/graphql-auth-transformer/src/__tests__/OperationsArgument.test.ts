@@ -1,6 +1,6 @@
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { ResourceConstants } from 'graphql-transformer-common';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { ModelAuthTransformer } from '../ModelAuthTransformer';
 
 test('Test "read" auth operation', () => {

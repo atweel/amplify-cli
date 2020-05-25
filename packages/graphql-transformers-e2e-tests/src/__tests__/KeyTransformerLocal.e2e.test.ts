@@ -1,6 +1,6 @@
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { KeyTransformer } from 'graphql-key-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { KeyTransformer } from '@atweel/graphql-key-transformer';
 import { parse, FieldDefinitionNode, ObjectTypeDefinitionNode, Kind, InputObjectTypeDefinitionNode } from 'graphql';
 import {
   expectArguments,

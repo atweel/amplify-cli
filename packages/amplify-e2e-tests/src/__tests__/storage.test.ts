@@ -1,5 +1,5 @@
-import { initJSProjectWithProfile, deleteProject, amplifyPushAuth } from 'amplify-e2e-core';
-import { addAuthWithDefault, addAuthWithGroupsAndAdminAPI } from 'amplify-e2e-core';
+import { initJSProjectWithProfile, deleteProject, amplifyPushAuth } from '@atweel/amplify-e2e-core';
+import { addAuthWithDefault, addAuthWithGroupsAndAdminAPI } from '@atweel/amplify-e2e-core';
 import {
   addSimpleDDB,
   addDDBWithTrigger,
@@ -10,8 +10,8 @@ import {
   addS3WithGuestAccess,
   addS3WithGroupAccess,
   addS3WithTrigger,
-} from 'amplify-e2e-core';
-import { createNewProjectDir, deleteProjectDir, getProjectMeta, getDDBTable, checkIfBucketExists } from 'amplify-e2e-core';
+} from '@atweel/amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir, getProjectMeta, getDDBTable, checkIfBucketExists } from '@atweel/amplify-e2e-core';
 
 describe('amplify add/update storage(S3)', () => {
   let projRoot: string;

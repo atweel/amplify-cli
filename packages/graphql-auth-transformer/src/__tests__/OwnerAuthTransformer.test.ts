@@ -7,9 +7,9 @@ import {
   Kind,
   InputObjectTypeDefinitionNode,
 } from 'graphql';
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { ResourceConstants } from 'graphql-transformer-common';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { ModelAuthTransformer } from '../ModelAuthTransformer';
 
 test('Test ModelAuthTransformer validation happy case', () => {
@@ -37,7 +37,7 @@ test('Test ModelAuthTransformer validation happy case', () => {
   const out = transformer.transform(validSchema);
   expect(out).toBeDefined();
   expect(out.rootStack.Resources[ResourceConstants.RESOURCES.GraphQLAPILogicalID].Properties.AuthenticationType).toEqual(
-    'AMAZON_COGNITO_USER_POOLS'
+    'AMAZON_COGNITO_USER_POOLS',
   );
 });
 
@@ -75,12 +75,12 @@ test('Test OwnerField with Subscriptions', () => {
 
   // expect logic in the resolvers to check for postOwner args as an allowerOwner
   expect(out.resolvers['Subscription.onCreatePost.res.vtl']).toContain(
-    '#set( $allowedOwners0 = $util.defaultIfNull($ctx.args.postOwner, null) )'
+    '#set( $allowedOwners0 = $util.defaultIfNull($ctx.args.postOwner, null) )',
   );
   expect(out.resolvers['Subscription.onUpdatePost.res.vtl']).toContain(
-    '#set( $allowedOwners0 = $util.defaultIfNull($ctx.args.postOwner, null) )'
+    '#set( $allowedOwners0 = $util.defaultIfNull($ctx.args.postOwner, null) )',
   );
   expect(out.resolvers['Subscription.onDeletePost.res.vtl']).toContain(
-    '#set( $allowedOwners0 = $util.defaultIfNull($ctx.args.postOwner, null) )'
+    '#set( $allowedOwners0 = $util.defaultIfNull($ctx.args.postOwner, null) )',
   );
 });

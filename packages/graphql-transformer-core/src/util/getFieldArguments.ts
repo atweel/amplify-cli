@@ -1,4 +1,4 @@
-import { getBaseType } from 'graphql-transformer-common';
+import { getBaseType } from '@atweel/graphql-transformer-common';
 import { FieldDefinitionNode } from 'graphql';
 /**
  * Given a Type returns a plain JS map of its arguments
@@ -11,7 +11,7 @@ export function getFieldArguments(type: any): any {
           ...acc,
           [arg.name.value]: getBaseType(arg.type),
         }),
-        {}
+        {},
       )
     : [];
 }

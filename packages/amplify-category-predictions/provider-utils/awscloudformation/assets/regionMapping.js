@@ -1,4 +1,4 @@
-import { predictionsRegionMap } from 'amplify-provider-awscloudformation';
+import { predictionsRegionMap } from '@atweel/amplify-provider-awscloudformation';
 
 function getRegionMapping(service, type) {
   const Mappings = {

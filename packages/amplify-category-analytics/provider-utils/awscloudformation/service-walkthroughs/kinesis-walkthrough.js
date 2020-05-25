@@ -72,7 +72,7 @@ function configure(context, defaultValuesFilename, serviceMetadata, resourceName
 
     // Check for authorization rules and settings
 
-    const { checkRequirements, externalAuthEnable } = require('amplify-category-auth');
+    const { checkRequirements, externalAuthEnable } = require('@atweel/amplify-category-auth');
 
     const apiRequirements = {
       authSelections: 'identityPoolOnly',

@@ -1,6 +1,6 @@
-import { initJSProjectWithProfile, amplifyPushUpdate, deleteProject } from 'amplify-e2e-core';
-import { addPinpoint, addKinesis, removeAnalytics } from 'amplify-e2e-core';
-import { createNewProjectDir, deleteProjectDir } from 'amplify-e2e-core';
+import { initJSProjectWithProfile, amplifyPushUpdate, deleteProject } from '@atweel/amplify-e2e-core';
+import { addPinpoint, addKinesis, removeAnalytics } from '@atweel/amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir } from '@atweel/amplify-e2e-core';
 import * as fs from 'fs-extra';
 import * as path from 'path';
 

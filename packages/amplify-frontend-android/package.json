@@ -1,7 +1,7 @@
 {
-  "name": "amplify-frontend-android",
+  "name": "@atweel/amplify-frontend-android",
   "version": "2.13.2",
-  "description": "amplify-cli front-end plugin for Android project",
+  "description": "@atweel/amplify-cli front-end plugin for Android project",
   "repository": {
     "type": "git",
     "url": "https://github.com/aws-amplify/amplify-cli.git",

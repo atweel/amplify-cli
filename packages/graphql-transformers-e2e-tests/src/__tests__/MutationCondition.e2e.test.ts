@@ -1,6 +1,6 @@
-import { GraphQLTransform, TRANSFORM_CURRENT_VERSION, TRANSFORM_BASE_VERSION } from 'graphql-transformer-core';
-import { KeyTransformer } from 'graphql-key-transformer';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform, TRANSFORM_CURRENT_VERSION, TRANSFORM_BASE_VERSION } from '@atweel/graphql-transformer-core';
+import { KeyTransformer } from '@atweel/graphql-key-transformer';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { parse } from 'graphql/language/parser';
 import {
   DocumentNode,
@@ -12,13 +12,13 @@ import {
   FieldDefinitionNode,
 } from 'graphql';
 import { VersionedModelTransformer } from 'graphql-versioned-transformer';
-import { ModelConnectionTransformer } from 'graphql-connection-transformer';
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
+import { ModelConnectionTransformer } from '@atweel/graphql-connection-transformer';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
 
 import { Auth } from 'aws-amplify';
 import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
 import gql from 'graphql-tag';
-import { ResourceConstants } from 'graphql-transformer-common';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
 import * as fs from 'fs';
 import { CloudFormationClient } from '../CloudFormationClient';
 import { Output } from 'aws-sdk/clients/cloudformation';

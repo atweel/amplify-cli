@@ -26,7 +26,7 @@ async function addWalkthrough(context, defaultValuesFilename, serviceMetadata, o
       )
     ) {
       try {
-        const { add } = require('amplify-category-auth');
+        const { add } = require('@atweel/amplify-category-auth');
         await add(context);
       } catch (e) {
         context.print.error('The Auth plugin is not installed in the CLI. You need to install it to use this feature');
@@ -79,7 +79,7 @@ async function configure(context, defaultValuesFilename, serviceMetadata, resour
 
   const projectBackendDirPath = context.amplify.pathManager.getBackendDirPath();
 
-  const { checkRequirements, externalAuthEnable } = require('amplify-category-auth');
+  const { checkRequirements, externalAuthEnable } = require('@atweel/amplify-category-auth');
 
   let parameters = {};
   let storageParams = {};

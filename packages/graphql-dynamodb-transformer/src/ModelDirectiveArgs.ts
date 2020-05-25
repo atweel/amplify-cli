@@ -1,4 +1,4 @@
-import { getDirectiveArguments } from 'graphql-transformer-core';
+import { getDirectiveArguments } from '@atweel/graphql-transformer-core';
 import { DirectiveNode } from 'graphql';
 
 export interface QueryNameMap {

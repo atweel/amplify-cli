@@ -1,6 +1,6 @@
 const { sync } = require('glob-all');
 const path = require('path');
-const { generate } = require('amplify-graphql-types-generator');
+const { generate } = require('@atweel/amplify-graphql-types-generator');
 const fs = require('fs-extra');
 
 const loadConfig = require('../../src/codegen-config');
@@ -19,7 +19,7 @@ const MOCK_CONTEXT = {
 };
 
 jest.mock('glob-all');
-jest.mock('amplify-graphql-types-generator');
+jest.mock('@atweel/amplify-graphql-types-generator');
 jest.mock('../../src/codegen-config');
 jest.mock('../../src/utils');
 jest.mock('fs-extra');
@@ -79,7 +79,7 @@ describe('command - types', () => {
       '',
       MOCK_TARGET,
       '',
-      { addTypename: true, complexObjectSupport: 'auto' }
+      { addTypename: true, complexObjectSupport: 'auto' },
     );
   });
 
@@ -98,7 +98,7 @@ describe('command - types', () => {
       path.join(MOCK_PROJECT_ROOT, MOCK_SCHEMA),
       MOCK_APIS[0],
       MOCK_REGION,
-      forceDownload
+      forceDownload,
     );
   });
 
@@ -111,7 +111,7 @@ describe('command - types', () => {
       path.join(MOCK_PROJECT_ROOT, MOCK_SCHEMA),
       MOCK_APIS[0],
       MOCK_REGION,
-      forceDownload
+      forceDownload,
     );
   });
 

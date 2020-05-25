@@ -1,6 +1,6 @@
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { GraphQLTransform } from 'graphql-transformer-core';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
 import { deploy, launchDDBLocal, terminateDDB } from './utils/index';
 import AWSAppSyncClient, { AUTH_TYPE } from 'aws-appsync';
 import { signUpAddToGroupAndGetJwtToken } from './utils/cognito-utils';

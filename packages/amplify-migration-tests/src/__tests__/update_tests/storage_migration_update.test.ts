@@ -1,6 +1,6 @@
-import { initJSProjectWithProfile, deleteProject, amplifyPushAuth } from 'amplify-e2e-core';
-import { addSimpleDDB, addDDBWithTrigger, updateDDBWithTrigger } from 'amplify-e2e-core';
-import { createNewProjectDir, deleteProjectDir, getProjectMeta, getDDBTable } from 'amplify-e2e-core';
+import { initJSProjectWithProfile, deleteProject, amplifyPushAuth } from '@atweel/amplify-e2e-core';
+import { addSimpleDDB, addDDBWithTrigger, updateDDBWithTrigger } from '@atweel/amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir, getProjectMeta, getDDBTable } from '@atweel/amplify-e2e-core';
 
 describe('amplify add/update storage(DDB)', () => {
   let projRoot: string;

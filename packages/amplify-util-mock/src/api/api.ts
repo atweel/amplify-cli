@@ -1,7 +1,7 @@
 import * as fs from 'fs-extra';
-import * as dynamoEmulator from 'amplify-dynamodb-simulator';
-import { AmplifyAppSyncSimulator, AmplifyAppSyncSimulatorConfig } from 'amplify-appsync-simulator';
-import { add, generate, isCodegenConfigured, switchToSDLSchema } from 'amplify-codegen';
+import * as dynamoEmulator from '@atweel/amplify-dynamodb-simulator';
+import { AmplifyAppSyncSimulator, AmplifyAppSyncSimulatorConfig } from '@atweel/amplify-appsync-simulator';
+import { add, generate, isCodegenConfigured, switchToSDLSchema } from '@atweel/amplify-codegen';
 import * as path from 'path';
 import * as chokidar from 'chokidar';
 
@@ -14,7 +14,7 @@ import { ConfigOverrideManager } from '../utils/config-override';
 import { configureDDBDataSource, createAndUpdateTable } from '../utils/dynamo-db';
 import { getMockConfig } from '../utils/mock-config-file';
 import { getAllLambdaFunctions } from '../utils/lambda/load';
-import { getInvoker } from 'amplify-category-function';
+import { getInvoker } from '@atweel/amplify-category-function';
 
 export class APITest {
   private apiName: string;

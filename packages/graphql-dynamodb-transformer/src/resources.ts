@@ -19,10 +19,10 @@ import {
   comment,
   forEach,
   and,
-} from 'graphql-mapping-template';
-import { ResourceConstants, plurality, graphqlName, toUpper, ModelResourceIDs, SyncResourceIDs } from 'graphql-transformer-common';
+} from '@atweel/graphql-mapping-template';
+import { ResourceConstants, plurality, graphqlName, toUpper, ModelResourceIDs, SyncResourceIDs } from '@atweel/graphql-transformer-common';
 import { plural } from 'pluralize';
-import { SyncConfig, SyncUtils } from 'graphql-transformer-core';
+import { SyncConfig, SyncUtils } from '@atweel/graphql-transformer-core';
 import Template from 'cloudform-types/types/template';
 import md5 from 'md5';
 

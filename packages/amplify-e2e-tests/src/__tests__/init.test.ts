@@ -4,8 +4,8 @@ import {
   initProjectWithAccessKey,
   initNewEnvWithAccessKey,
   initNewEnvWithProfile,
-} from 'amplify-e2e-core';
-import { createNewProjectDir, deleteProjectDir, getEnvVars, getProjectMeta } from 'amplify-e2e-core';
+} from '@atweel/amplify-e2e-core';
+import { createNewProjectDir, deleteProjectDir, getEnvVars, getProjectMeta } from '@atweel/amplify-e2e-core';
 
 describe('amplify init', () => {
   let projRoot: string;

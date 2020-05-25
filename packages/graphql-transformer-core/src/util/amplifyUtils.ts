@@ -3,7 +3,7 @@ import * as path from 'path';
 import { CloudFormation, Fn, Template } from 'cloudform-types';
 import { DeploymentResources } from '../DeploymentResources';
 import { GraphQLTransform, StackMapping } from '../GraphQLTransform';
-import { ResourceConstants } from 'graphql-transformer-common';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
 import { walkDirPosix, readFromPath, writeToPath, throwIfNotJSONExt, emptyDirectory } from './fileUtils';
 import { writeConfig, TransformConfig, TransformMigrationConfig, loadProject, readSchema, loadConfig } from './transformConfig';
 import * as Sanity from './sanity-check';

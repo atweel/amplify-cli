@@ -1,7 +1,7 @@
 const path = require('path');
 const fs = require('fs-extra');
 const Ora = require('ora');
-const { generate } = require('amplify-graphql-docs-generator');
+const { generate } = require('@atweel/amplify-graphql-docs-generator');
 
 const loadConfig = require('../codegen-config');
 const constants = require('../constants');

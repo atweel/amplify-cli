@@ -204,7 +204,7 @@ async function askPrivacy(context, answers, currentPath) {
     let permissionSelected = 'Auth/Guest Users';
     let allowUnauthenticatedIdentities = false;
     const privacy = {};
-    const { checkRequirements, externalAuthEnable } = require('amplify-category-auth');
+    const { checkRequirements, externalAuthEnable } = require('@atweel/amplify-category-auth');
 
     if (userPoolGroupList.length > 0) {
       do {

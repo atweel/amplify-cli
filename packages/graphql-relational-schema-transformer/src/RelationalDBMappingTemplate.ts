@@ -1,4 +1,4 @@
-import { obj, str, ObjectNode, ListNode } from 'graphql-mapping-template';
+import { obj, str, ObjectNode, ListNode } from '@atweel/graphql-mapping-template';
 
 /**
  * The class that contains the resolver templates for interacting

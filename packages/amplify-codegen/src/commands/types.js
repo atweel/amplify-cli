@@ -1,6 +1,6 @@
 const glob = require('glob-all');
 const path = require('path');
-const { generate } = require('amplify-graphql-types-generator');
+const { generate } = require('@atweel/amplify-graphql-types-generator');
 const Ora = require('ora');
 
 const constants = require('../constants');

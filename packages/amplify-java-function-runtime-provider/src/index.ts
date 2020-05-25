@@ -1,9 +1,9 @@
-import { FunctionRuntimeContributorFactory } from 'amplify-function-plugin-interface';
+import { FunctionRuntimeContributorFactory } from '@atweel/amplify-function-plugin-interface';
 import { buildResource } from './utils/build';
 import { packageResource } from './utils/package';
 import { checkJava, checkJavaCompiler, checkGradle } from './utils/detect';
 import { invokeResource } from './utils/invoke';
-import { CheckDependenciesResult } from 'amplify-function-plugin-interface/src';
+import { CheckDependenciesResult } from '@atweel/amplify-function-plugin-interface/src';
 
 export const functionRuntimeContributorFactory: FunctionRuntimeContributorFactory = context => {
   return {

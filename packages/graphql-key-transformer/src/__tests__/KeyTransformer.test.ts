@@ -1,6 +1,6 @@
-import { GraphQLTransform, InvalidDirectiveError } from 'graphql-transformer-core';
+import { GraphQLTransform, InvalidDirectiveError } from '@atweel/graphql-transformer-core';
 import { KeyTransformer } from '../KeyTransformer';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 
 test('Check KeyTransformer Resolver Code', () => {
   const validSchema = `

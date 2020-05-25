@@ -1,7 +1,7 @@
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
 import { ModelAuthTransformer } from '../ModelAuthTransformer';
-import { SearchableModelTransformer } from 'graphql-elasticsearch-transformer';
+import { SearchableModelTransformer } from '@atweel/graphql-elasticsearch-transformer';
 
 test('test auth logic is enabled on owner/static rules in resposne es resolver', () => {
   const validSchema = `
@@ -35,11 +35,11 @@ test('test auth logic is enabled on owner/static rules in resposne es resolver',
   // expect response resolver to contain auth logic for owner rule
   expect(out).toBeDefined();
   expect(out.resolvers['Query.searchComments.res.vtl']).toContain(
-    '## Authorization rule: { allow: owner, ownerField: "owner", identityClaim: "cognito:username" } **'
+    '## Authorization rule: { allow: owner, ownerField: "owner", identityClaim: "cognito:username" } **',
   );
   // expect response resolver to contain auth logic for group rule
   expect(out.resolvers['Query.searchComments.res.vtl']).toContain(
-    '## Authorization rule: { allow: groups, groups: ["writer"], groupClaim: "cognito:groups" } **'
+    '## Authorization rule: { allow: groups, groups: ["writer"], groupClaim: "cognito:groups" } **',
   );
 });
 

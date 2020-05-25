@@ -1,4 +1,4 @@
-import { FunctionTemplateParameters, ContributionRequest } from 'amplify-function-plugin-interface';
+import { FunctionTemplateParameters, ContributionRequest } from '@atweel/amplify-function-plugin-interface';
 import { commonFiles, templateRoot } from '../utils/constants';
 import { getDstMap } from '../utils/destFileMapper';
 import path from 'path';

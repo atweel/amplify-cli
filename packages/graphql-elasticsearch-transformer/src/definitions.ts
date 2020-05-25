@@ -8,7 +8,7 @@ import {
   EnumTypeDefinitionNode,
   EnumValueDefinitionNode,
 } from 'graphql';
-import { graphqlName, makeNamedType, isScalar, makeListType, getBaseType, SearchableResourceIDs } from 'graphql-transformer-common';
+import { graphqlName, makeNamedType, isScalar, makeListType, getBaseType, SearchableResourceIDs } from '@atweel/graphql-transformer-common';
 
 const ID_CONDITIONS = [
   'ne',
@@ -103,7 +103,7 @@ export function makeSearchableXFilterInputObject(obj: ObjectTypeDefinitionNode):
       // TODO: Service does not support new style descriptions so wait.
       // description: field.description,
       directives: [],
-    }
+    },
   );
   return {
     kind: Kind.INPUT_OBJECT_TYPE_DEFINITION,

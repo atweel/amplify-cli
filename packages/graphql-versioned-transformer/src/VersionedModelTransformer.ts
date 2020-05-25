@@ -1,6 +1,6 @@
-import { Transformer, TransformerContext, InvalidDirectiveError, TransformerContractError, gql } from 'graphql-transformer-core';
+import { Transformer, TransformerContext, InvalidDirectiveError, TransformerContractError, gql } from '@atweel/graphql-transformer-core';
 import { valueFromASTUntyped, ArgumentNode, ObjectTypeDefinitionNode, DirectiveNode, Kind } from 'graphql';
-import { printBlock, compoundExpression, set, ref, qref, obj, str, raw } from 'graphql-mapping-template';
+import { printBlock, compoundExpression, set, ref, qref, obj, str, raw } from '@atweel/graphql-mapping-template';
 import {
   ResourceConstants,
   ModelResourceIDs,
@@ -10,7 +10,7 @@ import {
   makeNamedType,
   getBaseType,
   makeField,
-} from 'graphql-transformer-common';
+} from '@atweel/graphql-transformer-common';
 
 export class VersionedModelTransformer extends Transformer {
   constructor() {
@@ -19,7 +19,7 @@ export class VersionedModelTransformer extends Transformer {
       // TODO: Allow version attribute selection. Could be `@version on FIELD_DEFINITION`
       gql`
         directive @versioned(versionField: String = "version", versionInput: String = "expectedVersion") on OBJECT
-      `
+      `,
     );
   }
 
@@ -104,10 +104,10 @@ export class VersionedModelTransformer extends Transformer {
             expressionNames: obj({
               [`#${versionField}`]: str(`${versionField}`),
             }),
-          })
+          }),
         ),
         qref(`$ctx.args.input.remove("${versionInput}")`),
-      ])
+      ]),
     );
     const resolver = ctx.getResource(mutationResolverLogicalId);
     if (resolver) {
@@ -130,12 +130,12 @@ export class VersionedModelTransformer extends Transformer {
             expressionNames: obj({
               [`#${versionField}`]: str(`${versionField}`),
             }),
-          })
+          }),
         ),
         set(ref('newVersion'), raw(`$ctx.args.input.${versionInput} + 1`)),
         qref(`$ctx.args.input.put("${versionField}", $newVersion)`),
         qref(`$ctx.args.input.remove("${versionInput}")`),
-      ])
+      ]),
     );
     const resolver = ctx.getResource(mutationResolverLogicalId);
     if (resolver) {
@@ -153,7 +153,7 @@ export class VersionedModelTransformer extends Transformer {
         throw new InvalidDirectiveError(
           `After stripping away version field "${versionField}", \
                     the create input for type "${typeName}" cannot be created \
-                    with 0 fields. Add another field to type "${typeName}" to continue.`
+                    with 0 fields. Add another field to type "${typeName}" to continue.`,
         );
       }
       const updatedInput = {

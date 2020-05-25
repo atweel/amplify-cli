@@ -1,9 +1,9 @@
-import { AmplifyStorageSimulator } from 'amplify-storage-simulator';
+import { AmplifyStorageSimulator } from '@atweel/amplify-storage-simulator';
 import * as path from 'path';
 import * as fs from 'fs-extra';
 import { getAmplifyMeta, addCleanupTask, getMockDataDirectory } from '../utils';
 import { ConfigOverrideManager } from '../utils/config-override';
-import { getInvoker } from 'amplify-category-function';
+import { getInvoker } from '@atweel/amplify-category-function';
 import { loadMinimalLambdaConfig } from '../utils/lambda/loadMinimal';
 
 const port = 20005; // port for S3

@@ -11,8 +11,8 @@ import {
   ModelResourceIDs,
   ResolverResourceIDs,
   getBaseType,
-} from 'graphql-transformer-common';
-import { getDirectiveArguments, gql, Transformer, TransformerContext, SyncConfig } from 'graphql-transformer-core';
+} from '@atweel/graphql-transformer-common';
+import { getDirectiveArguments, gql, Transformer, TransformerContext, SyncConfig } from '@atweel/graphql-transformer-core';
 import {
   getNonModelObjectArray,
   makeCreateInputObject,

@@ -1,9 +1,9 @@
-import { ResourceConstants } from 'graphql-transformer-common';
-import { GraphQLTransform, ConflictHandlerType } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { KeyTransformer } from 'graphql-key-transformer';
-import { SearchableModelTransformer } from 'graphql-elasticsearch-transformer';
-import { ModelAuthTransformer } from 'graphql-auth-transformer';
+import { ResourceConstants } from '@atweel/graphql-transformer-common';
+import { GraphQLTransform, ConflictHandlerType } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { KeyTransformer } from '@atweel/graphql-key-transformer';
+import { SearchableModelTransformer } from '@atweel/graphql-elasticsearch-transformer';
+import { ModelAuthTransformer } from '@atweel/graphql-auth-transformer';
 import { CloudFormationClient } from '../CloudFormationClient';
 import { S3Client } from '../S3Client';
 import { Output } from 'aws-sdk/clients/cloudformation';

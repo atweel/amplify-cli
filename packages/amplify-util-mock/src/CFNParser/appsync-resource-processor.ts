@@ -1,4 +1,4 @@
-import { AmplifyAppSyncSimulatorAuthenticationType, AmplifyAppSyncSimulatorConfig } from 'amplify-appsync-simulator';
+import { AmplifyAppSyncSimulatorAuthenticationType, AmplifyAppSyncSimulatorConfig } from '@atweel/amplify-appsync-simulator';
 import { registerAppSyncResourceProcessor, registerIAMResourceProcessor, registerLambdaResourceProcessor } from './resource-processors';
 import { AppSyncAPIKeyProcessedResource, AppSyncAPIProcessedResource } from './resource-processors/appsync';
 import { processCloudFormationStack } from './stack/index';

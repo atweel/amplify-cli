@@ -1,4 +1,4 @@
-import { amplifyPush, amplifyPushUpdate, deleteProject, initJSProjectWithProfile } from 'amplify-e2e-core';
+import { amplifyPush, amplifyPushUpdate, deleteProject, initJSProjectWithProfile } from '@atweel/amplify-e2e-core';
 import * as path from 'path';
 import { existsSync } from 'fs';
 import {
@@ -17,8 +17,8 @@ import {
   getAppSyncApi,
   getProjectMeta,
   getTransformConfig,
-} from 'amplify-e2e-core';
-import { TRANSFORM_CURRENT_VERSION, TRANSFORM_BASE_VERSION, writeTransformerConfiguration } from 'graphql-transformer-core';
+} from '@atweel/amplify-e2e-core';
+import { TRANSFORM_CURRENT_VERSION, TRANSFORM_BASE_VERSION, writeTransformerConfiguration } from '@atweel/graphql-transformer-core';
 
 describe('amplify add api (GraphQL)', () => {
   let projRoot: string;

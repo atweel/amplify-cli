@@ -1,7 +1,7 @@
 {
-  "name": "amplify-frontend-javascript",
+  "name": "@atweel/amplify-frontend-javascript",
   "version": "2.15.3",
-  "description": "amplify-cli front-end plugin for JavaScript projects",
+  "description": "@atweel/amplify-cli front-end plugin for JavaScript projects",
   "repository": {
     "type": "git",
     "url": "https://github.com/aws-amplify/amplify-cli.git",

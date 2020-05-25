@@ -2,7 +2,7 @@ import path from 'path';
 import fs from 'fs-extra';
 import glob from 'glob';
 import * as execa from 'execa';
-import { InvocationRequest } from 'amplify-function-plugin-interface';
+import { InvocationRequest } from '@atweel/amplify-function-plugin-interface';
 import { buildCore } from './build';
 import { executableName } from '../constants';
 

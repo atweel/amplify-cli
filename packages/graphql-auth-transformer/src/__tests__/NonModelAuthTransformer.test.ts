@@ -1,6 +1,6 @@
-import { GraphQLTransform } from 'graphql-transformer-core';
-import { DynamoDBModelTransformer } from 'graphql-dynamodb-transformer';
-import { FunctionTransformer } from 'graphql-function-transformer';
+import { GraphQLTransform } from '@atweel/graphql-transformer-core';
+import { DynamoDBModelTransformer } from '@atweel/graphql-dynamodb-transformer';
+import { FunctionTransformer } from '@atweel/graphql-function-transformer';
 import { ModelAuthTransformer } from '../ModelAuthTransformer';
 import { ObjectTypeDefinitionNode, DocumentNode, Kind, parse } from 'graphql';
 

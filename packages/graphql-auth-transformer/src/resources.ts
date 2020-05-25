@@ -25,8 +25,8 @@ import {
   ifElse,
   newline,
   methodCall,
-} from 'graphql-mapping-template';
-import { ResourceConstants, NONE_VALUE } from 'graphql-transformer-common';
+} from '@atweel/graphql-mapping-template';
+import { ResourceConstants, NONE_VALUE } from '@atweel/graphql-transformer-common';
 import GraphQLApi, {
   GraphQLApiProperties,
   UserPoolConfig,
