@@ -237,7 +237,7 @@ export function addIAMRolesToCFNStack(out: DeploymentResources, e2eConfig: E2Eco
     },
     Policies: [
       new cfnIAM.Role.Policy({
-        PolicyName: 'appsync-unauthrole-policy',
+        PolicyName: 'appsync-CognitoAnonymousRole-policy',
         PolicyDocument: {
           Version: '2012-10-17',
           Statement: [

@@ -57,8 +57,8 @@ const ECHO_FUNCTION_NAME = `long-prefix-e2e-test-functions-echo-dev-${BUILD_TIME
 const LAMBDA_EXECUTION_ROLE_NAME = `amplify_e2e_tests_lambda_basic_${BUILD_TIMESTAMP}`;
 const LAMBDA_EXECUTION_POLICY_NAME = `amplify_e2e_tests_lambda_basic_access_${BUILD_TIMESTAMP}`;
 let LAMBDA_EXECUTION_POLICY_ARN = '';
-const AUTH_ROLE_NAME = `${STACK_NAME}-authRole`;
-const UNAUTH_ROLE_NAME = `${STACK_NAME}-unauthRole`;
+const AUTH_ROLE_NAME = `${STACK_NAME}-CognitoAuthenticatedRole`;
+const UNAUTH_ROLE_NAME = `${STACK_NAME}-CognitoAnonymousRole`;
 const IDENTITY_POOL_NAME = `NonModelAuthFunctionTest_${BUILD_TIMESTAMP}_identity_pool`;
 const USER_POOL_CLIENTWEB_NAME = `nofuncauth_${BUILD_TIMESTAMP}_clientweb`;
 const USER_POOL_CLIENT_NAME = `nofuncauth_${BUILD_TIMESTAMP}_client`;
@@ -177,7 +177,7 @@ beforeAll(async () => {
     },
     Policies: [
       new Role.Policy({
-        PolicyName: 'appsync-unauthrole-policy',
+        PolicyName: 'appsync-CognitoAnonymousRole-policy',
         PolicyDocument: {
           Version: '2012-10-17',
           Statement: [

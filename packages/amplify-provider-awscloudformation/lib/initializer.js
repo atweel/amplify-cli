@@ -32,8 +32,8 @@ async function run(context) {
     const { amplifyAppId, verifiedStackName, deploymentBucketName } = await amplifyServiceManager.init(amplifyServiceParams);
 
     stackName = verifiedStackName;
-    const authRoleName = `${stackName}-authRole`;
-    const unauthRoleName = `${stackName}-unauthRole`;
+    const authRoleName = `${stackName}-CognitoAuthenticatedRole`;
+    const unauthRoleName = `${stackName}-CognitoAnonymousRole`;
     const params = {
       StackName: stackName,
       Capabilities: ['CAPABILITY_NAMED_IAM', 'CAPABILITY_AUTO_EXPAND'],

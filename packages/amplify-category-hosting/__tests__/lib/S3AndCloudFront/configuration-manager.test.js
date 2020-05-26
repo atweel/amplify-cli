@@ -14,12 +14,12 @@ describe('configuration-manager', () => {
   const mockAmplifyMeta = {
     providers: {
       awscloudformation: {
-        AuthRoleName: 'checkhosting-20190226163640-authRole',
-        UnauthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190226163640-unauthRole',
-        AuthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190226163640-authRole',
+        AuthRoleName: 'checkhosting-20190226163640-CognitoAuthenticatedRole',
+        UnauthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190226163640-CognitoAnonymousRole',
+        AuthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190226163640-CognitoAuthenticatedRole',
         Region: 'us-west-2',
         DeploymentBucketName: 'checkhosting-20190226163640-deployment',
-        UnauthRoleName: 'checkhosting-20190226163640-unauthRole',
+        UnauthRoleName: 'checkhosting-20190226163640-CognitoAnonymousRole',
         StackName: 'checkhosting-20190226163640',
         StackId: 'arn:aws:cloudformation:us-west-2:mockAccountId:stack/checkhosting-20190226163640/2c061610-3a28-11e9-acf3-02ee71065ed8',
       },

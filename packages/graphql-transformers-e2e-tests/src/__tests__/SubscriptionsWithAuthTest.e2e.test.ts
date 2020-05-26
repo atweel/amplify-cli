@@ -55,8 +55,8 @@ const STACK_NAME = `SubscriptionAuthTests-${BUILD_TIMESTAMP}`;
 const BUCKET_NAME = `subscription-auth-tests-bucket-${BUILD_TIMESTAMP}`;
 const LOCAL_BUILD_ROOT = '/tmp/subscription_auth_tests/';
 const DEPLOYMENT_ROOT_KEY = 'deployments';
-const AUTH_ROLE_NAME = `${STACK_NAME}-authRole`;
-const UNAUTH_ROLE_NAME = `${STACK_NAME}-unauthRole`;
+const AUTH_ROLE_NAME = `${STACK_NAME}-CognitoAuthenticatedRole`;
+const UNAUTH_ROLE_NAME = `${STACK_NAME}-CognitoAnonymousRole`;
 const IDENTITY_POOL_NAME = `SubscriptionAuthModelAuthTransformerTest_${BUILD_TIMESTAMP}_identity_pool`;
 const USER_POOL_CLIENTWEB_NAME = `subs_auth_${BUILD_TIMESTAMP}_clientweb`;
 const USER_POOL_CLIENT_NAME = `subs_auth_${BUILD_TIMESTAMP}_client`;
@@ -283,7 +283,7 @@ beforeAll(async () => {
       },
       Policies: [
         new cfnIAM.Role.Policy({
-          PolicyName: 'appsync-unauthrole-policy',
+          PolicyName: 'appsync-CognitoAnonymousRole-policy',
           PolicyDocument: {
             Version: '2012-10-17',
             Statement: [

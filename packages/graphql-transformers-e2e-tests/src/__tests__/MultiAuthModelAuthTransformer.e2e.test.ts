@@ -45,8 +45,8 @@ const STACK_NAME = `MultiAuthModelAuthTransformerTest-${BUILD_TIMESTAMP}`;
 const BUCKET_NAME = `appsync-multi-auth-transformer-test-bucket-${BUILD_TIMESTAMP}`;
 const LOCAL_FS_BUILD_DIR = '/tmp/multi_auth_model_auth_transform_tests/';
 const S3_ROOT_DIR_KEY = 'deployments';
-const AUTH_ROLE_NAME = `${STACK_NAME}-authRole`;
-const UNAUTH_ROLE_NAME = `${STACK_NAME}-unauthRole`;
+const AUTH_ROLE_NAME = `${STACK_NAME}-CognitoAuthenticatedRole`;
+const UNAUTH_ROLE_NAME = `${STACK_NAME}-CognitoAnonymousRole`;
 const IDENTITY_POOL_NAME = `MultiAuthModelAuthTransformerTest_${BUILD_TIMESTAMP}_identity_pool`;
 const USER_POOL_CLIENTWEB_NAME = `multiauth_${BUILD_TIMESTAMP}_clientweb`;
 const USER_POOL_CLIENT_NAME = `multiauth_${BUILD_TIMESTAMP}_client`;
@@ -323,7 +323,7 @@ beforeAll(async () => {
       },
       Policies: [
         new Role.Policy({
-          PolicyName: 'appsync-unauthrole-policy',
+          PolicyName: 'appsync-CognitoAnonymousRole-policy',
           PolicyDocument: {
             Version: '2012-10-17',
             Statement: [

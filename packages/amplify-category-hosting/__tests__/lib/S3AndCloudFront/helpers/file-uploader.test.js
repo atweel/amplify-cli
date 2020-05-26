@@ -21,12 +21,12 @@ describe('cloudfront-manager', () => {
   const mockAmplifyMeta = {
     providers: {
       awscloudformation: {
-        AuthRoleName: 'checkhosting-20190228131446-authRole',
-        UnauthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190228131446-unauthRole',
-        AuthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190228131446-authRole',
+        AuthRoleName: 'checkhosting-20190228131446-CognitoAuthenticatedRole',
+        UnauthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190228131446-CognitoAnonymousRole',
+        AuthRoleArn: 'arn:aws:iam::mockAccountId:role/checkhosting-20190228131446-CognitoAuthenticatedRole',
         Region: 'us-west-2',
         DeploymentBucketName: 'checkhosting-20190228131446-deployment',
-        UnauthRoleName: 'checkhosting-20190228131446-unauthRole',
+        UnauthRoleName: 'checkhosting-20190228131446-CognitoAnonymousRole',
         StackName: 'checkhosting-20190228131446',
         StackId: 'arn:aws:cloudformation:us-west-2:mockAccountId:stack/checkhosting-20190228131446/52623470-3b9e-11e9-a03a-0ad6ed005066',
       },

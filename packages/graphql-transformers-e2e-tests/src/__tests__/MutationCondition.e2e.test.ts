@@ -553,8 +553,8 @@ describe(`Deployed Mutation Condition tests`, () => {
   const BUCKET_NAME = `appsync-mutation-condition-test-bucket-${BUILD_TIMESTAMP}`;
   const LOCAL_FS_BUILD_DIR = '/tmp/mutation_condition_tests/';
   const S3_ROOT_DIR_KEY = 'deployments';
-  const AUTH_ROLE_NAME = `${STACK_NAME}-authRole`;
-  const UNAUTH_ROLE_NAME = `${STACK_NAME}-unauthRole`;
+  const AUTH_ROLE_NAME = `${STACK_NAME}-CognitoAuthenticatedRole`;
+  const UNAUTH_ROLE_NAME = `${STACK_NAME}-CognitoAnonymousRole`;
   const IDENTITY_POOL_NAME = `MutationConditionTest_${BUILD_TIMESTAMP}_identity_pool`;
   const USER_POOL_CLIENTWEB_NAME = `mutationcondition_${BUILD_TIMESTAMP}_clientweb`;
   const USER_POOL_CLIENT_NAME = `mutationcondition_${BUILD_TIMESTAMP}_client`;
@@ -692,7 +692,7 @@ describe(`Deployed Mutation Condition tests`, () => {
         },
         Policies: [
           new Role.Policy({
-            PolicyName: 'appsync-unauthrole-policy',
+            PolicyName: 'appsync-CognitoAnonymousRole-policy',
             PolicyDocument: {
               Version: '2012-10-17',
               Statement: [
