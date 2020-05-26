@@ -1,6 +1,6 @@
 {
   "name": "@atweel/amplify-category-notifications",
-  "version": "2.15.6",
+  "version": "2.16.0-beta.0",
   "description": "@atweel/amplify-cli notifications plugin",
   "repository": {
     "type": "git",
@@ -19,7 +19,7 @@
     "test-ci": "jest --ci -i"
   },
   "dependencies": {
-    "@atweel/amplify-category-auth": "2.15.6",
+    "@atweel/amplify-category-auth": "2.16.0-beta.0",
     "fs-extra": "^8.1.0",
     "inquirer": "^7.0.3",
     "open": "^7.0.0",

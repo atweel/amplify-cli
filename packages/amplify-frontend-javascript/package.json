@@ -1,6 +1,6 @@
 {
   "name": "@atweel/amplify-frontend-javascript",
-  "version": "2.15.3",
+  "version": "2.16.0-beta.0",
   "description": "@atweel/amplify-cli front-end plugin for JavaScript projects",
   "repository": {
     "type": "git",

@@ -3,97 +3,76 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0-beta.0 (2020-05-26)
+
+### Bug Fixes
+
+- **amplify-category-api:** fix api add-graphql-datasource command ([#2320](https://github.com/aws-amplify/amplify-cli/issues/2320)) ([a9c829d](https://github.com/aws-amplify/amplify-cli/commit/a9c829d79e91246d2bb9a707ccfe886502ceebe2))
+- **amplify-category-interactions:** call updateMetaAfterAdd only once ([#1653](https://github.com/aws-amplify/amplify-cli/issues/1653)) ([dc28758](https://github.com/aws-amplify/amplify-cli/commit/dc28758c647ea6d5381d25a02d84cce8a548c87d)), closes [#1621](https://github.com/aws-amplify/amplify-cli/issues/1621)
+- **amplify-category-interactions:** fix interactions unauth role policy ([b22ec77](https://github.com/aws-amplify/amplify-cli/commit/b22ec77987d453693c807525af234ff0bc785024))
+- **amplify-category-interactions:** make category region aware ([#4047](https://github.com/aws-amplify/amplify-cli/issues/4047)) ([a40a772](https://github.com/aws-amplify/amplify-cli/commit/a40a77299d66c3791f65cf5389dac9f2db41696b))
+- **amplify-category-interactions:** render the correct region in CFN ([#4049](https://github.com/aws-amplify/amplify-cli/issues/4049)) ([a6dd340](https://github.com/aws-amplify/amplify-cli/commit/a6dd340240eebb38bcffd43eb1b19aa12358217f))
+- fixed for interactions custom resource for node version change ([#3073](https://github.com/aws-amplify/amplify-cli/issues/3073)) ([5eafe4c](https://github.com/aws-amplify/amplify-cli/commit/5eafe4c03d965579b0691878c9e14b89435c3320)), closes [#2999](https://github.com/aws-amplify/amplify-cli/issues/2999)
+- **cli:** fix inquirer version ([#1690](https://github.com/aws-amplify/amplify-cli/issues/1690)) ([9246032](https://github.com/aws-amplify/amplify-cli/commit/9246032603db49022c444e41faa5881592ce5dc9)), closes [#1688](https://github.com/aws-amplify/amplify-cli/issues/1688)
+- update CLI to handle UTF8 BOM ([#1357](https://github.com/aws-amplify/amplify-cli/issues/1357)) ([b0afa07](https://github.com/aws-amplify/amplify-cli/commit/b0afa07ab22d50409ff93c41350995cd7d2a1084)), closes [#1355](https://github.com/aws-amplify/amplify-cli/issues/1355) [#1122](https://github.com/aws-amplify/amplify-cli/issues/1122)
+
+### Features
+
+- **cli:** new plugin platform ([#2254](https://github.com/aws-amplify/amplify-cli/issues/2254)) ([7ec29dd](https://github.com/aws-amplify/amplify-cli/commit/7ec29dd4f2da8c90727b36469eca646d289877b6))
+- adding amplify cli predictions category ([#1936](https://github.com/aws-amplify/amplify-cli/issues/1936)) ([b7b7c2c](https://github.com/aws-amplify/amplify-cli/commit/b7b7c2c1927da10f8c54f38a523021187361131c))
+- cognito + s3 + dyanmodb lambda trigger support ([#1783](https://github.com/aws-amplify/amplify-cli/issues/1783)) ([c6fc838](https://github.com/aws-amplify/amplify-cli/commit/c6fc83834ae70f3e0f5e1c8810a56de76ba36d41))
+- flow to add policies to access amplify resources from Lambda ([#1462](https://github.com/aws-amplify/amplify-cli/issues/1462)) ([fee247c](https://github.com/aws-amplify/amplify-cli/commit/fee247c74f54b050f7b7a6ea0733fbd08976f232))
+- Modify amplify env add/import behvior ([ca4a459](https://github.com/aws-amplify/amplify-cli/commit/ca4a459242b9e1c352b255507e3811d12048fd79))
+- **amplify-category-interactions:** Add voice ([c5eab20](https://github.com/aws-amplify/amplify-cli/commit/c5eab2008cf92d29c5809be21f94ab7a3d8f68d9))
+- migration of API GW and Interactions ([a91ba9a](https://github.com/aws-amplify/amplify-cli/commit/a91ba9ae4de8a49c7ce8b8912e2962fd1a59824b))
+- multi-environment support for interactions category ([4ca2617](https://github.com/aws-amplify/amplify-cli/commit/4ca26177aef907f911c1f961f962b35ba07f4810))
+
 ## [2.3.7](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.3.6...amplify-category-interactions@2.3.7) (2020-05-15)
 
 **Note:** Version bump only for package amplify-category-interactions
-
-
-
-
 
 ## [2.3.6](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.3.5...amplify-category-interactions@2.3.6) (2020-05-08)
 
 **Note:** Version bump only for package amplify-category-interactions
 
-
-
-
-
 ## [2.3.5](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.3.4...amplify-category-interactions@2.3.5) (2020-04-23)
-
 
 ### Bug Fixes
 
-* **amplify-category-interactions:** make category region aware ([#4047](https://github.com/aws-amplify/amplify-cli/issues/4047)) ([a40a772](https://github.com/aws-amplify/amplify-cli/commit/a40a77299d66c3791f65cf5389dac9f2db41696b))
-* **amplify-category-interactions:** render the correct region in CFN ([#4049](https://github.com/aws-amplify/amplify-cli/issues/4049)) ([a6dd340](https://github.com/aws-amplify/amplify-cli/commit/a6dd340240eebb38bcffd43eb1b19aa12358217f))
-
-
-
-
+- **amplify-category-interactions:** make category region aware ([#4047](https://github.com/aws-amplify/amplify-cli/issues/4047)) ([a40a772](https://github.com/aws-amplify/amplify-cli/commit/a40a77299d66c3791f65cf5389dac9f2db41696b))
+- **amplify-category-interactions:** render the correct region in CFN ([#4049](https://github.com/aws-amplify/amplify-cli/issues/4049)) ([a6dd340](https://github.com/aws-amplify/amplify-cli/commit/a6dd340240eebb38bcffd43eb1b19aa12358217f))
 
 ## [2.3.4](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.3.3...amplify-category-interactions@2.3.4) (2020-04-06)
 
 **Note:** Version bump only for package amplify-category-interactions
 
-
-
-
-
 ## [2.3.3](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.3.2...amplify-category-interactions@2.3.3) (2020-03-22)
 
 **Note:** Version bump only for package amplify-category-interactions
-
-
-
-
 
 ## [2.3.2](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.3.1...amplify-category-interactions@2.3.2) (2020-03-10)
 
 **Note:** Version bump only for package amplify-category-interactions
 
-
-
-
-
 ## [2.3.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.1.11...amplify-category-interactions@2.3.1) (2020-03-07)
 
 **Note:** Version bump only for package amplify-category-interactions
-
-
-
-
 
 ## [2.2.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.1.13-beta.0...amplify-category-interactions@2.2.1) (2020-03-05)
 
 **Note:** Version bump only for package amplify-category-interactions
 
-
-
-
-
 ## [2.1.11](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.1.10...amplify-category-interactions@2.1.11) (2020-02-13)
 
 **Note:** Version bump only for package amplify-category-interactions
-
-
-
-
 
 ## [2.1.10](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.1.9...amplify-category-interactions@2.1.10) (2020-02-07)
 
 **Note:** Version bump only for package amplify-category-interactions
 
-
-
-
-
 ## [2.1.9](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@2.1.8...amplify-category-interactions@2.1.9) (2020-01-24)
 
 **Note:** Version bump only for package amplify-category-interactions
-
-
-
-
 
 ## [2.1.8](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-interactions@1.29.0...amplify-category-interactions@2.1.8) (2020-01-23)
 

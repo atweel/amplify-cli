@@ -3,91 +3,80 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.17.0-beta.0 (2020-05-26)
+
+### Bug Fixes
+
+- **amplify-category-analytics:** Allow hyphens for pinpoint resources name ([#2516](https://github.com/aws-amplify/amplify-cli/issues/2516)) ([ecd87ee](https://github.com/aws-amplify/amplify-cli/commit/ecd87ee5b47b5d3e458feaa87b0949f5661a8901)), closes [#1877](https://github.com/aws-amplify/amplify-cli/issues/1877)
+- **amplify-category-analytics:** delete pinpoint project in delete ([#3165](https://github.com/aws-amplify/amplify-cli/issues/3165)) ([acc0240](https://github.com/aws-amplify/amplify-cli/commit/acc0240c02630b4b9424370732706955ea447057)), closes [#2974](https://github.com/aws-amplify/amplify-cli/issues/2974)
+- **amplify-category-analytics:** reverted the hyphen and updated tests ([#3181](https://github.com/aws-amplify/amplify-cli/issues/3181)) ([1a1efcf](https://github.com/aws-amplify/amplify-cli/commit/1a1efcfe9ba11242316ebed3bca3bf5fe78761f7)), closes [#3163](https://github.com/aws-amplify/amplify-cli/issues/3163)
+- **amplify-category-api:** fix api add-graphql-datasource command ([#2320](https://github.com/aws-amplify/amplify-cli/issues/2320)) ([a9c829d](https://github.com/aws-amplify/amplify-cli/commit/a9c829d79e91246d2bb9a707ccfe886502ceebe2))
+- **amplify-category-api:** use standard json read ([#2581](https://github.com/aws-amplify/amplify-cli/issues/2581)) ([3adc395](https://github.com/aws-amplify/amplify-cli/commit/3adc395a5e4ccf3673735f8091db63923a46c501))
+- **cli:** add console command in the help message ([#2494](https://github.com/aws-amplify/amplify-cli/issues/2494)) ([cf0eddd](https://github.com/aws-amplify/amplify-cli/commit/cf0eddd1ba27b1126b0745cc068f205b2c2c8343)), closes [#1607](https://github.com/aws-amplify/amplify-cli/issues/1607)
+- [#429](https://github.com/aws-amplify/amplify-cli/issues/429) - Editor hanging bug ([#2086](https://github.com/aws-amplify/amplify-cli/issues/2086)) ([6767445](https://github.com/aws-amplify/amplify-cli/commit/676744549f903fa3a4804d814eb325301ed462ba))
+- move test package dependencies to devDependencies ([#2034](https://github.com/aws-amplify/amplify-cli/issues/2034)) ([f5623d0](https://github.com/aws-amplify/amplify-cli/commit/f5623d04a43e685901f4f1cd96e2a227164c71ee))
+- **amplify-category-notifications:** remove env name ([#1440](https://github.com/aws-amplify/amplify-cli/issues/1440)) ([19ff63c](https://github.com/aws-amplify/amplify-cli/commit/19ff63cce2865e3f50b1ef24693a5611ed5547d4)), closes [#1372](https://github.com/aws-amplify/amplify-cli/issues/1372)
+- **cli:** fix inquirer version ([#1690](https://github.com/aws-amplify/amplify-cli/issues/1690)) ([9246032](https://github.com/aws-amplify/amplify-cli/commit/9246032603db49022c444e41faa5881592ce5dc9)), closes [#1688](https://github.com/aws-amplify/amplify-cli/issues/1688)
+- spelling mistakes in cli output ([#1588](https://github.com/aws-amplify/amplify-cli/issues/1588)) ([787ac57](https://github.com/aws-amplify/amplify-cli/commit/787ac57e2d34090173f6913df84e7e9b6199f8e5))
+- update CLI to handle UTF8 BOM ([#1357](https://github.com/aws-amplify/amplify-cli/issues/1357)) ([b0afa07](https://github.com/aws-amplify/amplify-cli/commit/b0afa07ab22d50409ff93c41350995cd7d2a1084)), closes [#1355](https://github.com/aws-amplify/amplify-cli/issues/1355) [#1122](https://github.com/aws-amplify/amplify-cli/issues/1122)
+- **amplify-category-analytics:** migration to use role names to ref ([#516](https://github.com/aws-amplify/amplify-cli/issues/516)) ([8493bdf](https://github.com/aws-amplify/amplify-cli/commit/8493bdf6d574e86b0ac06f31f2756551cee295ed))
+- **cli:** remove calls to gluegun's prompt.confirm ([#546](https://github.com/aws-amplify/amplify-cli/issues/546)) ([0080ddb](https://github.com/aws-amplify/amplify-cli/commit/0080ddbf5bc19bbbff7d4187167a748b5b578fce))
+- update pinpoint IAM policy to use mobiletargeting instead of mobileanalytics ([#326](https://github.com/aws-amplify/amplify-cli/issues/326)) ([96fcde6](https://github.com/aws-amplify/amplify-cli/commit/96fcde66a5674689e1c76513490dd835ae624c93))
+
+### Features
+
+- ability to add custom EventSource and lambda triggers via amplify add function, kinesis support in analytics category ([#2463](https://github.com/aws-amplify/amplify-cli/issues/2463)) ([b25cfd0](https://github.com/aws-amplify/amplify-cli/commit/b25cfd00b21416a82ecefda1f6498206ef71531b))
+- **cli:** cLI updates and new features for Amplify Console ([#2742](https://github.com/aws-amplify/amplify-cli/issues/2742)) ([0fd0dd5](https://github.com/aws-amplify/amplify-cli/commit/0fd0dd5102177766c454c8715fa5acac32385048))
+- **cli:** new plugin platform ([#2254](https://github.com/aws-amplify/amplify-cli/issues/2254)) ([7ec29dd](https://github.com/aws-amplify/amplify-cli/commit/7ec29dd4f2da8c90727b36469eca646d289877b6))
+- adding amplify cli predictions category ([#1936](https://github.com/aws-amplify/amplify-cli/issues/1936)) ([b7b7c2c](https://github.com/aws-amplify/amplify-cli/commit/b7b7c2c1927da10f8c54f38a523021187361131c))
+- flow to add policies to access amplify resources from Lambda ([#1462](https://github.com/aws-amplify/amplify-cli/issues/1462)) ([fee247c](https://github.com/aws-amplify/amplify-cli/commit/fee247c74f54b050f7b7a6ea0733fbd08976f232))
+- **amplify-category-analytics:** migrate script for multienv ([#500](https://github.com/aws-amplify/amplify-cli/issues/500)) ([78e053e](https://github.com/aws-amplify/amplify-cli/commit/78e053edee8a11d494a10f53c60a64faca42b9f3))
+- multi-enviornment support for Lambda & a minor fix in analytics plugin ([#414](https://github.com/aws-amplify/amplify-cli/issues/414)) ([e645b22](https://github.com/aws-amplify/amplify-cli/commit/e645b22e483119aaf00f7123513c41e24fd19350))
+- multiple evironment support for analytics and s3 storage ([0400f26](https://github.com/aws-amplify/amplify-cli/commit/0400f267a9cbcbed382adc54165da2d221cb0ee6))
+
 ## [2.16.5](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.16.4...amplify-category-analytics@2.16.5) (2020-05-15)
 
 **Note:** Version bump only for package amplify-category-analytics
-
-
-
-
 
 ## [2.16.4](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.16.3...amplify-category-analytics@2.16.4) (2020-05-08)
 
 **Note:** Version bump only for package amplify-category-analytics
 
-
-
-
-
 ## [2.16.3](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.16.2...amplify-category-analytics@2.16.3) (2020-04-06)
 
 **Note:** Version bump only for package amplify-category-analytics
-
-
-
-
 
 ## [2.16.2](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.16.1...amplify-category-analytics@2.16.2) (2020-03-22)
 
 **Note:** Version bump only for package amplify-category-analytics
 
-
-
-
-
 ## [2.16.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.16.0...amplify-category-analytics@2.16.1) (2020-03-10)
-
 
 ### Bug Fixes
 
-* **amplify-category-analytics:** delete pinpoint project in delete ([#3165](https://github.com/aws-amplify/amplify-cli/issues/3165)) ([acc0240](https://github.com/aws-amplify/amplify-cli/commit/acc0240c02630b4b9424370732706955ea447057)), closes [#2974](https://github.com/aws-amplify/amplify-cli/issues/2974)
-
-
-
-
+- **amplify-category-analytics:** delete pinpoint project in delete ([#3165](https://github.com/aws-amplify/amplify-cli/issues/3165)) ([acc0240](https://github.com/aws-amplify/amplify-cli/commit/acc0240c02630b4b9424370732706955ea447057)), closes [#2974](https://github.com/aws-amplify/amplify-cli/issues/2974)
 
 # [2.16.0](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.13.3...amplify-category-analytics@2.16.0) (2020-03-07)
 
-
 ### Features
 
-* ability to add custom EventSource and lambda triggers via amplify add function, kinesis support in analytics category ([#2463](https://github.com/aws-amplify/amplify-cli/issues/2463)) ([b25cfd0](https://github.com/aws-amplify/amplify-cli/commit/b25cfd00b21416a82ecefda1f6498206ef71531b))
-
-
-
-
+- ability to add custom EventSource and lambda triggers via amplify add function, kinesis support in analytics category ([#2463](https://github.com/aws-amplify/amplify-cli/issues/2463)) ([b25cfd0](https://github.com/aws-amplify/amplify-cli/commit/b25cfd00b21416a82ecefda1f6498206ef71531b))
 
 ## [2.14.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.13.5-beta.0...amplify-category-analytics@2.14.1) (2020-03-05)
 
 **Note:** Version bump only for package amplify-category-analytics
 
-
-
-
-
 ## [2.13.3](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.13.2...amplify-category-analytics@2.13.3) (2020-02-13)
 
 **Note:** Version bump only for package amplify-category-analytics
-
-
-
-
 
 ## [2.13.2](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.13.1...amplify-category-analytics@2.13.2) (2020-02-07)
 
 **Note:** Version bump only for package amplify-category-analytics
 
-
-
-
-
 ## [2.13.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@2.13.0...amplify-category-analytics@2.13.1) (2020-01-24)
 
 **Note:** Version bump only for package amplify-category-analytics
-
-
-
-
 
 # [2.13.0](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-analytics@1.28.0...amplify-category-analytics@2.13.0) (2020-01-23)
 

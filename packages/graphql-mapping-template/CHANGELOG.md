@@ -3,43 +3,43 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [4.13.4](https://github.com/aws-amplify/amplify-cli/compare/graphql-mapping-template@4.13.3...graphql-mapping-template@4.13.4) (2020-05-08)
-
+# 4.14.0-beta.0 (2020-05-26)
 
 ### Bug Fixes
 
-* use ES external versioning when using DataStore ([#4127](https://github.com/aws-amplify/amplify-cli/issues/4127)) ([cef709b](https://github.com/aws-amplify/amplify-cli/commit/cef709ba2087affe860dd6fb141ccda1e5d58fd1))
+- use ES external versioning when using DataStore ([#4127](https://github.com/aws-amplify/amplify-cli/issues/4127)) ([cef709b](https://github.com/aws-amplify/amplify-cli/commit/cef709ba2087affe860dd6fb141ccda1e5d58fd1))
+- **graphql-elasticsearch-transformer:** fixed es req template ([311f57d](https://github.com/aws-amplify/amplify-cli/commit/311f57d9938aa78c83c7c695ddd39457b89c8afc))
+- **graphql-mapping-template:** handle missing arguments gracefully ([4950993](https://github.com/aws-amplify/amplify-cli/commit/4950993eb7a3b11bbecef5e82e1859e1f27d1453))
+- **graphql-relational-schema-transformer:** fix [#3025](https://github.com/aws-amplify/amplify-cli/issues/3025) rds resolver correctly handles no data in response ([#3314](https://github.com/aws-amplify/amplify-cli/issues/3314)) ([cb826a7](https://github.com/aws-amplify/amplify-cli/commit/cb826a7ec7680ad9b5fc46fd7a931c30747cd0ce))
+- build break, chore: typescript, lerna update ([#2640](https://github.com/aws-amplify/amplify-cli/issues/2640)) ([29fae36](https://github.com/aws-amplify/amplify-cli/commit/29fae366f4cab054feefa58c7dc733002d19570c))
+- update grahql transformer package versions for multienv ([8b4b2bd](https://github.com/aws-amplify/amplify-cli/commit/8b4b2bd9486d5408d1f75448e3646bdee810f448))
 
+### Features
 
+- adding amplify cli predictions category ([#1936](https://github.com/aws-amplify/amplify-cli/issues/1936)) ([b7b7c2c](https://github.com/aws-amplify/amplify-cli/commit/b7b7c2c1927da10f8c54f38a523021187361131c))
+- feature/[@key](https://github.com/key) ([#1463](https://github.com/aws-amplify/amplify-cli/issues/1463)) ([00ed819](https://github.com/aws-amplify/amplify-cli/commit/00ed819419a4959a6d62da2fc5477621c046eff0))
+- resolver changes ([#2760](https://github.com/aws-amplify/amplify-cli/issues/2760)) ([8ce0d12](https://github.com/aws-amplify/amplify-cli/commit/8ce0d12eb1d3bd6d0132baca39b6e9daff04c39a))
+- updated version of [#2118](https://github.com/aws-amplify/amplify-cli/issues/2118) with addressed review comments ([#2230](https://github.com/aws-amplify/amplify-cli/issues/2230)) ([be3c499](https://github.com/aws-amplify/amplify-cli/commit/be3c499edcc6bec63b38e9241c5af7b83c930022))
 
+## [4.13.4](https://github.com/aws-amplify/amplify-cli/compare/graphql-mapping-template@4.13.3...graphql-mapping-template@4.13.4) (2020-05-08)
 
+### Bug Fixes
+
+- use ES external versioning when using DataStore ([#4127](https://github.com/aws-amplify/amplify-cli/issues/4127)) ([cef709b](https://github.com/aws-amplify/amplify-cli/commit/cef709ba2087affe860dd6fb141ccda1e5d58fd1))
 
 ## [4.13.3](https://github.com/aws-amplify/amplify-cli/compare/graphql-mapping-template@4.13.2...graphql-mapping-template@4.13.3) (2020-02-13)
 
 **Note:** Version bump only for package graphql-mapping-template
 
-
-
-
-
 ## [4.13.2](https://github.com/aws-amplify/amplify-cli/compare/graphql-mapping-template@4.13.1...graphql-mapping-template@4.13.2) (2020-02-07)
-
 
 ### Bug Fixes
 
-* **graphql-relational-schema-transformer:** fix [#3025](https://github.com/aws-amplify/amplify-cli/issues/3025) rds resolver correctly handles no data in response ([#3314](https://github.com/aws-amplify/amplify-cli/issues/3314)) ([cb826a7](https://github.com/aws-amplify/amplify-cli/commit/cb826a7ec7680ad9b5fc46fd7a931c30747cd0ce))
-
-
-
-
+- **graphql-relational-schema-transformer:** fix [#3025](https://github.com/aws-amplify/amplify-cli/issues/3025) rds resolver correctly handles no data in response ([#3314](https://github.com/aws-amplify/amplify-cli/issues/3314)) ([cb826a7](https://github.com/aws-amplify/amplify-cli/commit/cb826a7ec7680ad9b5fc46fd7a931c30747cd0ce))
 
 ## [4.13.1](https://github.com/aws-amplify/amplify-cli/compare/graphql-mapping-template@4.13.0...graphql-mapping-template@4.13.1) (2020-01-24)
 
 **Note:** Version bump only for package graphql-mapping-template
-
-
-
-
 
 # [4.13.0](https://github.com/aws-amplify/amplify-cli/compare/graphql-mapping-template@3.25.0...graphql-mapping-template@4.13.0) (2020-01-23)
 

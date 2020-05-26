@@ -3,91 +3,81 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.16.0-beta.0 (2020-05-26)
+
+### Bug Fixes
+
+- **amplify-category-analytics:** delete pinpoint project in delete ([#3165](https://github.com/aws-amplify/amplify-cli/issues/3165)) ([acc0240](https://github.com/aws-amplify/amplify-cli/commit/acc0240c02630b4b9424370732706955ea447057)), closes [#2974](https://github.com/aws-amplify/amplify-cli/issues/2974)
+- **amplify-category-api:** fix api add-graphql-datasource command ([#2320](https://github.com/aws-amplify/amplify-cli/issues/2320)) ([a9c829d](https://github.com/aws-amplify/amplify-cli/commit/a9c829d79e91246d2bb9a707ccfe886502ceebe2))
+- **amplify-category-notifications:** add apns sandbox channel ([#3669](https://github.com/aws-amplify/amplify-cli/issues/3669)) ([841297f](https://github.com/aws-amplify/amplify-cli/commit/841297f3da29caca880fbbef30fe9bf26ea4db5a)), closes [#3247](https://github.com/aws-amplify/amplify-cli/issues/3247)
+- **amplify-category-notifications:** fix notifications env change issue ([#2669](https://github.com/aws-amplify/amplify-cli/issues/2669)) ([54d4d64](https://github.com/aws-amplify/amplify-cli/commit/54d4d64e03dc246e42ba3e2d19b1789d2dbeaddc)), closes [#2616](https://github.com/aws-amplify/amplify-cli/issues/2616)
+- [#429](https://github.com/aws-amplify/amplify-cli/issues/429) - Editor hanging bug ([#2086](https://github.com/aws-amplify/amplify-cli/issues/2086)) ([6767445](https://github.com/aws-amplify/amplify-cli/commit/676744549f903fa3a4804d814eb325301ed462ba))
+- move test package dependencies to devDependencies ([#2034](https://github.com/aws-amplify/amplify-cli/issues/2034)) ([f5623d0](https://github.com/aws-amplify/amplify-cli/commit/f5623d04a43e685901f4f1cd96e2a227164c71ee))
+- **amplify-category-notifications:** fix redundant pinpoint creation ([#474](https://github.com/aws-amplify/amplify-cli/issues/474)) ([5e28dc0](https://github.com/aws-amplify/amplify-cli/commit/5e28dc0893f83164cc84424b4db71f3468b6db1b))
+- **amplify-category-notifications:** remove env name ([#1440](https://github.com/aws-amplify/amplify-cli/issues/1440)) ([19ff63c](https://github.com/aws-amplify/amplify-cli/commit/19ff63cce2865e3f50b1ef24693a5611ed5547d4)), closes [#1372](https://github.com/aws-amplify/amplify-cli/issues/1372)
+- **cli:** fix inquirer version ([#1690](https://github.com/aws-amplify/amplify-cli/issues/1690)) ([9246032](https://github.com/aws-amplify/amplify-cli/commit/9246032603db49022c444e41faa5881592ce5dc9)), closes [#1688](https://github.com/aws-amplify/amplify-cli/issues/1688)
+- spelling mistakes in cli output ([#1588](https://github.com/aws-amplify/amplify-cli/issues/1588)) ([787ac57](https://github.com/aws-amplify/amplify-cli/commit/787ac57e2d34090173f6913df84e7e9b6199f8e5))
+- update CLI to handle UTF8 BOM ([#1357](https://github.com/aws-amplify/amplify-cli/issues/1357)) ([b0afa07](https://github.com/aws-amplify/amplify-cli/commit/b0afa07ab22d50409ff93c41350995cd7d2a1084)), closes [#1355](https://github.com/aws-amplify/amplify-cli/issues/1355) [#1122](https://github.com/aws-amplify/amplify-cli/issues/1122)
+- **amplify-category-notifications:** fix lint issues ([b2f4dfe](https://github.com/aws-amplify/amplify-cli/commit/b2f4dfed39e6aecfc5ccc7d14c00f185642391ae))
+- **amplify-cli:** promise not resolving in lts/dubnium ([#1028](https://github.com/aws-amplify/amplify-cli/issues/1028)) ([8a966be](https://github.com/aws-amplify/amplify-cli/commit/8a966beeed5a6fb57874ba084e6b42a23aded20a))
+- **amplify-provider-awscloudformation:** fix pinpoint console url ([#912](https://github.com/aws-amplify/amplify-cli/issues/912)) ([77e3af6](https://github.com/aws-amplify/amplify-cli/commit/77e3af632e84a2ade3c97305dc20bef5989c9b46)), closes [#910](https://github.com/aws-amplify/amplify-cli/issues/910)
+- update pinpoint IAM policy to use mobiletargeting instead of mobileanalytics ([#326](https://github.com/aws-amplify/amplify-cli/issues/326)) ([96fcde6](https://github.com/aws-amplify/amplify-cli/commit/96fcde66a5674689e1c76513490dd835ae624c93))
+
+### Features
+
+- **cli:** cLI updates and new features for Amplify Console ([#2742](https://github.com/aws-amplify/amplify-cli/issues/2742)) ([0fd0dd5](https://github.com/aws-amplify/amplify-cli/commit/0fd0dd5102177766c454c8715fa5acac32385048))
+- **cli:** new plugin platform ([#2254](https://github.com/aws-amplify/amplify-cli/issues/2254)) ([7ec29dd](https://github.com/aws-amplify/amplify-cli/commit/7ec29dd4f2da8c90727b36469eca646d289877b6))
+- adding amplify cli predictions category ([#1936](https://github.com/aws-amplify/amplify-cli/issues/1936)) ([b7b7c2c](https://github.com/aws-amplify/amplify-cli/commit/b7b7c2c1927da10f8c54f38a523021187361131c))
+- **amplify-provider-awscloudformation:** assume role ([#669](https://github.com/aws-amplify/amplify-cli/issues/669)) ([c3204bc](https://github.com/aws-amplify/amplify-cli/commit/c3204bc2d9fdb9f674101fcc9662542522e1f10a))
+- headless Init and configure ([#371](https://github.com/aws-amplify/amplify-cli/issues/371)) ([acd14a8](https://github.com/aws-amplify/amplify-cli/commit/acd14a8634b97474424f22cdd7031bff58138cd2))
+- headless Init and configure ([#371](https://github.com/aws-amplify/amplify-cli/issues/371)) ([8780400](https://github.com/aws-amplify/amplify-cli/commit/8780400fb316d3e31a25a6ac395bb86235082c74))
+- migration of hosting and notifications ([#497](https://github.com/aws-amplify/amplify-cli/issues/497)) ([f6a60b6](https://github.com/aws-amplify/amplify-cli/commit/f6a60b6fa9fc5eb766713e388cfc1a8893badad2))
+- multienv support for Notifications ([#440](https://github.com/aws-amplify/amplify-cli/issues/440)) ([4dac0de](https://github.com/aws-amplify/amplify-cli/commit/4dac0defc5fdcc9039da477495bc8d4287a73080))
+- multienv support for Notifications ([#440](https://github.com/aws-amplify/amplify-cli/issues/440)) ([a2964d4](https://github.com/aws-amplify/amplify-cli/commit/a2964d4eb5638af4f3608f9b8322bcbaed6ef212))
+
 ## [2.15.6](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.15.5...amplify-category-notifications@2.15.6) (2020-05-15)
 
 **Note:** Version bump only for package amplify-category-notifications
-
-
-
-
 
 ## [2.15.5](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.15.4...amplify-category-notifications@2.15.5) (2020-05-08)
 
 **Note:** Version bump only for package amplify-category-notifications
 
-
-
-
-
 ## [2.15.4](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.15.3...amplify-category-notifications@2.15.4) (2020-04-06)
 
 **Note:** Version bump only for package amplify-category-notifications
 
-
-
-
-
 ## [2.15.3](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.15.2...amplify-category-notifications@2.15.3) (2020-03-22)
-
 
 ### Bug Fixes
 
-* **amplify-category-notifications:** add apns sandbox channel ([#3669](https://github.com/aws-amplify/amplify-cli/issues/3669)) ([841297f](https://github.com/aws-amplify/amplify-cli/commit/841297f3da29caca880fbbef30fe9bf26ea4db5a)), closes [#3247](https://github.com/aws-amplify/amplify-cli/issues/3247)
-
-
-
-
+- **amplify-category-notifications:** add apns sandbox channel ([#3669](https://github.com/aws-amplify/amplify-cli/issues/3669)) ([841297f](https://github.com/aws-amplify/amplify-cli/commit/841297f3da29caca880fbbef30fe9bf26ea4db5a)), closes [#3247](https://github.com/aws-amplify/amplify-cli/issues/3247)
 
 ## [2.15.2](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.15.1...amplify-category-notifications@2.15.2) (2020-03-10)
 
-
 ### Bug Fixes
 
-* **amplify-category-analytics:** delete pinpoint project in delete ([#3165](https://github.com/aws-amplify/amplify-cli/issues/3165)) ([acc0240](https://github.com/aws-amplify/amplify-cli/commit/acc0240c02630b4b9424370732706955ea447057)), closes [#2974](https://github.com/aws-amplify/amplify-cli/issues/2974)
-
-
-
-
+- **amplify-category-analytics:** delete pinpoint project in delete ([#3165](https://github.com/aws-amplify/amplify-cli/issues/3165)) ([acc0240](https://github.com/aws-amplify/amplify-cli/commit/acc0240c02630b4b9424370732706955ea447057)), closes [#2974](https://github.com/aws-amplify/amplify-cli/issues/2974)
 
 ## [2.15.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.13.3...amplify-category-notifications@2.15.1) (2020-03-07)
 
 **Note:** Version bump only for package amplify-category-notifications
 
-
-
-
-
 ## [2.14.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.13.5-beta.0...amplify-category-notifications@2.14.1) (2020-03-05)
 
 **Note:** Version bump only for package amplify-category-notifications
-
-
-
-
 
 ## [2.13.3](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.13.2...amplify-category-notifications@2.13.3) (2020-02-13)
 
 **Note:** Version bump only for package amplify-category-notifications
 
-
-
-
-
 ## [2.13.2](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.13.1...amplify-category-notifications@2.13.2) (2020-02-07)
 
 **Note:** Version bump only for package amplify-category-notifications
 
-
-
-
-
 ## [2.13.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@2.13.0...amplify-category-notifications@2.13.1) (2020-01-24)
 
 **Note:** Version bump only for package amplify-category-notifications
-
-
-
-
 
 # [2.13.0](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-notifications@1.27.0...amplify-category-notifications@2.13.0) (2020-01-23)
 

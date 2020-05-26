@@ -1,6 +1,6 @@
 {
   "name": "@atweel/graphql-versioned-transformer",
-  "version": "4.15.5",
+  "version": "4.16.0-beta.0",
   "description": "A GraphQL transform that enabled object versioning and conflict resolution for a @model type.",
   "repository": {
     "type": "git",
@@ -23,14 +23,14 @@
     "clean": "rimraf ./lib"
   },
   "dependencies": {
-    "graphql": "^14.5.8",
-    "@atweel/graphql-mapping-template": "4.13.4",
-    "@atweel/graphql-transformer-common": "4.15.0",
-    "@atweel/graphql-transformer-core": "6.18.0"
+    "@atweel/graphql-mapping-template": "4.14.0-beta.0",
+    "@atweel/graphql-transformer-common": "4.16.0-beta.0",
+    "@atweel/graphql-transformer-core": "7.0.0-beta.0",
+    "graphql": "^14.5.8"
   },
   "devDependencies": {
-    "@types/node": "^10.17.13",
-    "@atweel/graphql-dynamodb-transformer": "6.18.0"
+    "@atweel/graphql-dynamodb-transformer": "7.0.0-beta.0",
+    "@types/node": "^10.17.13"
   },
   "jest": {
     "transform": {

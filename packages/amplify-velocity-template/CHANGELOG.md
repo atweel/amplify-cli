@@ -3,24 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-## [1.1.10](https://github.com/aws-amplify/amplify-cli/compare/amplify-velocity-template@1.1.9...amplify-velocity-template@1.1.10) (2020-02-07)
-
+# 1.2.0-beta.0 (2020-05-26)
 
 ### Bug Fixes
 
-* **amplify-velocity-template:** #Return directive called several times ([#3306](https://github.com/aws-amplify/amplify-cli/issues/3306)) ([82f1d26](https://github.com/aws-amplify/amplify-cli/commit/82f1d26aa12306bdb7d6fe635fd37b3ac7180d19))
+- **amplify-appsync-simulator:** support early return from resolvers ([#2497](https://github.com/aws-amplify/amplify-cli/issues/2497)) ([0cff7ed](https://github.com/aws-amplify/amplify-cli/commit/0cff7ed09bfaf797baad2acd1c0a6d013cb717e8)), closes [#2427](https://github.com/aws-amplify/amplify-cli/issues/2427)
+- **amplify-velocity-template:** #Return directive called several times ([#3306](https://github.com/aws-amplify/amplify-cli/issues/3306)) ([82f1d26](https://github.com/aws-amplify/amplify-cli/commit/82f1d26aa12306bdb7d6fe635fd37b3ac7180d19))
+- local mock fix ([#1982](https://github.com/aws-amplify/amplify-cli/issues/1982)) ([8ee9029](https://github.com/aws-amplify/amplify-cli/commit/8ee90298189f4d3140ab84fe2d40d16bcb95485f))
 
+### Features
 
+- add support for multiauth in mock server ([#2109](https://github.com/aws-amplify/amplify-cli/issues/2109)) ([fe8ee8c](https://github.com/aws-amplify/amplify-cli/commit/fe8ee8cff355a826fa9ccddcf0fad8a200a081af))
+- **amplify-util-mock:** add support for S3 triggers in local mocking ([#2101](https://github.com/aws-amplify/amplify-cli/issues/2101)) ([ac9a134](https://github.com/aws-amplify/amplify-cli/commit/ac9a13469704f9c3cfa584760087e389380add3d))
+- mock support for API, function and storage ([#1893](https://github.com/aws-amplify/amplify-cli/issues/1893)) ([372e534](https://github.com/aws-amplify/amplify-cli/commit/372e5346ee1f27a2e9bee25fbbdcb19417f5230f))
 
+## [1.1.10](https://github.com/aws-amplify/amplify-cli/compare/amplify-velocity-template@1.1.9...amplify-velocity-template@1.1.10) (2020-02-07)
 
+### Bug Fixes
+
+- **amplify-velocity-template:** #Return directive called several times ([#3306](https://github.com/aws-amplify/amplify-cli/issues/3306)) ([82f1d26](https://github.com/aws-amplify/amplify-cli/commit/82f1d26aa12306bdb7d6fe635fd37b3ac7180d19))
 
 ## [1.1.9](https://github.com/aws-amplify/amplify-cli/compare/amplify-velocity-template@1.1.8...amplify-velocity-template@1.1.9) (2020-01-24)
 
 **Note:** Version bump only for package amplify-velocity-template
-
-
-
-
 
 ## [1.1.8](https://github.com/aws-amplify/amplify-cli/compare/amplify-velocity-template@0.22.0...amplify-velocity-template@1.1.8) (2020-01-23)
 

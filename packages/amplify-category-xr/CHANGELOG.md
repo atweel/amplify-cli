@@ -3,88 +3,83 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.4.0-beta.0 (2020-05-26)
+
+### Bug Fixes
+
+- replaced v1 docs references with v2 docs references ([#4169](https://github.com/aws-amplify/amplify-cli/issues/4169)) ([b578c2d](https://github.com/aws-amplify/amplify-cli/commit/b578c2dcd10038367c653ede2f6da42e7644b41b))
+- **amplify-category-api:** fix api add-graphql-datasource command ([#2320](https://github.com/aws-amplify/amplify-cli/issues/2320)) ([a9c829d](https://github.com/aws-amplify/amplify-cli/commit/a9c829d79e91246d2bb9a707ccfe886502ceebe2))
+- **cli:** add console command in the help message ([#2494](https://github.com/aws-amplify/amplify-cli/issues/2494)) ([cf0eddd](https://github.com/aws-amplify/amplify-cli/commit/cf0eddd1ba27b1126b0745cc068f205b2c2c8343)), closes [#1607](https://github.com/aws-amplify/amplify-cli/issues/1607)
+- [#429](https://github.com/aws-amplify/amplify-cli/issues/429) - Editor hanging bug ([#2086](https://github.com/aws-amplify/amplify-cli/issues/2086)) ([6767445](https://github.com/aws-amplify/amplify-cli/commit/676744549f903fa3a4804d814eb325301ed462ba))
+- add env to cloudformation parameters ([d9eac81](https://github.com/aws-amplify/amplify-cli/commit/d9eac81f022ebfe3ffd84c3dc813b952283ec7bc))
+- add scene name validation to prevent cloudformation errors ([f8cb167](https://github.com/aws-amplify/amplify-cli/commit/f8cb167caa7be38f1297419734baeeacaf8fb0d0))
+- allow absolute path for scene config ([faba5ea](https://github.com/aws-amplify/amplify-cli/commit/faba5ea11917495b8585b2f333b81cc68d20f55f))
+- lint error ([abc176c](https://github.com/aws-amplify/amplify-cli/commit/abc176c008ecfd7cafd8d1410633983348b2e78a))
+- lint errors ([2159ca3](https://github.com/aws-amplify/amplify-cli/commit/2159ca3a8a47ae72ef91c894ede0ec32d19ca0a4))
+- lint errors ([4cb6e57](https://github.com/aws-amplify/amplify-cli/commit/4cb6e570814b95e1f21fbec024a5068f212b7c66))
+- move test package dependencies to devDependencies ([#2034](https://github.com/aws-amplify/amplify-cli/issues/2034)) ([f5623d0](https://github.com/aws-amplify/amplify-cli/commit/f5623d04a43e685901f4f1cd96e2a227164c71ee))
+- **cli:** fix inquirer version ([#1690](https://github.com/aws-amplify/amplify-cli/issues/1690)) ([9246032](https://github.com/aws-amplify/amplify-cli/commit/9246032603db49022c444e41faa5881592ce5dc9)), closes [#1688](https://github.com/aws-amplify/amplify-cli/issues/1688)
+- lint errors ([0360a1a](https://github.com/aws-amplify/amplify-cli/commit/0360a1aba07df33427da406cfceff5fdc7009a85))
+- remove await unit tests ([70270d0](https://github.com/aws-amplify/amplify-cli/commit/70270d06bd9545fbe298c5b67a3f63b83f2e79a4))
+- remove unneeded log statement ([7910031](https://github.com/aws-amplify/amplify-cli/commit/7910031f8a73d6be95c4d684be7235306dfe8460))
+- update CLI to handle UTF8 BOM ([#1357](https://github.com/aws-amplify/amplify-cli/issues/1357)) ([b0afa07](https://github.com/aws-amplify/amplify-cli/commit/b0afa07ab22d50409ff93c41350995cd7d2a1084)), closes [#1355](https://github.com/aws-amplify/amplify-cli/issues/1355) [#1122](https://github.com/aws-amplify/amplify-cli/issues/1122)
+- update scene URI parsing with projectName URI decoding ([e0ce793](https://github.com/aws-amplify/amplify-cli/commit/e0ce793efe080374937f291619d1ee9f15e0e771))
+- update xr sumerian config generation and bump versions ([4f02f1d](https://github.com/aws-amplify/amplify-cli/commit/4f02f1d98cd863df9ec604dd5af736ec2d64f915))
+- use helper functions for adding metadata ([50f8d76](https://github.com/aws-amplify/amplify-cli/commit/50f8d76fe6bca913cc57f1223825ef895a96da7a))
+- use JSON parse instead of require in xr ([#1312](https://github.com/aws-amplify/amplify-cli/issues/1312)) ([5f0a4e9](https://github.com/aws-amplify/amplify-cli/commit/5f0a4e9ebfae571d4ccc5568a83f1c6be19d021e))
+
+### Features
+
+- **cli:** new plugin platform ([#2254](https://github.com/aws-amplify/amplify-cli/issues/2254)) ([7ec29dd](https://github.com/aws-amplify/amplify-cli/commit/7ec29dd4f2da8c90727b36469eca646d289877b6))
+- adding amplify cli predictions category ([#1936](https://github.com/aws-amplify/amplify-cli/issues/1936)) ([b7b7c2c](https://github.com/aws-amplify/amplify-cli/commit/b7b7c2c1927da10f8c54f38a523021187361131c))
+- flow to add policies to access amplify resources from Lambda ([#1462](https://github.com/aws-amplify/amplify-cli/issues/1462)) ([fee247c](https://github.com/aws-amplify/amplify-cli/commit/fee247c74f54b050f7b7a6ea0733fbd08976f232))
+- use cloudformation to update meta ([d4ae437](https://github.com/aws-amplify/amplify-cli/commit/d4ae43733e5686724e4665329751f9208669adef))
+
+### Reverts
+
+- Revert "refactor: add fuzzy matching CX improvement to scene config input" ([967a303](https://github.com/aws-amplify/amplify-cli/commit/967a303aed3e2f7da49a7ab951844f6b02704353))
+
 ## [2.3.6](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.3.5...amplify-category-xr@2.3.6) (2020-05-15)
 
 **Note:** Version bump only for package amplify-category-xr
 
-
-
-
-
 ## [2.3.5](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.3.4...amplify-category-xr@2.3.5) (2020-05-08)
-
 
 ### Bug Fixes
 
-* replaced v1 docs references with v2 docs references ([#4169](https://github.com/aws-amplify/amplify-cli/issues/4169)) ([b578c2d](https://github.com/aws-amplify/amplify-cli/commit/b578c2dcd10038367c653ede2f6da42e7644b41b))
-
-
-
-
+- replaced v1 docs references with v2 docs references ([#4169](https://github.com/aws-amplify/amplify-cli/issues/4169)) ([b578c2d](https://github.com/aws-amplify/amplify-cli/commit/b578c2dcd10038367c653ede2f6da42e7644b41b))
 
 ## [2.3.4](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.3.3...amplify-category-xr@2.3.4) (2020-04-06)
 
 **Note:** Version bump only for package amplify-category-xr
 
-
-
-
-
 ## [2.3.3](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.3.2...amplify-category-xr@2.3.3) (2020-03-22)
 
 **Note:** Version bump only for package amplify-category-xr
-
-
-
-
 
 ## [2.3.2](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.3.1...amplify-category-xr@2.3.2) (2020-03-10)
 
 **Note:** Version bump only for package amplify-category-xr
 
-
-
-
-
 ## [2.3.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.1.11...amplify-category-xr@2.3.1) (2020-03-07)
 
 **Note:** Version bump only for package amplify-category-xr
-
-
-
-
 
 ## [2.2.1](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.1.13-beta.0...amplify-category-xr@2.2.1) (2020-03-05)
 
 **Note:** Version bump only for package amplify-category-xr
 
-
-
-
-
 ## [2.1.11](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.1.10...amplify-category-xr@2.1.11) (2020-02-13)
 
 **Note:** Version bump only for package amplify-category-xr
-
-
-
-
 
 ## [2.1.10](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.1.9...amplify-category-xr@2.1.10) (2020-02-07)
 
 **Note:** Version bump only for package amplify-category-xr
 
-
-
-
-
 ## [2.1.9](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@2.1.8...amplify-category-xr@2.1.9) (2020-01-24)
 
 **Note:** Version bump only for package amplify-category-xr
-
-
-
-
 
 ## [2.1.8](https://github.com/aws-amplify/amplify-cli/compare/amplify-category-xr@1.29.0...amplify-category-xr@2.1.8) (2020-01-23)
 

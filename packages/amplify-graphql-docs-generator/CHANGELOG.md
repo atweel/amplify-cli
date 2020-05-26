@@ -3,51 +3,53 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# 2.2.0-beta.0 (2020-05-26)
+
+### Bug Fixes
+
+- append eslint-disable to template ([#3707](https://github.com/aws-amplify/amplify-cli/issues/3707)) ([12f8797](https://github.com/aws-amplify/amplify-cli/commit/12f8797701f63111f525c809566f1471873c424f)), closes [#3706](https://github.com/aws-amplify/amplify-cli/issues/3706)
+- build break, chore: typescript, lerna update ([#2640](https://github.com/aws-amplify/amplify-cli/issues/2640)) ([29fae36](https://github.com/aws-amplify/amplify-cli/commit/29fae366f4cab054feefa58c7dc733002d19570c))
+- cloudform/type versions ([ec6f99f](https://github.com/aws-amplify/amplify-cli/commit/ec6f99f2be2f248489bf976a9eacfab1b3851a5a))
+- e2e tests, tsconfigs, [@deprecated](https://github.com/deprecated) directive for codegen: ([#3338](https://github.com/aws-amplify/amplify-cli/issues/3338)) ([2ed7715](https://github.com/aws-amplify/amplify-cli/commit/2ed77151dd6367ac9547f78fe600e7913a3d37b2))
+- export Typescript definitions and fix resulting type errors ([#2452](https://github.com/aws-amplify/amplify-cli/issues/2452)) ([7de3845](https://github.com/aws-amplify/amplify-cli/commit/7de384594d3b9cbf22cdaa85107fc8df26c141ec)), closes [#2451](https://github.com/aws-amplify/amplify-cli/issues/2451)
+- upgrade to node10 as min version for CLI ([#3128](https://github.com/aws-amplify/amplify-cli/issues/3128)) ([a0b18e0](https://github.com/aws-amplify/amplify-cli/commit/a0b18e0187a26b4ab0e6e986b0277f347e829444))
+- **amplify-graphql-docs-generator:** change prettier parser to babel ([609f498](https://github.com/aws-amplify/amplify-cli/commit/609f498ccf6b4b98ed30d871c9339f9b1dbaaa7d))
+- **amplify-graphql-docs-generator:** fix overfetching of lists ([#571](https://github.com/aws-amplify/amplify-cli/issues/571)) ([82017d9](https://github.com/aws-amplify/amplify-cli/commit/82017d9508ce0d57c417617bb16a6a3c3c3c1318))
+- **amplify-graphql-docs-generator:** render enums like scalar fields ([4e4de94](https://github.com/aws-amplify/amplify-cli/commit/4e4de9450f932c1c1fc014f83d8a0c3ed400d8e4)), closes [#623](https://github.com/aws-amplify/amplify-cli/issues/623)
+- **amplify-graphql-docs-generator:** support list types in input ([#336](https://github.com/aws-amplify/amplify-cli/issues/336)) ([bd515e6](https://github.com/aws-amplify/amplify-cli/commit/bd515e6a387474d070b30befc864c434cb1c5404)), closes [#295](https://github.com/aws-amplify/amplify-cli/issues/295)
+- **amplify-graphql-docs-generator:** Support scalar returns in statements ([#267](https://github.com/aws-amplify/amplify-cli/issues/267)) ([ec4cf55](https://github.com/aws-amplify/amplify-cli/commit/ec4cf55889d8ca1be37a55fba9354544f8957595)), closes [#264](https://github.com/aws-amplify/amplify-cli/issues/264)
+- **amplify-graphql-docs-generator:** update prettier version ([#901](https://github.com/aws-amplify/amplify-cli/issues/901)) ([da2632d](https://github.com/aws-amplify/amplify-cli/commit/da2632d4b6f58fe43675eb0b099dcad847eb2af2))
+
+### Features
+
+- add support for multiauth in mock server ([#2109](https://github.com/aws-amplify/amplify-cli/issues/2109)) ([fe8ee8c](https://github.com/aws-amplify/amplify-cli/commit/fe8ee8cff355a826fa9ccddcf0fad8a200a081af))
+- adding amplify cli predictions category ([#1936](https://github.com/aws-amplify/amplify-cli/issues/1936)) ([b7b7c2c](https://github.com/aws-amplify/amplify-cli/commit/b7b7c2c1927da10f8c54f38a523021187361131c))
+- mock support for API, function and storage ([#1893](https://github.com/aws-amplify/amplify-cli/issues/1893)) ([372e534](https://github.com/aws-amplify/amplify-cli/commit/372e5346ee1f27a2e9bee25fbbdcb19417f5230f))
+- **amplify-codegen:** add angular codegen support ([7dd7259](https://github.com/aws-amplify/amplify-cli/commit/7dd72591f330450f8e638f4de7a9776b1fb5c068))
+
 ## [2.1.13](https://github.com/aws-amplify/amplify-cli/compare/amplify-graphql-docs-generator@2.1.12...amplify-graphql-docs-generator@2.1.13) (2020-04-23)
 
 **Note:** Version bump only for package amplify-graphql-docs-generator
 
-
-
-
-
 ## [2.1.12](https://github.com/aws-amplify/amplify-cli/compare/amplify-graphql-docs-generator@2.1.11...amplify-graphql-docs-generator@2.1.12) (2020-03-22)
-
 
 ### Bug Fixes
 
-* append eslint-disable to template ([#3707](https://github.com/aws-amplify/amplify-cli/issues/3707)) ([12f8797](https://github.com/aws-amplify/amplify-cli/commit/12f8797701f63111f525c809566f1471873c424f)), closes [#3706](https://github.com/aws-amplify/amplify-cli/issues/3706)
-
-
-
-
+- append eslint-disable to template ([#3707](https://github.com/aws-amplify/amplify-cli/issues/3707)) ([12f8797](https://github.com/aws-amplify/amplify-cli/commit/12f8797701f63111f525c809566f1471873c424f)), closes [#3706](https://github.com/aws-amplify/amplify-cli/issues/3706)
 
 ## [2.1.11](https://github.com/aws-amplify/amplify-cli/compare/amplify-graphql-docs-generator@2.1.10...amplify-graphql-docs-generator@2.1.11) (2020-02-13)
 
 **Note:** Version bump only for package amplify-graphql-docs-generator
 
-
-
-
-
 ## [2.1.10](https://github.com/aws-amplify/amplify-cli/compare/amplify-graphql-docs-generator@2.1.9...amplify-graphql-docs-generator@2.1.10) (2020-02-07)
-
 
 ### Bug Fixes
 
-* e2e tests, tsconfigs, [@deprecated](https://github.com/deprecated) directive for codegen: ([#3338](https://github.com/aws-amplify/amplify-cli/issues/3338)) ([2ed7715](https://github.com/aws-amplify/amplify-cli/commit/2ed77151dd6367ac9547f78fe600e7913a3d37b2))
-
-
-
-
+- e2e tests, tsconfigs, [@deprecated](https://github.com/deprecated) directive for codegen: ([#3338](https://github.com/aws-amplify/amplify-cli/issues/3338)) ([2ed7715](https://github.com/aws-amplify/amplify-cli/commit/2ed77151dd6367ac9547f78fe600e7913a3d37b2))
 
 ## [2.1.9](https://github.com/aws-amplify/amplify-cli/compare/amplify-graphql-docs-generator@2.1.8...amplify-graphql-docs-generator@2.1.9) (2020-01-24)
 
 **Note:** Version bump only for package amplify-graphql-docs-generator
-
-
-
-
 
 ## [2.1.8](https://github.com/aws-amplify/amplify-cli/compare/amplify-graphql-docs-generator@1.28.0...amplify-graphql-docs-generator@2.1.8) (2020-01-23)
 

@@ -1,6 +1,6 @@
 {
   "name": "@atweel/graphql-auth-transformer",
-  "version": "6.16.0",
+  "version": "7.0.0-beta.0",
   "description": "Implements the @auth directive for the appsync model transform.",
   "repository": {
     "type": "git",
@@ -24,18 +24,18 @@
     "watch": "tsc -w"
   },
   "dependencies": {
-    "graphql": "^14.5.8",
-    "@atweel/graphql-connection-transformer": "4.17.0",
-    "@atweel/graphql-mapping-template": "4.13.4",
-    "@atweel/graphql-transformer-common": "4.15.0",
-    "@atweel/graphql-transformer-core": "6.18.0"
+    "@atweel/graphql-connection-transformer": "4.18.0-beta.0",
+    "@atweel/graphql-mapping-template": "4.14.0-beta.0",
+    "@atweel/graphql-transformer-common": "4.16.0-beta.0",
+    "@atweel/graphql-transformer-core": "7.0.0-beta.0",
+    "graphql": "^14.5.8"
   },
   "devDependencies": {
+    "@atweel/graphql-dynamodb-transformer": "7.0.0-beta.0",
+    "@atweel/graphql-elasticsearch-transformer": "4.8.0-beta.0",
+    "@atweel/graphql-function-transformer": "2.4.0-beta.0",
     "@types/node": "^10.17.13",
     "cloudform-types": "^4.2.0",
-    "@atweel/graphql-dynamodb-transformer": "6.18.0",
-    "@atweel/graphql-elasticsearch-transformer": "4.7.0",
-    "@atweel/graphql-function-transformer": "2.3.5",
     "rimraf": "^3.0.0"
   },
   "jest": {

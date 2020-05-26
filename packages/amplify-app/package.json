@@ -1,6 +1,6 @@
 {
   "name": "@atweel/amplify-app",
-  "version": "2.16.0",
+  "version": "2.17.0-beta.0",
   "description": "Amplify CLI",
   "repository": {
     "type": "git",
@@ -28,9 +28,9 @@
     "@atweel/amplify-cli": ">=4.18.0"
   },
   "dependencies": {
-    "@atweel/amplify-frontend-android": "2.13.2",
-    "@atweel/amplify-frontend-ios": "2.13.2",
-    "@atweel/amplify-frontend-javascript": "^2.13.2",
+    "@atweel/amplify-frontend-android": "2.14.0-beta.0",
+    "@atweel/amplify-frontend-ios": "2.14.0-beta.0",
+    "@atweel/amplify-frontend-javascript": "2.16.0-beta.0",
     "chalk": "^3.0.0",
     "fs-extra": "^8.1.0",
     "graphql": "^14.5.8",

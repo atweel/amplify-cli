@@ -1,6 +1,6 @@
 {
   "name": "@atweel/amplify-frontend-ios",
-  "version": "2.13.2",
+  "version": "2.14.0-beta.0",
   "description": "@atweel/amplify-cli front-end plugin for xcode projects",
   "repository": {
     "type": "git",

@@ -3,51 +3,61 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
-# [4.15.0](https://github.com/aws-amplify/amplify-cli/compare/graphql-transformer-common@4.14.0...graphql-transformer-common@4.15.0) (2020-05-08)
+# 4.16.0-beta.0 (2020-05-26)
 
+### Bug Fixes
+
+- upgrade to node10 as min version for CLI ([#3128](https://github.com/aws-amplify/amplify-cli/issues/3128)) ([a0b18e0](https://github.com/aws-amplify/amplify-cli/commit/a0b18e0187a26b4ab0e6e986b0277f347e829444))
+- **graphql-function-transformer:** add hash to function iam role name ([#3030](https://github.com/aws-amplify/amplify-cli/issues/3030)) ([e3c4a32](https://github.com/aws-amplify/amplify-cli/commit/e3c4a32135f3df6ffb06308d5250433aaf2c1ce9)), closes [#2468](https://github.com/aws-amplify/amplify-cli/issues/2468)
+- [#2296](https://github.com/aws-amplify/amplify-cli/issues/2296) [#2304](https://github.com/aws-amplify/amplify-cli/issues/2304) [#2100](https://github.com/aws-amplify/amplify-cli/issues/2100) ([#2439](https://github.com/aws-amplify/amplify-cli/issues/2439)) ([82762d6](https://github.com/aws-amplify/amplify-cli/commit/82762d6187eb2102ebd134b181622188c5632d1d))
+- [#2347](https://github.com/aws-amplify/amplify-cli/issues/2347) - enum validation for key directive ([#2363](https://github.com/aws-amplify/amplify-cli/issues/2363)) ([1facade](https://github.com/aws-amplify/amplify-cli/commit/1facaded3095eaff5a015e76ca4d718b7bc3c938))
+- build break, chore: typescript, lerna update ([#2640](https://github.com/aws-amplify/amplify-cli/issues/2640)) ([29fae36](https://github.com/aws-amplify/amplify-cli/commit/29fae366f4cab054feefa58c7dc733002d19570c))
+- **graphql-key-transformer:** Fix type resolve for 2 field [@key](https://github.com/key) when second field is an Enum ([#1619](https://github.com/aws-amplify/amplify-cli/issues/1619)) ([bbd82b0](https://github.com/aws-amplify/amplify-cli/commit/bbd82b067a140320a399128bb9c3a5c995358c40)), closes [#1572](https://github.com/aws-amplify/amplify-cli/issues/1572)
+- update grahql transformer package versions for multienv ([8b4b2bd](https://github.com/aws-amplify/amplify-cli/commit/8b4b2bd9486d5408d1f75448e3646bdee810f448))
 
 ### Features
 
-* **amplify-category-api:** change default graphql query limit to 100 ([#4124](https://github.com/aws-amplify/amplify-cli/issues/4124)) ([1a68c4d](https://github.com/aws-amplify/amplify-cli/commit/1a68c4d589e2101357dec4e980719fc547964e23))
+- **amplify-category-api:** change default graphql query limit to 100 ([#4124](https://github.com/aws-amplify/amplify-cli/issues/4124)) ([1a68c4d](https://github.com/aws-amplify/amplify-cli/commit/1a68c4d589e2101357dec4e980719fc547964e23))
+- **amplify-category-function:** refactor to support runtime and template plugins ([#3517](https://github.com/aws-amplify/amplify-cli/issues/3517)) ([607ae21](https://github.com/aws-amplify/amplify-cli/commit/607ae21287941805f44ea8a9b78dd12d16d71f85))
+- **cli:** cLI updates and new features for Amplify Console ([#2742](https://github.com/aws-amplify/amplify-cli/issues/2742)) ([0fd0dd5](https://github.com/aws-amplify/amplify-cli/commit/0fd0dd5102177766c454c8715fa5acac32385048))
+- adding amplify cli predictions category ([#1936](https://github.com/aws-amplify/amplify-cli/issues/1936)) ([b7b7c2c](https://github.com/aws-amplify/amplify-cli/commit/b7b7c2c1927da10f8c54f38a523021187361131c))
+- conditions update ([#2789](https://github.com/aws-amplify/amplify-cli/issues/2789)) ([3fae391](https://github.com/aws-amplify/amplify-cli/commit/3fae391340d5fd151e1c43286c90142b5ab0eab0))
+- feature/[@key](https://github.com/key) ([#1463](https://github.com/aws-amplify/amplify-cli/issues/1463)) ([00ed819](https://github.com/aws-amplify/amplify-cli/commit/00ed819419a4959a6d62da2fc5477621c046eff0))
+- implement multi-auth functionality ([#1916](https://github.com/aws-amplify/amplify-cli/issues/1916)) ([b99f58e](https://github.com/aws-amplify/amplify-cli/commit/b99f58e4a2b85cbe9f430838554ae3c277440132))
+- resolver changes ([#2760](https://github.com/aws-amplify/amplify-cli/issues/2760)) ([8ce0d12](https://github.com/aws-amplify/amplify-cli/commit/8ce0d12eb1d3bd6d0132baca39b6e9daff04c39a))
+- sanity check ([#1815](https://github.com/aws-amplify/amplify-cli/issues/1815)) ([54a8dbe](https://github.com/aws-amplify/amplify-cli/commit/54a8dbe8925a4e73358b03ba927267a2df328b78))
+- **field-level-auth:** Add field level auth support via the [@auth](https://github.com/auth) directive ([#1262](https://github.com/aws-amplify/amplify-cli/issues/1262)) ([3b1c600](https://github.com/aws-amplify/amplify-cli/commit/3b1c6006f174c414485bd3520774bbcb8ed5c4d7)), closes [#1043](https://github.com/aws-amplify/amplify-cli/issues/1043)
+- **graphql-dynamodb-transformer:** always output stream arn ([df1712b](https://github.com/aws-amplify/amplify-cli/commit/df1712b00427792bcce34adf7027698afd8e6841)), closes [#980](https://github.com/aws-amplify/amplify-cli/issues/980)
+- **graphql-dynamodb-transformer:** support filter enums in query ([#757](https://github.com/aws-amplify/amplify-cli/issues/757)) ([f053a8b](https://github.com/aws-amplify/amplify-cli/commit/f053a8bbde1b98ff23932f5f3410b0a9fa0399dd)), closes [#712](https://github.com/aws-amplify/amplify-cli/issues/712)
+- **graphql-elasticsearch-transformer:** export domain arn and endpoint ([97b8cad](https://github.com/aws-amplify/amplify-cli/commit/97b8cadf1d28a92f4f233cd10e7e16b351f27763)), closes [#1047](https://github.com/aws-amplify/amplify-cli/issues/1047)
 
+### Reverts
 
+- Revert "Changing behavior so that the switch to PAY_PER_REQUEST billing is explicit. Users now set a parameter UsePayPerRequestBilling. This makes the migration steps occur much faster." ([e278fe1](https://github.com/aws-amplify/amplify-cli/commit/e278fe1f8edc85054a9684534c00225e4a79b242))
 
+# [4.15.0](https://github.com/aws-amplify/amplify-cli/compare/graphql-transformer-common@4.14.0...graphql-transformer-common@4.15.0) (2020-05-08)
 
+### Features
+
+- **amplify-category-api:** change default graphql query limit to 100 ([#4124](https://github.com/aws-amplify/amplify-cli/issues/4124)) ([1a68c4d](https://github.com/aws-amplify/amplify-cli/commit/1a68c4d589e2101357dec4e980719fc547964e23))
 
 # [4.14.0](https://github.com/aws-amplify/amplify-cli/compare/graphql-transformer-common@4.13.3...graphql-transformer-common@4.14.0) (2020-03-22)
 
-
 ### Features
 
-* **amplify-category-function:** refactor to support runtime and template plugins ([#3517](https://github.com/aws-amplify/amplify-cli/issues/3517)) ([607ae21](https://github.com/aws-amplify/amplify-cli/commit/607ae21287941805f44ea8a9b78dd12d16d71f85))
-
-
-
-
+- **amplify-category-function:** refactor to support runtime and template plugins ([#3517](https://github.com/aws-amplify/amplify-cli/issues/3517)) ([607ae21](https://github.com/aws-amplify/amplify-cli/commit/607ae21287941805f44ea8a9b78dd12d16d71f85))
 
 ## [4.13.3](https://github.com/aws-amplify/amplify-cli/compare/graphql-transformer-common@4.13.2...graphql-transformer-common@4.13.3) (2020-02-13)
 
 **Note:** Version bump only for package graphql-transformer-common
 
-
-
-
-
 ## [4.13.2](https://github.com/aws-amplify/amplify-cli/compare/graphql-transformer-common@4.13.1...graphql-transformer-common@4.13.2) (2020-02-07)
 
 **Note:** Version bump only for package graphql-transformer-common
 
-
-
-
-
 ## [4.13.1](https://github.com/aws-amplify/amplify-cli/compare/graphql-transformer-common@4.13.0...graphql-transformer-common@4.13.1) (2020-01-24)
 
 **Note:** Version bump only for package graphql-transformer-common
-
-
-
-
 
 # [4.13.0](https://github.com/aws-amplify/amplify-cli/compare/graphql-transformer-common@3.32.0...graphql-transformer-common@4.13.0) (2020-01-23)
 
