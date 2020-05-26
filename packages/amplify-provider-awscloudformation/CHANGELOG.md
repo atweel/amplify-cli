@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0-beta.6](https://github.com/aws-amplify/amplify-cli/compare/@atweel/amplify-provider-awscloudformation@5.0.0-beta.5...@atweel/amplify-provider-awscloudformation@5.0.0-beta.6) (2020-05-26)
+
+**Note:** Version bump only for package @atweel/amplify-provider-awscloudformation
+
 # [5.0.0-beta.5](https://github.com/aws-amplify/amplify-cli/compare/@atweel/amplify-provider-awscloudformation@5.0.0-beta.4...@atweel/amplify-provider-awscloudformation@5.0.0-beta.5) (2020-05-26)
 
 ### Features
