@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.0.3-beta.1](https://github.com/aws-amplify/amplify-cli/compare/@atweel/amplify-nodejs-function-template-provider@1.0.3-beta.0...@atweel/amplify-nodejs-function-template-provider@1.0.3-beta.1) (2020-05-26)
+
+**Note:** Version bump only for package @atweel/amplify-nodejs-function-template-provider
+
 ## 1.0.3-beta.0 (2020-05-26)
 
 ### Bug Fixes
