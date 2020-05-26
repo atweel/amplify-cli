@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [7.0.0-beta.1](https://github.com/aws-amplify/amplify-cli/compare/@atweel/graphql-transformers-e2e-tests@7.0.0-beta.0...@atweel/graphql-transformers-e2e-tests@7.0.0-beta.1) (2020-05-26)
+
+### Features
+
+- **amplify-cli:** rename Cognito roles ([29bd9eb](https://github.com/aws-amplify/amplify-cli/commit/29bd9eb2e4261f1f4396d2e0b9a8f3c3fe087db9))
+
 # 7.0.0-beta.0 (2020-05-26)
 
 ### Bug Fixes
