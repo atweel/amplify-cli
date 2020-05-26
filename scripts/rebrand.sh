@@ -16,4 +16,6 @@ yarn lint-fix && \
 
 yarn build && \
 
-yarn test
+yarn test && \
+
+lerna exec "jq '.publishConfig.access = \"restricted\"' package.json > new.package.json && mv new.package.json package.json"
