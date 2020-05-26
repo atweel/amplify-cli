@@ -1,6 +1,6 @@
 import inquirer from 'inquirer';
 import path from 'path';
-const TransformPackage = require('graphql-transformer-core');
+const TransformPackage = require('@atweel/graphql-transformer-core');
 
 export async function askDynamoDBQuestions(context: any, currentProjectOnly = false): Promise<{ resourceName: string }> {
   const dynamoDbTypeQuestion = {

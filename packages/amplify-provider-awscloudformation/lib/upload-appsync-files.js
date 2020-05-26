@@ -2,7 +2,7 @@ const fs = require('fs');
 const fsext = require('fs-extra');
 const path = require('path');
 
-const TransformPackage = require('graphql-transformer-core');
+const TransformPackage = require('@atweel/graphql-transformer-core');
 const S3 = require('../src/aws-utils/aws-s3');
 
 const ROOT_APPSYNC_S3_KEY = 'amplify-appsync-files';
@@ -108,7 +108,7 @@ async function uploadAppSyncFiles(context, resourcesToUpdate, allResources, opti
         if (personalParams.CreateAPIKey !== undefined && personalParams.APIKeyExpirationEpoch !== undefined) {
           context.print.warning(
             'APIKeyExpirationEpoch and CreateAPIKey parameters should not used together because it can cause ' +
-              'unwanted behavior. In the future APIKeyExpirationEpoch will be removed, use CreateAPIKey instead.'
+              'unwanted behavior. In the future APIKeyExpirationEpoch will be removed, use CreateAPIKey instead.',
           );
         }
 
@@ -122,7 +122,7 @@ async function uploadAppSyncFiles(context, resourcesToUpdate, allResources, opti
 
             context.print.warning(
               "APIKeyExpirationEpoch parameter's -1 value is deprecated to disable " +
-                'the API Key creation. In the future CreateAPIKey parameter replaces this behavior.'
+                'the API Key creation. In the future CreateAPIKey parameter replaces this behavior.',
             );
           } else {
             currentParameters.CreateAPIKey = 1;

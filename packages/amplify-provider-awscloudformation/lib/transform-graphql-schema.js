@@ -14,7 +14,7 @@ const { HttpTransformer } = require('graphql-http-transformer');
 const { PredictionsTransformer } = require('graphql-predictions-transformer');
 const { KeyTransformer } = require('graphql-key-transformer');
 const providerName = require('./constants').ProviderName;
-const TransformPackage = require('graphql-transformer-core');
+const TransformPackage = require('@atweel/graphql-transformer-core');
 const { hashElement } = require('folder-hash');
 const { print } = require('graphql');
 
