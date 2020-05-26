@@ -16,7 +16,6 @@
   ],
   "dependencies": {
     "@atweel/amplify-category-auth": "2.16.0-beta.0",
-    "@atweel/amplify-provider-awscloudformation": "5.0.0-beta.5",
     "aws-sdk": "^2.608.0",
     "chalk": "^3.0.0",
     "chalk-pipe": "^3.0.0",
