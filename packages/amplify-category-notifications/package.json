@@ -37,5 +37,8 @@
     "collectCoverageFrom": [
       "lib/**/*.js"
     ]
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

@@ -4,7 +4,7 @@ import {
   PackageResult,
   BuildRequest,
   BuildResult,
-} from '@atweel/amplify-function-plugin-interface/src';
+} from '@atweel/amplify-function-plugin-interface';
 import * as which from 'which';
 import * as execa from 'execa';
 import archiver from 'archiver';

@@ -31,5 +31,8 @@
     "strip-ansi": "^6.0.0",
     "throat": "^5.0.0",
     "uuid": "7.0.1"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

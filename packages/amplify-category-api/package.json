@@ -50,5 +50,8 @@
       "json",
       "html"
     ]
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

@@ -37,5 +37,8 @@
   "jest": {
     "testEnvironment": "node",
     "collectCoverage": true
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

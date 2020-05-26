@@ -1,4 +1,4 @@
-import { CheckDependenciesResult } from '@atweel/amplify-function-plugin-interface/src';
+import { CheckDependenciesResult } from '@atweel/amplify-function-plugin-interface';
 import { execAsStringPromise, majMinPyVersion } from './pyUtils';
 import { coerce, lt } from 'semver';
 

@@ -14,7 +14,7 @@ const { engines } = require('../package.json');
 
 const npm = /^win/.test(process.platform) ? 'npm.cmd' : 'npm';
 const amplify = /^win/.test(process.platform) ? 'amplify.cmd' : 'amplify';
-const amplifyCliPackageName = '@aws-amplify/cli';
+const amplifyCliPackageName = '@atweel/amplify-cli';
 
 function run() {
   const projpath = args.path;
@@ -78,7 +78,7 @@ async function installAmplifyCLI() {
 // Check the amplify CLI version, install latest CLI if it does not exist or is too old
 async function amplifyCLIVersionCheck() {
   const amplifyCLIVersionSpawn = spawnSync(amplify, ['-v']);
-  const minCLIVersion = engines['@aws-amplify/cli'];
+  const minCLIVersion = engines['@atweel/amplify-cli'];
   if (amplifyCLIVersionSpawn.stderr !== null) {
     const amplifyCLIVersion = semver.coerce(stripAnsi(amplifyCLIVersionSpawn.stdout.toString()));
     if (semver.satisfies(amplifyCLIVersion, minCLIVersion)) {

@@ -91,5 +91,8 @@
         "diagnostics": false
       }
     }
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

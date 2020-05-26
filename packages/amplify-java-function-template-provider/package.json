@@ -26,5 +26,8 @@
   },
   "devDependencies": {
     "@types/inquirer": "^6.5.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

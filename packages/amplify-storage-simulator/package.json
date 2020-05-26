@@ -72,5 +72,8 @@
       "/node_modules/",
       "/lib/"
     ]
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

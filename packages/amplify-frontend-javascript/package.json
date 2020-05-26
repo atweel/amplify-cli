@@ -21,5 +21,8 @@
     "graphql-config": "^2.2.1",
     "inquirer": "^7.0.3",
     "promise-sequential": "^1.1.1"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

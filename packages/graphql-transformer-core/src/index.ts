@@ -31,6 +31,8 @@ import { EXTRA_DIRECTIVES_DOCUMENT } from './validation';
 export * from './errors';
 export * from './util';
 
+export { MappingParameters } from './TransformerContext';
+
 /**
  * Returns the extra set of directives that are supported by AppSync service
  */

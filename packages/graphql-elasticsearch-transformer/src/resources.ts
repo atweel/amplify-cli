@@ -24,7 +24,7 @@ import {
   methodCall,
 } from '@atweel/graphql-mapping-template';
 import { toUpper, plurality, graphqlName, ResourceConstants, ModelResourceIDs } from '@atweel/graphql-transformer-common';
-import { MappingParameters } from '@atweel/graphql-transformer-core/src/TransformerContext';
+import { MappingParameters } from '@atweel/graphql-transformer-core';
 
 export class ResourceFactory {
   public makeParams() {

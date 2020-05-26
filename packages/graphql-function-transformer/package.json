@@ -44,5 +44,8 @@
       "node"
     ],
     "collectCoverage": true
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

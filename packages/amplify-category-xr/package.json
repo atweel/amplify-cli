@@ -32,5 +32,8 @@
       "lib/**/*.js",
       "commands/**/*.js"
     ]
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

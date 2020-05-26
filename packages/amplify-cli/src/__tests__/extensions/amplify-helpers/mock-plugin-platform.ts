@@ -4,7 +4,7 @@ import { PluginInfo } from '../../../domain/plugin-info';
 export function constructMockPluginPlatform(): PluginPlatform {
   const mockPluginPlatform = new PluginPlatform();
   const corePluginInfo: PluginInfo = {
-    packageName: '@aws-amplify/cli',
+    packageName: '@atweel/amplify-cli',
     packageVersion: '4.13.4',
     packageLocation: '/root/amplify-cli/packages/amplify-cli/',
     manifest: {

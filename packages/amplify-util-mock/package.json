@@ -101,5 +101,8 @@
     "outputName": "js-test-results.xml",
     "usePathForSuiteName": "true",
     "addFileAttribute": "true"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

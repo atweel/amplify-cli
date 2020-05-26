@@ -85,5 +85,8 @@
       "json",
       "node"
     ]
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }

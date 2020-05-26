@@ -108,7 +108,7 @@ async function init(amplifyServiceParams) {
   if (!amplifyAppId) {
     const createAppParams = {
       name: projectName,
-      environmentVariables: { _LIVE_PACKAGE_UPDATES: '[{"pkg":"@aws-amplify/cli","type":"npm","version":"latest"}]' },
+      environmentVariables: { _LIVE_PACKAGE_UPDATES: '[{"pkg":"@atweel/amplify-cli","type":"npm","version":"latest"}]' },
     };
     try {
       const createAppResponse = await amplifyClient.createApp(createAppParams).promise();
@@ -255,7 +255,7 @@ async function postPushCheck(context) {
       if (!amplifyAppId) {
         const createAppParams = {
           name: projectConfig.projectName,
-          environmentVariables: { _LIVE_PACKAGE_UPDATES: '[{"pkg":"@aws-amplify/cli","type":"npm","version":"latest"}]' },
+          environmentVariables: { _LIVE_PACKAGE_UPDATES: '[{"pkg":"@atweel/amplify-cli","type":"npm","version":"latest"}]' },
         };
 
         try {

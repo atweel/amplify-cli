@@ -20,7 +20,7 @@
     "amplify": "bin/amplify"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "restricted"
   },
   "scripts": {
     "test": "jest",

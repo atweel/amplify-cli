@@ -53,7 +53,7 @@ export async function createConsoleApp(projectName: string, amplifyClient?: any)
   }
   const createAppParams = {
     name: projectName,
-    environmentVariables: { _LIVE_PACKAGE_UPDATES: '[{"pkg":"@aws-amplify/cli","type":"npm","version":"latest"}]' },
+    environmentVariables: { _LIVE_PACKAGE_UPDATES: '[{"pkg":"@atweel/amplify-cli","type":"npm","version":"latest"}]' },
   };
 
   const createAppResponse = await amplifyClient.createApp(createAppParams).promise();

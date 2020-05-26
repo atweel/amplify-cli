@@ -14,5 +14,8 @@
   "scripts": {
     "build": "tsc",
     "clean": "rimraf ./lib"
+  },
+  "publishConfig": {
+    "access": "restricted"
   }
 }
