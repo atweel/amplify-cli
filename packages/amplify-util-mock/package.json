@@ -1,6 +1,6 @@
 {
   "name": "@atweel/amplify-util-mock",
-  "version": "4.0.0-beta.0",
+  "version": "4.0.0-beta.1",
   "description": "amplify cli plugin providing local testing",
   "repository": {
     "type": "git",
@@ -28,7 +28,7 @@
   "dependencies": {
     "@atweel/amplify-appsync-simulator": "1.21.0-beta.0",
     "@atweel/amplify-category-function": "2.21.0-beta.0",
-    "@atweel/amplify-codegen": "2.16.0-beta.0",
+    "@atweel/amplify-codegen": "2.16.0-beta.1",
     "@atweel/amplify-dynamodb-simulator": "1.15.0-beta.0",
     "@atweel/amplify-storage-simulator": "1.5.0-beta.0",
     "@hapi/topo": "^5.0.0",

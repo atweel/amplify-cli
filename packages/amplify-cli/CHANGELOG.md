@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [5.0.0-beta.3](https://github.com/aws-amplify/amplify-cli/compare/@atweel/amplify-cli@5.0.0-beta.2...@atweel/amplify-cli@5.0.0-beta.3) (2020-05-26)
+
+**Note:** Version bump only for package @atweel/amplify-cli
+
 # [5.0.0-beta.2](https://github.com/aws-amplify/amplify-cli/compare/@atweel/amplify-cli@5.0.0-beta.1...@atweel/amplify-cli@5.0.0-beta.2) (2020-05-26)
 
 **Note:** Version bump only for package @atweel/amplify-cli

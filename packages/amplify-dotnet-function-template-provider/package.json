@@ -1,6 +1,6 @@
 {
   "name": "@atweel/amplify-dotnet-function-template-provider",
-  "version": "1.3.0-beta.1",
+  "version": "1.3.0-beta.2",
   "description": ".NET Core templates supplied by the Amplify Team",
   "repository": {
     "type": "git",
