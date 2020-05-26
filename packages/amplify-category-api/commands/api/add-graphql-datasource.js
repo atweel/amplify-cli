@@ -2,7 +2,7 @@ const fs = require('fs-extra');
 const inquirer = require('inquirer');
 const graphql = require('graphql');
 const { RelationalDBSchemaTransformer } = require('graphql-relational-schema-transformer');
-const { RelationalDBTemplateGenerator, AuroraServerlessMySQLDatabaseReader } = require('graphql-relational-schema-transformer');
+const { RelationalDBTemplateGenerator, AuroraServerlessMySQLDatabaseReader } = require('@atweel/graphql-relational-schema-transformer');
 const { mergeTypes } = require('merge-graphql-schemas');
 
 const subcommand = 'add-graphql-datasource';
@@ -86,7 +86,7 @@ module.exports = {
           answers.secretStoreArn,
           answers.dbClusterArn,
           answers.databaseName,
-          AWS
+          AWS,
         );
 
         /**
@@ -148,7 +148,7 @@ module.exports = {
         print.success('Some next steps:');
         print.info('"amplify push" will build all your local backend resources and provision it in the cloud');
         print.info(
-          '"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud'
+          '"amplify publish" will build all your local backend and frontend resources (if you have hosting category added) and provision it in the cloud',
         );
         print.info('');
       })

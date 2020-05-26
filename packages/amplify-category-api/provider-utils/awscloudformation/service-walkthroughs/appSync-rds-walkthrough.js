@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const ora = require('ora');
-const { DataApiParams } = require('graphql-relational-schema-transformer');
+const { DataApiParams } = require('@atweel/graphql-relational-schema-transformer');
 
 const spinner = ora('');
 const category = 'api';
@@ -12,7 +12,7 @@ async function serviceWalkthrough(context, defaultValuesFilename, datasourceMeta
   // Verify that an API exists in the project before proceeding.
   if (amplifyMeta == null || amplifyMeta[category] == null || Object.keys(amplifyMeta[category]).length === 0) {
     context.print.error(
-      'You must create an AppSync API in your project before adding a graphql datasource. Please use "amplify api add" to create the API.'
+      'You must create an AppSync API in your project before adding a graphql datasource. Please use "amplify api add" to create the API.',
     );
     process.exit(0);
   }
@@ -31,7 +31,7 @@ async function serviceWalkthrough(context, defaultValuesFilename, datasourceMeta
   // If an AppSync API does not exist, inform the user to create the AppSync API
   if (!appSyncApi) {
     context.print.error(
-      'You must create an AppSync API in your project before adding a graphql datasource. Please use "amplify api add" to create the API.'
+      'You must create an AppSync API in your project before adding a graphql datasource. Please use "amplify api add" to create the API.',
     );
     process.exit(0);
   }
