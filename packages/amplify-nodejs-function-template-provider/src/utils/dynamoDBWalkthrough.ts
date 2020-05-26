@@ -52,7 +52,7 @@ export async function askDynamoDBQuestions(context: any, currentProjectOnly = fa
       case 'newResource': {
         let add;
         try {
-          ({ add } = require('amplify-category-storage'));
+          ({ add } = require('@atweel/amplify-category-storage'));
         } catch (e) {
           context.print.error('Storage plugin is not installed in the CLI. You must install it to use this feature.');
           break;

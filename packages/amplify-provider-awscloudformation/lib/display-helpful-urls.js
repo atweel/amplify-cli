@@ -1,5 +1,5 @@
 const chalk = require('chalk');
-const { predictionsConsole } = require('amplify-category-predictions');
+const { predictionsConsole } = require('@atweel/amplify-category-predictions');
 
 async function displayHelpfulURLs(context, resourcesToBeCreated) {
   context.print.info('');

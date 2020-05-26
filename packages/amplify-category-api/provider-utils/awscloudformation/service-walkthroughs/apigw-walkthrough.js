@@ -616,7 +616,7 @@ async function askLambdaSource(context, functionType, path, currentPath) {
 function newLambdaFunction(context, path) {
   let add;
   try {
-    ({ add } = require('amplify-category-function'));
+    ({ add } = require('@atweel/amplify-category-function'));
   } catch (e) {
     throw new Error('Function plugin not installed in the CLI. You need to install it to use this feature.');
   }

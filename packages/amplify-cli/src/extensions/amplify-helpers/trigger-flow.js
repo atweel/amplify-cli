@@ -47,7 +47,7 @@ const addTrigger = async triggerOptions => {
 
   let add;
   try {
-    ({ add } = require('amplify-category-function'));
+    ({ add } = require('@atweel/amplify-category-function'));
   } catch (e) {
     throw new Error('Function plugin not installed in the CLI. You need to install it to use this feature.');
   }
@@ -127,7 +127,7 @@ const updateTrigger = async triggerOptions => {
   } = triggerOptions;
   let update;
   try {
-    ({ update } = require('amplify-category-function'));
+    ({ update } = require('@atweel/amplify-category-function'));
   } catch (e) {
     throw new Error('Function plugin not installed in the CLI. You need to install it to use this feature.');
   }

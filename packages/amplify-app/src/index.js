@@ -165,9 +165,9 @@ async function getProjectConfig(existingApp) {
 
 async function guessPlatform() {
   const frontendPlugins = {
-    javascript: 'amplify-frontend-javascript',
-    android: 'amplify-frontend-android',
-    ios: 'amplify-frontend-ios',
+    javascript: '@atweel/amplify-frontend-javascript',
+    android: '@atweel/amplify-frontend-android',
+    ios: '@atweel/amplify-frontend-ios',
   };
 
   let suitableFrontend;
