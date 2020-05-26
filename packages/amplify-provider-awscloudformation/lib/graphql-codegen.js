@@ -1,6 +1,6 @@
 let graphQLConfig;
 
-const { prePushAddGraphQLCodegenHook, prePushUpdateGraphQLCodegenHook, postPushGraphQLCodegenHook } = require('amplify-codegen');
+const { prePushAddGraphQLCodegenHook, prePushUpdateGraphQLCodegenHook, postPushGraphQLCodegenHook } = require('@atweel/amplify-codegen');
 
 async function prePushGraphQLCodegen(context, createResources, updateResources) {
   createResources = createResources.filter(resource => resource.service === 'AppSync');
